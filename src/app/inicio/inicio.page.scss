@@ -1,0 +1,34 @@
+.titulo{
+    float: left;
+    font-size: 350%;
+    padding: 50% 5% 5% 26%;
+    font-weight: bolder;
+}
+
+.texto1{
+float: left;
+padding: 25% 5% 5% 27%;
+font-weight: bold;
+}
+
+.texto2{
+float: left;
+padding: 35% 5% 5% 33%;
+font-weight: bold;
+}
+
+.botao{
+    display:block;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+ion-content{    
+ --background: none;
+  background-image: url("/assets/IMG_7646.JPG");
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

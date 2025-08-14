@@ -5,13 +5,13 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonLabel, IonIte
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-inicio',
+  templateUrl: './inicio.page.html',
+  styleUrls: ['./inicio.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonLabel, IonItem, IonList, IonText, IonButton, RouterLink, CommonModule, FormsModule]
 })
-export class LoginPage implements OnInit {
+export class InicioPage implements OnInit {
 
   constructor() { }
 
