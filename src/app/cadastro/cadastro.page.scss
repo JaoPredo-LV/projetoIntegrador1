@@ -1,9 +1,13 @@
+.person{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 .intro{
     text-align: center;
-    margin-left: 25%;
-    width: 50%;
+    font-size: 17px;
 }
-
 .corpo{
     height: 50%;
     padding: 0 10%;
@@ -11,9 +15,11 @@
 
 .inputs{
     padding: 10%;
+    color: white;
 }
 
 .botao{
     width: 90%;
     margin-left: 5%;
+    color: white;
 }
