@@ -1,0 +1,27 @@
+.titulo{
+    text-align: center;
+    font-size: small;
+    padding: 5%;
+}
+
+.texto{
+    font-weight: bold;
+    float: left;
+    margin-top: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+.botao{
+    --background:rgb(179, 179, 179);
+    margin-left: 5%;
+    width: 90%;
+    float: left
+}
+
+.botaoD{
+    margin-left: 5%;
+    width: 90%;
+    float: left;
+    color: white;
+}
