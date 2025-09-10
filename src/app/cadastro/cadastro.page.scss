@@ -1,25 +1,54 @@
-.person{
-    font-size: 40px;
+.div-cadastro {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    justify-content: center;  
+    min-height: 100vh;         
+    text-align: center;       
+    position: fixed;           
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;              
+}
+
+.person {
+    font-size: 50px;
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
-.intro{
+
+.intro {
     text-align: center;
     font-size: 17px;
 }
-.corpo{
-    height: 50%;
-    padding: 0 10%;
+
+.formulario {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    width: 100%;
 }
 
-.inputs{
-    padding: 10%;
-    color: white;
+ion-input {
+    text-align: left;
+    --background: white;
+    --color: black;
+    --placeholder-color: gray;
+    --padding-start: 15px;
+    --border-radius: 20px;
+    margin: 10px 0;
+    height: 45px;
+    width: 80%;   
+    max-width: 400px;
 }
 
-.botao{
-    width: 90%;
-    margin-left: 5%;
+.botao {
+    --border-radius: 50px;
+    width: 50%;       
+    margin: 10px 0;   
+    opacity: 1;
     color: white;
-}
+  }

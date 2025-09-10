@@ -1,28 +1,30 @@
-.titulo{
-    float: left;
-    font-size: 350%;
-    padding: 50% 5% 5% 26%;
-    font-weight: bolder;
+.div-inicio {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  justify-content: center;  
+  height: 100%;             
+  text-align: center;       
 }
 
-.texto1{
-float: left;
-padding: 25% 5% 5% 27%;
+.titulo {
+  font-size: 350%;
+  font-weight: bolder;
+  margin-bottom: 20px; 
 }
 
-.texto2{
-float: left;
-padding: 35% 5% 5% 33%;
+.texto1,
+.texto2 {
+  margin: 15px 0;
 }
 
-.botao{
-    display:block;
-    width: 70%;
-    margin-left: 15%;
-    opacity: 100%;
-    color: white;
+.botao {
+  --border-radius: 50px;
+  width: 50%;       
+  margin: 10px 0;   
+  opacity: 1;
+  color: white;
 }
-
 
 ion-content{    
   --background: none;

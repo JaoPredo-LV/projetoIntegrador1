@@ -25,3 +25,11 @@
     float: left;
     color: white;
 }
+ion-content{    
+    --background: none;
+    background-image: url("/assets/girl.jpg");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
