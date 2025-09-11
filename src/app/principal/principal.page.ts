@@ -13,7 +13,9 @@ import { addIcons } from 'ionicons'
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, CommonModule, FormsModule]
 })
 export class PrincipalPage implements OnInit {
-
+  usuario = {
+    nome: "ALEXA"
+  }  
   constructor() { 
     addIcons({chevronForwardOutline})
   }

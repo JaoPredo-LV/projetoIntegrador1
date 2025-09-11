@@ -1,12 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="titulo">SEJA BEM-VINDO(A), (NOME DO[A] USUÁRIO[A])</ion-title>
-  </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
+
+  <div class="boas-vindas">
+    SEJA BEM-VINDA, {{ usuario.nome }}!
+  </div>
+
   <div class="corpo">
   <ion-label class="texto">MEUS TREINOS</ion-label>
   <ion-button class="botao" shape="round">
@@ -24,10 +25,11 @@
   <ion-button class="botao" shape="round">
     ACESSAR
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    
   </ion-button>
 
   <ion-label class="texto">DIETA</ion-label>
-  <ion-button class="botaoD" size="large">ACESSAR</ion-button>
+  <ion-button class="botao-dieta">
+    <span class="botao-texto">Acessar</span>
+  </ion-button>
   </div>
 </ion-content>
