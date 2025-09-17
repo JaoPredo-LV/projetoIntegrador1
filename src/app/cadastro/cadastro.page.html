@@ -15,13 +15,22 @@
   </div>  
   
     <div class="formulario">
-      <ion-input placeholder="Nome completo:" type="nome"></ion-input>
-      <ion-input placeholder="Data de nascimento:" type="date"></ion-input>
-      <ion-input placeholder="Peso:" type="number"></ion-input>
-      <ion-input placeholder="Altura:" type="number"></ion-input>
-      <ion-input placeholder="Gênero:" type="genero"></ion-input>
-      <ion-input placeholder="E-mail:" type="email"></ion-input>
-      <ion-input placeholder="Senha:" type="password"></ion-input>
-      <ion-button class="botao" color="medium" style="--border-radius: 100px;">CADASTRAR</ion-button>
+      <ion-input [(ngModel)]="nome" placeholder="Nome completo:" type="nome"></ion-input>
+
+      <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date"></ion-input>
+
+      <ion-input [(ngModel)]="peso" placeholder="Peso:" type="number"></ion-input>
+
+      <ion-input [(ngModel)]="altura" placeholder="Altura: (em centimetros)" type="number"></ion-input>
+
+      <ion-input [(ngModel)]="genero" placeholder="Gênero:" type="genero"></ion-input>
+
+      <ion-input [(ngModel)]="email" placeholder="E-mail:" type="email"></ion-input>
+
+      <ion-input [(ngModel)]="senha" placeholder="Senha:" type="password">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+
+      <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="salvar()" routerLink="/login">CADASTRAR</ion-button>
     </div>
 
