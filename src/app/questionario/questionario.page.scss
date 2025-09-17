@@ -1,64 +1,38 @@
-/* Fundo da página */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: url('fundo.jpg') no-repeat center center fixed;
+ion-content{    
+  --background: none;
+  background-image: url("/assets/comida.jpg");
   background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-/* Barra superior */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0,0,0,0.6);
-  padding: 10px;
-  color: white;
-}
-
-.title {
-  flex: 1;
+.titulo {
+  background: rgba(255, 255, 255, 0.15); 
+  padding: 40px;
   text-align: center;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.logo {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
-
-/* Texto abaixo da barra */
-.header-text {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
   text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 20px 0;
+  font-size: small;
+  padding: 5%;
 }
-
-/* Container do formulário */
-.form-container {
-  background-color: rgba(0,0,0,0.6);
-  padding: 20px;
-  margin: 0 15px 30px;
-  border-radius: 10px;
+.aviso{
+  text-align: center;
+  margin-top: 5%;
 }
-
-/* Estilo das perguntas */
-form label {
-  font-weight: bold;
-  display: block;
-  margin-top: 15px;
+.questao{
+  float: left;
+  margin-left: 8%;
+  margin-top: 7%;
+  width: 100%;
+  text-align: left;
 }
-
-form input {
-  margin: 5px 10px 15px 0;
+.check{
+  text-align: center;
 }
-
-form hr {
-  border: 0;
-  border-top: 1px solid #888;
-  margin: 10px 0;
+.check ion-checkbox{
+  margin: 20px;
 }

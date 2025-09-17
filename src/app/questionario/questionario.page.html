@@ -1,56 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dieta - Questionário</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Barra superior -->
-  <div class="top-bar">
-    <span class="title">DIETA</span>
-    <img src="logo.png" alt="Logo GYMUP" class="logo">
+<ion-header [translucent]="true">
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <div class="titulo">DIETA</div>
+  <div class="aviso">RESPONDA AO QUESTIONÁRIO CORRETAMENTE!</div>
+  
+  <div class="corpo">
+    <ion-label class="questao">Você tem alguma meta expecífica?</ion-label>
+    <div class="check">
+      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
+    <ion-checkbox labelPlacement="end">Não</ion-checkbox>
   </div>
 
-  <!-- Texto de destaque -->
-  <div class="header-text">
-    RESPONDA AO QUESTIONÁRIO!
+
+    <ion-label class="questao">Tem alguma condição de saúde (diabetes, 
+      <br>hipertensão, colesterol alto, problemas renais, 
+      <br>gastrite etc.)?</ion-label>
+    <ion-label class="questao">Já fez algum acompanhamento nutricional antes?</ion-label>
+    <ion-label class="questao">Em quanto tempo gostaria de atingir seus objetivos?</ion-label>
+    <ion-label class="questao">Prefere um plano mais flexível (com substituições) 
+      <br>ou mais estruturado (refeições fixas)?</ion-label>
+    <ion-label class="questao">Gostaria que o plano incluísse cardápio com receitas 
+      <br>ou apenas lista de alimentos e quantidades?</ion-label>
   </div>
-
-  <!-- Formulário -->
-  <div class="form-container">
-    <form>
-      <label>Você tem alguma meta específica?</label><br>
-      <input type="checkbox"> sim
-      <input type="checkbox"> não
-      <p>Quais as metas?</p>
-      <hr>
-
-      <label>Tem alguma condição de saúde (diabetes, hipertensão, colesterol alto, problemas renais, gastrite etc.)?</label><br>
-      <input type="checkbox"> sim
-      <input type="checkbox"> não
-      <hr>
-
-      <label>Já fez algum acompanhamento nutricional antes?</label><br>
-      <input type="checkbox"> sim
-      <input type="checkbox"> não
-      <hr>
-
-      <label>Em quanto tempo gostaria de atingir seus objetivos?</label><br>
-      <input type="checkbox"> sim
-      <input type="checkbox"> não
-      <hr>
-
-      <label>Prefere um plano mais flexível (com substituições) ou mais estruturado (refeições fixas)?</label><br>
-      <input type="checkbox"> sim
-      <input type="checkbox"> não
-      <hr>
-
-      <label>Gostaria que o plano incluísse cardápio com receitas ou apenas lista de alimentos e quantidades?</label><br>
-      <input type="checkbox"> sim
-      <input type="checkbox"> não
-    </form>
-  </div>
-</body>
-</html>
+</ion-content>
