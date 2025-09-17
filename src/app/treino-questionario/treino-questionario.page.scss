@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url("/assets/girl.jpg");
+  color: #ffffff;
+}
+
+/* container transparente sobre a imagem */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* fundo preto semi-transparente */
+  border-radius: 8px;
+}
+
+/* HEADER */
+header {
+  background: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 4px 4px 0 0;
+}
+
+header .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+header .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* TÍTULO */
+h2 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 25px 0 40px;
+  font-size: 18px; /* mesmo tamanho do segundo print */
+}
+
+/* PERGUNTAS */
+.question {
+  margin-bottom: 25px;
+}
+
+.question label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* INPUTS estilo underline */
+.question input,
+.question textarea {
+  width: 100%;
+  padding: 8px 5px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+}
+
+.question input::placeholder,
+.question textarea::placeholder {
+  color: #cccccc;
+}
+
+.question input:focus,
+.question textarea:focus {
+  border-bottom: 1px solid #ffcc00;
+}
+
+/* TEXTO INFORMATIVO */
+.note {
+  text-align: center;
+  font-size: 13px;
+  color: #cccccc;
+  margin: 20px 0 30px;
+}
+
+/* BOTÃO */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
