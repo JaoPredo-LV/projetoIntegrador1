@@ -1,19 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { 
-  IonContent, 
-  IonHeader, 
-  IonTitle, 
-  IonToolbar,
-  IonList,
-  IonItem,
-  IonLabel,
-  IonInput,
-  IonButton,
-  IonAvatar,
-  IonButtons
-} from '@ionic/angular/standalone';
+import { IonContent, IonButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-treino-questionario',
@@ -22,24 +9,15 @@ import {
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule,
     IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
-    IonList,
-    IonItem,
-    IonLabel,
-    IonInput,
     IonButton,
-    IonAvatar,
-    IonButtons
   ]
 })
-export class TreinoQuestionarioPage implements OnInit {
+export class TreinoQuestionarioPage {
 
-  constructor() { }
-
-  ngOnInit() { }
-
+  gerarTreino(): void {
+    console.log('Botão GERAR MEU TREINO foi clicado!');
+    // Aqui você pode colocar a lógica futura de geração de treino
+  }
 }
+
