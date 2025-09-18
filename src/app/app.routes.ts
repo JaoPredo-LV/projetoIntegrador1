@@ -25,13 +25,22 @@ export const routes: Routes = [
   {
     path: 'principal',
     loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
-  },  {
+  },
+  {
     path: 'questionario',
     loadComponent: () => import('./questionario/questionario.page').then( m => m.QuestionarioPage)
   },
-  {
+{
     path: 'opcaoa',
     loadComponent: () => import('./opcaoa/opcaoa.page').then( m => m.OpcaoaPage)
-  },
+},
 
+  { 
+    path: 'treino-questionario',
+    loadComponent: () => import('./treino-questionario/treino-questionario.page').then( m => m.TreinoQuestionarioPage)
+  },
+  {
+    path: 'treinos',
+    loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
+  },
 ];

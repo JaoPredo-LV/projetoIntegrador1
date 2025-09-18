@@ -6,9 +6,12 @@
   </ion-header>
   <div class="div-login">
     <h1 class="intro">LOGIN</h1>
-    <ion-input placeholder="E-mail:" type="nome"></ion-input>
+    <ion-input placeholder="E-mail:" type="email" [(ngModel)]="email"></ion-input>
       <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
-      <ion-input placeholder="Senha:" type="nome"></ion-input>
+
+      <ion-input placeholder="Senha:" type="password" [(ngModel)]="senha"><ion-input-password-toggle slot="end">
+        </ion-input-password-toggle>
+      </ion-input>
       <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
 
        <p><a href="#">Esqueci minha senha</a></p>
