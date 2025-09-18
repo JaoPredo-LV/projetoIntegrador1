@@ -5,54 +5,39 @@
   <ion-header collapse="condense">
   </ion-header>
 
-  <div class="titulo">DIETA</div>
-  <div class="aviso">RESPONDA AO QUESTIONÁRIO CORRETAMENTE!</div>
+  <div class="titulo"></div>
+  <div class="aviso">RESPONDA O QUESTIONÁRIO CORRETAMENTE!</div>
 
-  <div class="corpo">
+  <form>
+  <h6>Qual seu objetivo?</h6>
+  <label><input type="radio" name="objetivo" value="hipertrofia"> Hipertrofia</label><br>
+  <label><input type="radio" name="objetivo" value="emagrecimento"> Emagrecimento</label>
 
-    <ion-label class="questao">Você tem alguma meta específica?</ion-label>
-    <div class="check">
-      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
-      <ion-checkbox labelPlacement="end">Não</ion-checkbox>
-    </div>
+  <h6>Tem alguma restrição alimentar?</h6>
+  <label><input type="radio" name="restricao" value="lactose"> Intolerância à lactose</label><br>
+  <label><input type="radio" name="restricao" value="vegetariano"> Vegetarianismo e Vegano</label><br>
+  <label><input type="radio" name="restricao" value="diabetes"> Diabetes</label><br>
+  <label><input type="radio" name="restricao" value="autoimune"> Doenças Autoimunes</label>
 
-    <ion-label class="questao">
-      Tem alguma condição de saúde (diabetes, hipertensão, 
-      <br>colesterol alto, problemas renais, gastrite etc.)?
-    </ion-label>
-    <div class="check">
-      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
-      <ion-checkbox labelPlacement="end">Não</ion-checkbox>
-    </div>
+  <h6>Irá treinar quantas vezes na semana?</h6>
+  <label><input type="radio" name="frequencia" value="3"> 3 dias</label><br>
+  <label><input type="radio" name="frequencia" value="5"> 5 dias</label><br>
+  <label><input type="radio" name="frequencia" value="7"> 7 dias</label>
 
-    <ion-label class="questao">Já fez algum acompanhamento nutricional antes?</ion-label>
-    <div class="check">
-      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
-      <ion-checkbox labelPlacement="end">Não</ion-checkbox>
-    </div>
+  <h6>Prefere um treino longo ou curto?</h6>
+  <label><input type="radio" name="duracao" value="longo"> Longo</label><br>
+  <label><input type="radio" name="duracao" value="curto"> Curto</label>
 
-    <ion-label class="questao">Em quanto tempo gostaria de atingir seus objetivos?</ion-label>
-    <div class="check">
-      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
-      <ion-checkbox labelPlacement="end">Não</ion-checkbox>
-    </div>
+  <h6>Qual o seu nível?</h6>
+  <label><input type="radio" name="nivel" value="iniciante"> Iniciante</label><br>
+  <label><input type="radio" name="nivel" value="intermediario"> Intermediário</label><br>
+  <label><input type="radio" name="nivel" value="avancado"> Avançado</label>
 
-    <ion-label class="questao">
-      Prefere um plano mais flexível (com substituições) 
-      <br>ou mais estruturado (refeições fixas)?
-    </ion-label>
-    <div class="check">
-      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
-      <ion-checkbox labelPlacement="end">Não</ion-checkbox>
-    </div>
+  <h6>Costuma pular refeições?</h6>
+  <label><input type="radio" name="pular" value="sim"> Sim</label><br>
+  <label><input type="radio" name="pular" value="nao"> Não</label>
 
-    <ion-label class="questao">
-      Gostaria que o plano incluísse cardápio com receitas ou apenas lista de alimentos e quantidades?
-    </ion-label>
-    <div class="check">
-      <ion-checkbox labelPlacement="end">Sim</ion-checkbox>
-      <ion-checkbox labelPlacement="end">Não</ion-checkbox>
-    </div>
+  <button type="submit" class="btn-enviar">Enviar</button>
+</form>
 
-  </div>
 </ion-content>
