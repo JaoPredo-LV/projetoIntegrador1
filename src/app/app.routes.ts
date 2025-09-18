@@ -31,10 +31,6 @@ export const routes: Routes = [
     loadComponent: () => import('./questionario/questionario.page').then( m => m.QuestionarioPage)
   },
   { 
-    path: 'treino-questionario',
-    loadComponent: () => import('./treino-questionario/treino-questionario.page').then( m => m.TreinoQuestionarioPage)
-  },
-  {
     path: 'treinos',
     loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
   },
