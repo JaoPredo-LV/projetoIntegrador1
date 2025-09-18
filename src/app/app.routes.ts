@@ -35,4 +35,15 @@ export const routes: Routes = [
     path: 'treinos',
     loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
   },
+  {
+    path: 'treinos',
+    loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
+  },
+  {
+    path: 'info',
+    loadComponent: () => import('./info/info.page').then( m => m.InfoPage)
+  },
+
+
+
 ];
