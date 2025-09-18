@@ -34,5 +34,13 @@ export const routes: Routes = [
     path: 'treino-questionario',
     loadComponent: () => import('./treino-questionario/treino-questionario.page').then( m => m.TreinoQuestionarioPage)
   },
+  {
+    path: 'treinos',
+    loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
+  },
+  {
+    path: 'treinoa',
+    loadComponent: () => import('./treinoa/treinoa.page').then( m => m.TreinoaPage)
+  },
 
 ];
