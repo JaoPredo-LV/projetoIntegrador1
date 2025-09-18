@@ -1,0 +1,66 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonContent, IonHeader, IonTitle, IonToolbar,IonLabel, IonButtons, IonIcon, IonBackButton,IonAvatar,IonList, IonButton,IonItem,IonThumbnail,IonCard,IonCardContent } from '@ionic/angular/standalone';
+
+
+@Component({
+  selector: 'app-opcaoa',
+  templateUrl: './opcaoa.page.html',
+  styleUrls: ['./opcaoa.page.scss'],
+  standalone: true,
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonLabel, IonButtons, IonIcon, IonBackButton,IonAvatar,IonList, IonButton,IonItem,IonThumbnail,IonCard,IonCardContent ]
+})
+export class OpcaoaPage implements OnInit {
+  intervalos: any[] = []; // guarda os intervalos de cada exercício
+
+  exercicios = [
+    { nome: 'Abdominal Supra', img: 'assets/gifs/abdominalsupra.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Elevação lateral', img: 'assets/gifs/elevacaolateral.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Crucifixo', img: 'assets/gifs/crucifixo.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Encolhimento de Ombros', img: 'assets/gifs/encolhimentoombro.gif', tempo: 0, rodando: false, descanso: '01:00' }
+  ];
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  toggleTimer(index: number) {
+    if (this.exercicios[index].rodando) {
+      this.pausarTimer(index);
+    } else {
+      this.iniciarTimer(index);
+    }
+  }
+
+  iniciarTimer(index: number) {
+    this.exercicios[index].rodando = true;
+
+    this.intervalos[index] = setInterval(() => {
+      this.exercicios[index].tempo += 1000; // adiciona 1 segundo
+    }, 1000);
+  }
+
+  pausarTimer(index: number) {
+    this.exercicios[index].rodando = false;
+    clearInterval(this.intervalos[index]);
+    this.intervalos[index] = null;
+  }
+
+  resetarTimer(index: number) {
+    this.pausarTimer(index);
+    this.exercicios[index].tempo = 0;
+  }
+
+  formatarTempo(ms: number): string {
+    const totalSec = Math.floor(ms / 1000);
+    const min = Math.floor(totalSec / 60);
+    const sec = totalSec % 60;
+    return `${this.pad(min)}:${this.pad(sec)}`;
+  }
+
+  private pad(n: number): string {
+    return n < 10 ? '0' + n : '' + n;
+  }
+}
+

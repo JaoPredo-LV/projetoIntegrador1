@@ -29,5 +29,9 @@ export const routes: Routes = [
     path: 'questionario',
     loadComponent: () => import('./questionario/questionario.page').then( m => m.QuestionarioPage)
   },
+  {
+    path: 'opcaoa',
+    loadComponent: () => import('./opcaoa/opcaoa.page').then( m => m.OpcaoaPage)
+  },
 
 ];
