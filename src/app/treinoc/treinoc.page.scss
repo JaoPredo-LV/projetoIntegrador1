@@ -9,11 +9,7 @@
     -webkit-backdrop-filter: blur(8px);
     text-align: center;
     font-size: small;
-}
-
-ion-toolbar {
-  --background: transparent;
-  box-shadow: none; /* remove a linha embaixo */
+    padding: 5%;
 }
 
 .texto{
@@ -23,6 +19,40 @@ ion-toolbar {
     text-align: center;
 }
 
+.botao{
+    --background:rgb(179, 179, 179);
+    margin-left: 5%;
+    width: 90%;
+    float: left
+}
+
+.botaoD{
+    margin-left: 5%;
+    width: 90%;
+    float: left;
+    color: white;
+}
+.botao-dieta {
+    --background: none; 
+    background-image: url('../../assets/dieta.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    --box-shadow: none;
+  }
+  .botao-dieta .botao-texto {
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  }
 ion-content{    
     --background: none;
     background-image: url("/assets/gym.jpg");
@@ -31,7 +61,7 @@ ion-content{
     background-position: center;
     background-repeat: no-repeat;
   }
-  .exercicio1{
+  .exercicio3{
     background: rgba(255, 255, 255, 0.15); 
     padding: 40px;
     text-align: center;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonToolbar, IonHeader, IonTitle, IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { chevronForwardOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons'
 
@@ -10,7 +10,7 @@ import { addIcons } from 'ionicons'
   templateUrl: './treinoa.page.html',
   styleUrls: ['./treinoa.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonLabel, IonButton, IonIcon, CommonModule, FormsModule]
+  imports: [IonContent, IonToolbar, IonHeader, IonTitle, IonLabel, IonButton, IonIcon, CommonModule, FormsModule]
 })
 export class TreinoaPage implements OnInit {
   usuario = {

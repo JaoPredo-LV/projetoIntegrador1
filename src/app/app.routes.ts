@@ -15,16 +15,8 @@ export const routes: Routes = [
     loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
   },
   {
-    path: 'inicio',
-    loadComponent: () => import('./inicio/inicio.page').then( m => m.InicioPage)
-  },
-  {
     path: 'cadastro',
     loadComponent: () => import('./cadastro/cadastro.page').then( m => m.CadastroPage)
-  },
-  {
-    path: 'principal',
-    loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
   },
   {
     path: 'questionario',
@@ -38,5 +30,22 @@ export const routes: Routes = [
     path: 'treinoa',
     loadComponent: () => import('./treinoa/treinoa.page').then( m => m.TreinoaPage)
   },
+  {
+    path: 'treinob',
+    loadComponent: () => import('./treinob/treinob.page').then( m => m.TreinobPage)
+  },
+  {
+    path: 'treinoc',
+    loadComponent: () => import('./treinoc/treinoc.page').then( m => m.TreinocPage)
+  },
+  {
+  path: 'dieta',
+  loadComponent: () => import('./dieta/dieta.page').then(m => m.DietaPage)
+  },
+  {
+    path: 'principal',
+    loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
+  },
+
 
 ];
