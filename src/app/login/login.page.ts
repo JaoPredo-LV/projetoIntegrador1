@@ -27,7 +27,6 @@ export class LoginPage implements OnInit {
 
     this.autenticacao.logar(email,senha).subscribe((_res:any)=>{
       if(_res.status == 'success'){
-        // Autenticação realizada
         sessionStorage.setItem('token', _res.token);
       }else{
         // Erro na autenticação

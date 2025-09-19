@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, IonList, IonItem } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { chevronBackOutline, personCircleOutline } from 'ionicons/icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.page.html',
   styleUrls: ['./info.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, IonList, IonItem, CommonModule, FormsModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, IonList, IonItem, RouterLink, CommonModule, FormsModule]
 })
 export class InfoPage implements OnInit {
 

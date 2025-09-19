@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <div class="boas-vindas">
+    <ion-label class="text">INFORMAÇÕES PESSOAIS</ion-label>
+  </div>
+
+  <div class="corpo">
+    <img class="fotinha" src="./assets/fotoTeste.png">
+    <ion-list>
+      <ion-item>
+      <ion-input label="Nome:"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-input label="E-mail:" [disabled]="true" value="E-mail aleatório"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-input label="Data de nascimento:" [disabled]="true" value="11/11/1111"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-input label="Gênero:"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="botaoA" color="medium" shape="round" routerLink="/info">Salvar Alterações</ion-button>
+  </div>
+</ion-content>

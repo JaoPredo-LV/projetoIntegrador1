@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { home, personCircleOutline } from 'ionicons/icons';
 import { RealtimeDatabase } from '../firebase/realtime-database';
+import { RequisicaoService } from '../service/requisicao';
 
 
 
@@ -28,7 +29,7 @@ export class CadastroPage implements OnInit {
   public senha:string='';
 
   constructor(
-    public rt: RealtimeDatabase
+    public rs:RequisicaoService
   ) {
     addIcons({home, personCircleOutline})
    }
@@ -37,20 +38,16 @@ export class CadastroPage implements OnInit {
   }
 
   salvar(){
-    this.rt.add('/cadastro',{
-      nome: this.nome,
-      data: this.data,
-      peso: this.peso,
-      altura: this.altura,
-      genero: this.genero,
-      email: this.email,
-      senha: this.senha,
-    },this.id)
-    .subscribe({
-      next: (res:any) =>{
-      },
+    const fd =new FormData();
+    fd.append('controller','cadastro-usuario');
+    fd.append('nome', this.nome);
+    fd.append('data', this.data);
+    fd.append('email', this.email);
+    fd.append('senha', this.senha);
+    fd.append('peso', this.peso);
+    fd.append('altura', this.altura);
+    fd.append('genero', this.genero);    
 
-    })
+    this.rs.post(fd).subscribe();
   }
-
 }
