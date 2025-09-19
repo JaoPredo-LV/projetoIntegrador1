@@ -14,12 +14,6 @@
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
     ACESSAR
   </ion-button>
-  
-  <ion-label class="texto">HITS</ion-label>
-  <ion-button class="botao" shape="round">
-    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-    ACESSAR
-  </ion-button>
 
   <ion-label class="texto">GYM DESAFIOS</ion-label>
   <ion-button class="botao" shape="round">
@@ -27,9 +21,11 @@
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
 
-  <ion-label class="texto">DIETA</ion-label>
-  <ion-button class="botao-dieta">
-    <span class="botao-texto">Acessar</span>
+    <ion-label class="texto">DIETA</ion-label>
+  <ion-button class="botao"  [routerLink]="['/dieta']"shape="round">
+    ACESSAR
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
+
   </div>
 </ion-content>

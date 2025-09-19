@@ -1,37 +1,52 @@
-<ion-header [translucent]="true">
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
+    <ion-toolbar></ion-toolbar>
   </ion-header>
 
   <div class="div-cadastro">
-  <h1 class="intro">Preencha os dados corretamente:</h1>
+    <h1 class="intro">Preencha os dados corretamente:</h1>
 
-  <div class="person">
-    <ion-icon name="person-circle-outline" class="icon-person"></ion-icon>
-    <ion-icon name="camera" class="icon-camera" ></ion-icon>
-  </div> 
-  
+    <!-- Avatar + Ícone da câmera -->
+    <div class="person">
+      <!-- Se já escolheu imagem, mostra a foto -->
+      <img *ngIf="selectedImage; else defaultAvatar"
+           [src]="selectedImage"
+           class="avatar-img" />
+
+      <!-- Avatar padrão -->
+      <ng-template #defaultAvatar>
+        <ion-icon name="person-circle-outline" class="icon-person"></ion-icon>
+      </ng-template>
+
+      <!-- Ícone da câmera -->
+      <ion-icon name="camera" class="icon-camera" (click)="openCameraOrGallery()"></ion-icon>
+    </div> 
+
+    <!-- Formulário -->
     <div class="formulario">
-      <ion-input [(ngModel)]="nome" placeholder="Nome completo:" type="nome"></ion-input>
-
+      <ion-input [(ngModel)]="nome" placeholder="Nome completo:" type="text"></ion-input>
       <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date"></ion-input>
-
       <ion-input [(ngModel)]="peso" placeholder="Peso:" type="number"></ion-input>
-
-      <ion-input [(ngModel)]="altura" placeholder="Altura: (em centimetros)" type="number"></ion-input>
-
-      <ion-input [(ngModel)]="genero" placeholder="Gênero:" type="genero"></ion-input>
-
+      <ion-input [(ngModel)]="altura" placeholder="Altura (em centímetros)" type="number"></ion-input>
+      <ion-input [(ngModel)]="genero" placeholder="Gênero:" type="text"></ion-input>
       <ion-input [(ngModel)]="email" placeholder="E-mail:" type="email"></ion-input>
-
       <ion-input [(ngModel)]="senha" placeholder="Senha:" type="password">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
 
-      <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="salvar()" routerLink="/login">CADASTRAR</ion-button>
+      <!-- Botão -->
+      <ion-button 
+        class="botao" 
+        color="medium" 
+        style="--border-radius: 100px;" 
+        (click)="salvar()" 
+        routerLink="/login">
+        CADASTRAR
+      </ion-button>
     </div>
+  </div>
+</ion-content>
+
 

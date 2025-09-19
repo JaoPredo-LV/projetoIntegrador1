@@ -1,0 +1,54 @@
+<ion-header class="transparent-header">
+  <ion-toolbar>
+    <!-- Botão de voltar -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/principal"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Título -->
+    <ion-title>MINHA DIETA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-bg">
+  <!-- Fundo -->
+  <div class="page-background"></div>
+
+  <!-- Conteúdo -->
+  <div class="container">
+    <h2 class="page-title">Seu Plano Alimentar Semanal!</h2>
+
+    <div class="day-list">
+      <div class="day-card" *ngFor="let dia of dias; let i = index">
+        <button class="day-header" (click)="toggleDia(i)" [class.open]="dia.open">
+          <div class="day-left">
+            <span>{{ dia.nome }}</span>
+            <span class="toggle-hint">{{ dia.open ? 'Fechar' : 'Abrir' }}</span>
+          </div>
+          <div class="day-right">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </button>
+
+        <div class="day-content" [class.open]="dia.open">
+          <ion-item *ngFor="let refeicao of dia.refeicoes">
+            <ion-label>
+              <div class="ref-title">
+                {{ refeicao.titulo }}
+                <span class="hora">{{ refeicao.hora }}</span>
+              </div>
+              <div class="food-list">
+                <p *ngFor="let alimento of refeicao.alimentos">{{ alimento }}</p>
+              </div>
+            </ion-label>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+
+
+

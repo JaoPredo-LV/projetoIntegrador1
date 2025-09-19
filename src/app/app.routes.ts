@@ -30,9 +30,37 @@ export const routes: Routes = [
     path: 'opcaoa',
     loadComponent: () => import('./opcaoa/opcaoa.page').then( m => m.OpcaoaPage)
 },
-
   {
     path: 'treinos',
     loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
   },
+  {
+    path: 'info',
+    loadComponent: () => import('./info/info.page').then( m => m.InfoPage)
+  },
+  {
+    path: 'config',
+    loadComponent: () => import('./config/config.page').then( m => m.ConfigPage)
+  },
+  {
+    path: 'treinob',
+    loadComponent: () => import('./treinob/treinob.page').then( m => m.TreinobPage)
+  },
+  {
+    path: 'treinoc',
+    loadComponent: () => import('./treinoc/treinoc.page').then( m => m.TreinocPage)
+  },
+  {
+  path: 'dieta',
+  loadComponent: () => import('./dieta/dieta.page').then(m => m.DietaPage)
+  },
+  {
+    path: 'principal',
+    loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
+  },
+
+
+
+
+
 ];
