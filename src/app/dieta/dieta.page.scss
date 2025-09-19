@@ -1,22 +1,18 @@
 :host {
   ion-content.page-bg {
-    --background: transparent !important; /* deixa transparente */
+    --background: transparent !important; 
     position: relative;
   }
 }
-
-/* Header transparente */
 ion-header.transparent-header {
-  --background: transparent !important;
-  background: transparent !important;
+
   box-shadow: none;
-  position: absolute;  /* faz o header "flutuar" sobre o fundo */
+  position: absolute;  
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10; /* fica acima do fundo */
+  z-index: 10; 
 }
-
 ion-toolbar {
   --background: transparent !important;
   background: transparent !important;
@@ -24,59 +20,48 @@ ion-toolbar {
  background: rgba(0,0,0,0.3);
 backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px);
-
 }
-
 ion-title {
-  color: #fff; /* título branco */
+  color: #fff; 
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
 }
-
-
-/* Imagem de fundo */
 .page-background {
-  background: url('/assets/dieta.jpg') no-repeat center center / cover;
+  // background: url('/assets/dietapag.jpg') no-repeat center center ;
+  background-image: url('/assets/fundo.jpg');
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; /* atrás do conteúdo */
-  filter: brightness(0.6); /* escurece a imagem para o texto aparecer melhor */
+  z-index: 0; 
+  filter: brightness(0.6); 
 }
-
 .container {
   padding: 18px;
   position: relative;
-  z-index: 1; /* garante que fica acima do fundo */
+  z-index: 1; 
   margin-top: 20px;
 }
-
 .page-title {
   text-align: center;
   margin-top: 10%;
   font-size: medium;
 }
-
-/* Lista de dias */
 .day-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 10%;
 }
-
 .day-card {
   border-radius: 12px;
   overflow: hidden;
   background: rgba(255,255,255,0.12);
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-  backdrop-filter: blur(6px); /* efeito vidro */
+  backdrop-filter: blur(6px); 
 }
-
-/* header (botão) */
 .day-header {
   width: 100%;
   display: flex;
@@ -89,28 +74,22 @@ ion-title {
   color: #fff;
   font-size: 16px;
 }
-
 .day-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
 }
-
 .toggle-hint {
   font-size: 12px;
   color: rgba(255,255,255,0.6);
 }
-
-/* Ícone animado */
 .day-right ion-icon {
   transition: transform .25s ease;
 }
 .day-header.open .day-right ion-icon {
   transform: rotate(180deg);
 }
-
-/* content (refeições) */
 .day-content {
   max-height: 0;
   overflow: hidden;
@@ -118,10 +97,9 @@ ion-title {
   background: rgba(255,255,255,0.08);
   padding: 0 12px;
 }
-
 .day-content.open {
   padding: 12px;
-  max-height: 1000px; /* suficiente para expandir */
+  max-height: 1000px; 
 }
 
 ion-item {
@@ -150,7 +128,6 @@ ion-item {
   color: rgba(255,255,255,0.9);
 }
 
-/* adaptações para tema claro */
 @media (prefers-color-scheme: light) {
   .page-background {
     filter: brightness(0.8);
