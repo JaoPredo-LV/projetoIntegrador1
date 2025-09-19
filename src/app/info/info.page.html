@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <div class="boas-vindas">
+    <ion-button class="botaoR" color="medium"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    <ion-label class="text">INFORMAÇÕES PESSOAIS</ion-label>
+  </div>
+
+  <div class="corpo">
+    <img class="fotinha" src="./assets/fotoTeste.png">
+    <ion-list>
+      <ion-item>Nome:</ion-item>
+      <ion-item>E-mail:</ion-item>
+      <ion-item>Data de nascimento:</ion-item>
+      <ion-item>Gênero:</ion-item>
+    </ion-list>
+
+    <ion-button class="botaoA" color="medium" shape="round" routerLink="/config">Alterar informações</ion-button>
+  </div>
+</ion-content>

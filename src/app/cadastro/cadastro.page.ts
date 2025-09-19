@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { home, personCircleOutline } from 'ionicons/icons';
+import { RequisicaoService } from '../service/requisicao';
 
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { getStorage, ref, uploadString, getDownloadURL } from 'firebase/storage';
@@ -25,9 +28,11 @@ export class CadastroPage {
   email!: string;
   senha!: string;
 
-  constructor() {}
+  constructor(public rs: RequisicaoService) {
+    addIcons({ home, personCircleOutline });
+  }
 
-  // Abrir câmera ou galeria
+  // 📷 Abrir câmera ou galeria
   async openCameraOrGallery() {
     try {
       const image = await Camera.getPhoto({
@@ -43,21 +48,22 @@ export class CadastroPage {
     }
   }
 
-  // Salvar cadastro no Firestore
+  // 💾 Salvar cadastro (Firestore + API Requisição)
   async salvar() {
     try {
-      let photoUrl = null;
+      let photoUrl: string | null = null;
 
+      // Upload da foto no Firebase Storage
       if (this.selectedImage) {
         const storage = getStorage();
         const filePath = `usuarios/${Date.now()}.jpg`;
         const storageRef = ref(storage, filePath);
 
         await uploadString(storageRef, this.selectedImage, 'data_url');
-
         photoUrl = await getDownloadURL(storageRef);
       }
 
+      // Salva no Firestore
       const db = getFirestore();
       await addDoc(collection(db, 'usuarios'), {
         nome: this.nome,
@@ -70,7 +76,22 @@ export class CadastroPage {
         foto: photoUrl,
       });
 
-      console.log('Usuário cadastrado com sucesso!');
+      // Salva também na sua API (via RequisicaoService)
+      const fd = new FormData();
+      fd.append('controller', 'cadastro-usuario');
+      fd.append('nome', this.nome);
+      fd.append('data', this.data);
+      fd.append('email', this.email);
+      fd.append('senha', this.senha);
+      fd.append('peso', String(this.peso));
+      fd.append('altura', String(this.altura));
+      fd.append('genero', this.genero);
+
+      this.rs.post(fd).subscribe({
+        next: () => console.log('Usuário salvo no backend!'),
+        error: (err) => console.error('Erro API:', err),
+      });
+
       alert('Cadastro realizado com sucesso!');
     } catch (err) {
       console.error('Erro ao cadastrar usuário:', err);
@@ -78,3 +99,4 @@ export class CadastroPage {
     }
   }
 }
+

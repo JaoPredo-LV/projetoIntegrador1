@@ -10,7 +10,12 @@ import { AutenticacaoService } from '../service/autenticacao';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonLabel, IonItem, IonList, IonText, IonButton, CommonModule, FormsModule, IonInputPasswordToggle]
+  imports: [
+    IonContent, IonHeader, IonTitle, IonToolbar, 
+    IonInput, IonLabel, IonItem, IonList, 
+    IonText, IonButton, CommonModule, FormsModule, 
+    IonInputPasswordToggle
+  ]
 })
 export class LoginPage implements OnInit {
   public email: string = "";
@@ -19,26 +24,26 @@ export class LoginPage implements OnInit {
   constructor(
     public autenticacao: AutenticacaoService,
     private router: Router // ✅ Injeta Router
-  ) { }
+  ) {}
 
   ngOnInit() {}
 
   logar() {
-    let email = this.email;
-    let senha = this.senha;
+    const email = this.email;
+    const senha = this.senha;
 
     this.autenticacao.logar(email, senha).subscribe((_res: any) => {
-      if (_res.status == 'success') {
-        // Autenticação realizada
+      if (_res.status === 'success') {
+        // ✅ Salva token
         sessionStorage.setItem('token', _res.token);
 
         // ✅ Redireciona para Questionário
         this.router.navigate(['/questionario']);
       } else {
-        // Erro na autenticação
+        // ❌ Erro na autenticação
         console.log("Erro ao logar:", _res.message);
       }
-    })
+    });
   }
 }
 

@@ -21,25 +21,22 @@
       </ng-template>
 
       <!-- Ícone da câmera -->
-      <ion-icon 
-        name="camera" 
-        class="icon-camera" 
-        (click)="openCameraOrGallery()">
-      </ion-icon>
-    </div>  
+      <ion-icon name="camera" class="icon-camera" (click)="openCameraOrGallery()"></ion-icon>
+    </div> 
 
     <!-- Formulário -->
     <div class="formulario">
       <ion-input [(ngModel)]="nome" placeholder="Nome completo:" type="text"></ion-input>
       <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date"></ion-input>
       <ion-input [(ngModel)]="peso" placeholder="Peso:" type="number"></ion-input>
-      <ion-input [(ngModel)]="altura" placeholder="Altura: (em centímetros)" type="number"></ion-input>
+      <ion-input [(ngModel)]="altura" placeholder="Altura (em centímetros)" type="number"></ion-input>
       <ion-input [(ngModel)]="genero" placeholder="Gênero:" type="text"></ion-input>
       <ion-input [(ngModel)]="email" placeholder="E-mail:" type="email"></ion-input>
       <ion-input [(ngModel)]="senha" placeholder="Senha:" type="password">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
 
+      <!-- Botão -->
       <ion-button 
         class="botao" 
         color="medium" 
@@ -51,3 +48,5 @@
     </div>
   </div>
 </ion-content>
+
+

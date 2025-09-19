@@ -1,8 +1,9 @@
+/* Fundo da página */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  background: url('src/assets/gym.jpg') no-repeat center center fixed;
+  background: url('src/assets/fundo.jpg') no-repeat center center fixed;
   background-size: cover;
   object-fit: cover;
   background-position: center;
@@ -23,10 +24,7 @@ body {
 }
 .aviso{
   text-align: center;
-  margin-top: 5%;
-}
-.corpo{
-  text-align: center;
+  margin-top: 10%;
 }
 .questao{
   float: left;
@@ -35,9 +33,28 @@ body {
   width: 100%;
   text-align: left;
 }
-.check{
-  text-align: center;
+input{
+  font-size: 20px;
 }
-.check ion-checkbox{
-  margin: 20px;
+form input[type="radio"] {
+  appearance: none;        
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #fff;   
+  border-radius: 50%;      
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-right: 6px;
+  vertical-align: middle;
+  transition: 0.2s;
+}
+
+form input[type="radio"]:checked {
+  background-color: #fff;  
+}
+form label {
+  color: #fff;              /* branco como na imagem */
+  font-size: 14px;
+  cursor: pointer;
 }
