@@ -1,0 +1,139 @@
+:host {
+  ion-content.page-bg {
+    --background: transparent !important; 
+    position: relative;
+  }
+}
+ion-header.transparent-header {
+
+  box-shadow: none;
+  position: absolute;  
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; 
+}
+ion-toolbar {
+  --background: transparent !important;
+  background: transparent !important;
+  text-align: center;
+ background: rgba(0,0,0,0.3);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+}
+ion-title {
+  color: #fff; 
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.page-background {
+  // background: url('/assets/dietapag.jpg') no-repeat center center ;
+  background-image: url('/assets/fundo.jpg');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; 
+  filter: brightness(0.6); 
+}
+.container {
+  padding: 18px;
+  position: relative;
+  z-index: 1; 
+  margin-top: 20px;
+}
+.page-title {
+  text-align: center;
+  margin-top: 10%;
+  font-size: medium;
+}
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10%;
+}
+.day-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px); 
+}
+.day-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+.day-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.toggle-hint {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+}
+.day-right ion-icon {
+  transition: transform .25s ease;
+}
+.day-header.open .day-right ion-icon {
+  transform: rotate(180deg);
+}
+.day-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .28s ease, padding .28s ease;
+  background: rgba(255,255,255,0.08);
+  padding: 0 12px;
+}
+.day-content.open {
+  padding: 12px;
+  max-height: 1000px; 
+}
+
+ion-item {
+  --background: transparent;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.ref-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hora {
+  margin-left: auto;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.food-list p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+}
+
+@media (prefers-color-scheme: light) {
+  .page-background {
+    filter: brightness(0.8);
+  }
+  .day-card { background: rgba(255,255,255,0.75); }
+  .day-header { color: #000; }
+  .food-list p { color: rgba(0,0,0,0.8); }
+  .hora { color: rgba(0,0,0,0.6); }
+}

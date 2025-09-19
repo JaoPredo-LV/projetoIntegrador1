@@ -1,15 +1,8 @@
 .div-cadastro {
-    display: flex;
-    flex-direction: column;   
-    align-items: center;      
-    justify-content: center;  
-    min-height: 100vh;         
-    text-align: center;       
-    position: fixed;           
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;              
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
 }
 
 .person {
@@ -36,35 +29,41 @@
   }
 
 .intro {
-    text-align: center;
-    font-size: 17px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.formulario {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    justify-content: center;
-    width: 100%;
+.person {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
-ion-input {
-    text-align: left;
-    --background: white;
-    --color: black;
-    --placeholder-color: gray;
-    --padding-start: 15px;
-    --border-radius: 20px;
-    margin: 10px 0;
-    height: 45px;
-    width: 80%;   
-    max-width: 400px;
+.avatar-img,
+.icon-person {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.botao {
-    --border-radius: 50px;
-    width: 50%;       
-    margin: 10px 0;   
-    opacity: 1;
-    color: white;
-  }
+.icon-person {
+  font-size: 120px;
+  color: gray;
+}
+
+.icon-camera {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 32px;
+  color: #666;
+  background: white;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+

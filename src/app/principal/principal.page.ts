@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { chevronForwardOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons'
@@ -10,7 +11,7 @@ import { addIcons } from 'ionicons'
   templateUrl: './principal.page.html',
   styleUrls: ['./principal.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, CommonModule, FormsModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, CommonModule, RouterModule, FormsModule]
 })
 export class PrincipalPage implements OnInit {
   usuario = {
