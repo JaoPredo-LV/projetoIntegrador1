@@ -1,66 +1,119 @@
-.treino-header h2 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 10px 0;
-  color: #fff;
-}
-
-.camera-icon {
-  font-size: 28px;
-}
-
-.exercicio-card {
-  background: #1a1a1a;
-  color: #fff;
-  border-radius: 12px;
-  margin: 15px 10px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-ion-button.finalizar {
-  margin-top: 20px;
-  font-weight: bold;
-  --background: #fff;
-  --color: #000;
-  border-radius: 25px;
-}
-
-ion-item {
-  --background: transparent;
-  color: #fff;
-}
-
-.timer {
+/* Estilos para o novo container do cabeçalho */
+.header-container {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 14px;
+  justify-content: space-between;
+  position: relative; /* ou absolute, dependendo de como você quer que ele se posicione */
+  padding: 10px 15px;
+  color: #fff;
+  z-index: 10;
+  
+  /* Estilo que cria o fundo semitransparente e borrado, como na sua tela 'Meus Treinos' */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.descanso {
-  font-size: 13px;
+/* Estilo para a seta de voltar */
+.botao-voltar {
+  --color: #fff;
+  z-index: 10;
+}
+
+/* Estilo para o título centralizado */
+.titulo-meio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: 500;
   text-align: center;
-  padding: 6px;
-  background: #2a2a2a;
-  color: #bbb;
+  color: #fff;
+  z-index: 5; /* Z-index menor para que os botões fiquem em cima */
 }
 
-.finalizar {
-  margin-top: 20px;
+/* Estilo para o avatar */
+.avatar {
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+}
+
+/* O restante do seu código SCSS original foi mantido abaixo. 
+  Certifique-se de que a sua `ion-content` não tenha a propriedade `padding-top`
+  para que o conteúdo não se sobreponha ao novo cabeçalho.
+*/  
+
+ion-content { 
+  --background: none;
+  background-image: url("/assets/girl.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: darken;
+}
+
+/* Subtítulo */
+.subtitulo {
+  margin: 30px 0 30px 0; /* Ajustado para dar mais espaço */
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
   font-weight: bold;
 }
-ion-content{    
-    --background: none;
-    background-image: url("/assets/girl.jpg");
-    background-size: cover;
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  ion-toolbar {
-  --background: #3a3a3a; /* cinza médio */
-  --color: #fff;         /* cor do texto e ícones */
+
+/* Container */
+.corpo {
+  padding: 0 2.5%;
+}
+
+/* Card de exercício */
+.exercicio-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Info do exercício */
+.exercicio-info {
+  flex: 1;
+  margin: 0 12px;
+}
+.exercicio-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.exercicio-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Timer */
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  gap: 6px;
+}
+.timer span {
+  color: #fff;
+}
+
+/* Botão finalizar */
+.botao {
+  --background: rgb(179, 179, 179);
+  margin: 20px 5% 40px 5%;
+  width: 90%;
+  font-weight: bold;
+  border-radius: 25px;
 }
