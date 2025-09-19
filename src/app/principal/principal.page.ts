@@ -15,8 +15,8 @@ import { addIcons } from 'ionicons'
 })
 export class PrincipalPage implements OnInit {
   usuario = {
-    nome: ""
-  }  
+    nome: sessionStorage.getItem('username')
+  } 
   constructor() { 
     addIcons({chevronForwardOutline})
   }
