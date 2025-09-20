@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar,IonLabel, IonButtons, IonIcon, IonBackButton,IonAvatar,IonList, IonButton,IonItem,IonThumbnail,IonCard,IonCardContent } from '@ionic/angular/standalone';
-
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-opcaoa',

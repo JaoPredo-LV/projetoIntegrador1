@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header></ion-header>
+
+  <div class="boas-vindas">
+  <ion-button color="medium" routerLink="/login"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+  <ion-label class="texto">ESQUECEU SUA SENHA?</ion-label>
+  </div>
+
+  <div class="div-login">
+    <h1 class="intro">Digite seu E-mail</h1>
+    <ion-input placeholder="E-mail:" type="email"></ion-input>
+
+       <ion-button id="pinto" class="botao" color="medium" style="--border-radius: 100px;">ENVIAR CÓDIGO</ion-button>
+       <ion-popover trigger="pinto" triggerAction="click" side="top" alignment="center">
+        <ng-template>
+          <ion-content>Código enviado</ion-content>
+        </ng-template>
+       </ion-popover>
+    </div>
+</ion-content>

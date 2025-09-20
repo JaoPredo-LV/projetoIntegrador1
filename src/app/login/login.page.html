@@ -13,12 +13,9 @@
     </ion-input>
     <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
 
-    <p><a href="#">Esqueci minha senha</a></p>
+       <p><a href="/esenha">Esqueci minha senha</a></p>
 
-    <!-- Botão chama logar() -->
-    <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="logar()">
-      ENTRAR
-    </ion-button>
-  </div>
+       <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="logar()" routerLink="/principal">ENTRAR</ion-button>
+    </div>
 </ion-content>
 

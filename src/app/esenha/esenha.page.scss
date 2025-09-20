@@ -1,0 +1,64 @@
+.div-login {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    justify-content: center;  
+    min-height: 100vh;         
+    text-align: center;       
+    position: fixed;           
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;              
+}
+.intro {
+    text-align: center;
+    font-size: 17px;
+}
+
+ion-input {
+    text-align: left;
+    --background: white;
+    --color: black;
+    --placeholder-color: gray;
+    --padding-start: 15px;
+    --border-radius: 20px;
+    margin: 10px 0;
+    height: 45px;
+    width: 100%;   
+    max-width: 400px;
+}
+
+.label{
+    font-size: x-small;
+}
+.div-login
+{
+    padding:0 10%;
+}
+
+.botao{
+    padding: 30% 0;
+    width: 50%;
+}
+
+ion-popover ion-content {
+  --background: rgba(255, 255, 255, 0.15);
+  align-self: center;
+}
+
+.boas-vindas {
+    background: rgba(255, 255, 255, 0.15); 
+    padding: 40px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    font-size: large;
+    padding: 4%;
+}
+
+.texto{
+    margin-left: 9%;
+}

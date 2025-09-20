@@ -43,20 +43,8 @@ export const routes: Routes = [
     loadComponent: () => import('./config/config.page').then( m => m.ConfigPage)
   },
   {
-    path: 'treinob',
-    loadComponent: () => import('./treinob/treinob.page').then( m => m.TreinobPage)
-  },
-  {
-    path: 'treinoc',
-    loadComponent: () => import('./treinoc/treinoc.page').then( m => m.TreinocPage)
-  },
-  {
-  path: 'dieta',
-  loadComponent: () => import('./dieta/dieta.page').then(m => m.DietaPage)
-  },
-  {
-    path: 'principal',
-    loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
+    path: 'esenha',
+    loadComponent: () => import('./esenha/esenha.page').then( m => m.ESenhaPage)
   },
   {
     path: 'hits',

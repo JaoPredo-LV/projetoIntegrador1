@@ -1,59 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
-    <ion-title >OPÇÃO A</ion-title>
-    <ion-avatar slot="end">
+<ion-header [translucent]="true"></ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <div class="header-container">
+    <ion-back-button defaultHref="/home" class="botao-voltar"></ion-back-button>
+    
+    <div class="titulo-meio">OPÇÃO A</div>
+    
+    <ion-avatar class="avatar">
       <img src="assets/girl.jpg" />
     </ion-avatar>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="ion-padding">
-
-  <!-- Cabeçalho do treino -->
-  <div class="treino-header">
-    <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
-    <h2>Abdômen, Ombro, Peitoral</h2>
   </div>
 
-  <!-- Lista de exercícios -->
-  <ion-list lines="none">
-    <div *ngFor="let ex of exercicios; let i = index"class="exercicio-card">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img [src]="ex.img" />
-        </ion-thumbnail>
+  <div class="subtitulo">
+    Abdômen, Ombro, Peitoral
+  </div>
 
-        <ion-label>
-          <h3>{{ ex.nome }}</h3>
-        </ion-label>
-        
-       <div slot="end" class="timer">
-  <ion-button
-    size="small"
-    [color]="ex.rodando ? 'danger' : 'primary'"
-    (click)="toggleTimer(i)">
-    <ion-icon
-      slot="icon-only"
-      [name]="ex.rodando ? 'pause-outline' : 'play-outline'">
-    </ion-icon>
-  </ion-button>
-  <span>{{ formatarTempo(ex.tempo) }}</span>
-</div>
+  <div class="corpo">
+    <div *ngFor="let ex of exercicios; let i = index" class="exercicio-card">
+      <ion-thumbnail>
+        <img [src]="ex.img" />
+      </ion-thumbnail>
 
-      </ion-item>
-
-      <div class="descanso">
-        {{ ex.descanso }} (Descanso entre séries)
+      <div class="exercicio-info">
+        <h3>{{ ex.nome }}</h3>
+        <p>{{ ex.descanso }} (Descanso entre séries)</p>
       </div>
 
+      <div class="timer">
+        <ion-button
+          size="small"
+          shape="round"
+          [color]="ex.rodando ? 'danger' : 'primary'"
+          (click)="toggleTimer(i)">
+          <ion-icon
+            slot="icon-only"
+            [name]="ex.rodando ? 'pause-outline' : 'play-outline'">
+          </ion-icon>
+        </ion-button>
+        <span>{{ formatarTempo(ex.tempo) }}</span>
+      </div>
     </div>
-  </ion-list>
+  </div>
 
-  <!-- Botão finalizar -->
-  <ion-button expand="block" shape="round" color="dark" class="finalizar">
-    Finalizar treino
+  <ion-button expand="block" shape="round" class="botao">
+    FINALIZAR TREINO
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
 
 </ion-content>
