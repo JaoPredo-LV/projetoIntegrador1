@@ -3,35 +3,36 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-
-  <div class="boas-vindas">
-    SEJA BEM-VINDA, {{ usuario.nome }}!
-  </div>
+<div class="hits-header">
+  <ion-back-button defaultHref="/home" text="" class="voltar"></ion-back-button>
+  <h1 class="hits-title">HITS</h1>
+</div>
 
   <div class="corpo">
-  <ion-label class="texto">MEUS TREINOS</ion-label>
-<ion-button class="botao"  [routerLink]="['/treinos']"shape="round">
+  <ion-label class="texto">HIT NA BIKE</ion-label>
+  <ion-button class="botao" shape="round">
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
     ACESSAR
   </ion-button>
 
-  <ion-label class="texto">GYM DESAFIOS</ion-label>
+  <ion-label class="texto">HIT ELÍPTICO</ion-label>
   <ion-button class="botao" shape="round">
     ACESSAR
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
 
-    <ion-label class="texto">HITS</ion-label>
- <ion-button class="botao"  [routerLink]="['/hits']"shape="round">
-    ACESSAR
+  <div class="corpo">
+  <ion-label class="texto">HIT NA ESTEIRA</ion-label>
+  <ion-button class="botao" shape="round">
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    ACESSAR
   </ion-button>
 
-    <ion-label class="texto">DIETA</ion-label>
-  <ion-button class="botao"  [routerLink]="['/dieta']"shape="round">
-    ACESSAR
+  <div class="corpo">
+  <ion-label class="texto">DANÇA</ion-label>
+  <ion-button class="botao" shape="round">
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    ACESSAR
   </ion-button>
 
   </div>
-</ion-content>

@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { home, personCircleOutline } from 'ionicons/icons';
 import { RequisicaoService } from '../service/requisicao';
+import { RouterModule } from '@angular/router';
 
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { getStorage, ref, uploadString, getDownloadURL } from 'firebase/storage';
@@ -15,7 +16,7 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
   templateUrl: './cadastro.page.html',
   styleUrls: ['./cadastro.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule], // 🔥 necessário no standalone
+  imports: [CommonModule, RouterModule, FormsModule, IonicModule], // 🔥 necessário no standalone
 })
 export class CadastroPage {
   selectedImage: string | null = null;
