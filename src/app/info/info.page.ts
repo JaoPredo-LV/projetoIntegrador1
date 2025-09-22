@@ -14,6 +14,21 @@ import { RouterLink } from '@angular/router';
   imports: [IonContent, IonHeader,  IonLabel, IonButton, IonIcon, IonList, IonItem, RouterLink, CommonModule, FormsModule]
 })
 export class InfoPage implements OnInit {
+  usuario = {
+    nome: sessionStorage.getItem('username')
+  }
+
+  email = {
+    email: sessionStorage.getItem('email')
+  }
+
+  date = {
+    dataN: sessionStorage.getItem('dataN')
+  }
+
+  genero = {
+    genero: sessionStorage.getItem('genero')
+  }
 
   constructor() { 
     addIcons({chevronBackOutline, personCircleOutline})

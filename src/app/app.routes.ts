@@ -35,6 +35,10 @@ export const routes: Routes = [
     loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
   },
   {
+  path: 'dieta',
+  loadComponent: () => import('./dieta/dieta.page').then(m => m.DietaPage),
+  },
+  {
     path: 'info',
     loadComponent: () => import('./info/info.page').then( m => m.InfoPage)
   },
@@ -43,24 +47,25 @@ export const routes: Routes = [
     loadComponent: () => import('./config/config.page').then( m => m.ConfigPage)
   },
   {
-    path: 'treinob',
-    loadComponent: () => import('./treinob/treinob.page').then( m => m.TreinobPage)
+    path: 'esenha',
+    loadComponent: () => import('./esenha/esenha.page').then( m => m.ESenhaPage)
   },
   {
-    path: 'treinoc',
-    loadComponent: () => import('./treinoc/treinoc.page').then( m => m.TreinocPage)
+    path: 'hits',
+    loadComponent: () => import('./hits/hits.page').then( m => m.HitsPage)
   },
   {
-  path: 'dieta',
-  loadComponent: () => import('./dieta/dieta.page').then(m => m.DietaPage)
+    path: 'gymdesafios',
+    loadComponent: () => import('./gymdesafios/gymdesafios.page').then( m => m.GymdesafiosPage)
   },
   {
-    path: 'principal',
-    loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
+    path: 'hitdez',
+    loadComponent: () => import('./hitdez/hitdez.page').then( m => m.HitdezPage)
   },
-
-
-
+  {
+    path: 'tempo',
+    loadComponent: () => import('./tempo/tempo.page').then( m => m.TempoPage)
+  },
 
 
 ];

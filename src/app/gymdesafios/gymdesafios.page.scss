@@ -1,16 +1,3 @@
-.titulo {
-  background: rgba(255, 255, 255, 0.15); 
-  padding: 40px;
-  text-align: center;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  backdrop-filter: blur(8px); 
-  -webkit-backdrop-filter: blur(8px);
-  text-align: center;
-  font-size: small;
-  padding: 5%;
-}
 :host {
   ion-content.page-bg {
     --background: transparent !important; 
@@ -40,7 +27,7 @@
   }
 }
 .page-background {
-  background-image: url('/assets/fundo.jpg') ;
+  background-image: url('/assets/gym.jpg') ;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -70,6 +57,7 @@
   border-radius: 12px;
   overflow: hidden;
   background: rgba(255,255,255,0.12);
+  margin-top: 30px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
   backdrop-filter: blur(6px); 
 }

@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { OpcaoaPage } from './opcaoa.page';
+import { ESenhaPage } from './esenha.page';
 
-describe('OpcaoaPage', () => {
-  let component: OpcaoaPage;
-  let fixture: ComponentFixture<OpcaoaPage>;
+describe('ESenhaPage', () => {
+  let component: ESenhaPage;
+  let fixture: ComponentFixture<ESenhaPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OpcaoaPage);
+    fixture = TestBed.createComponent(ESenhaPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -15,4 +15,3 @@ describe('OpcaoaPage', () => {
     expect(component).toBeTruthy();
   });
 });
-
