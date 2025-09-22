@@ -1,26 +1,21 @@
-/* Estilos para o novo container do cabeçalho */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative; /* ou absolute, dependendo de como você quer que ele se posicione */
+  position: relative; 
   padding: 10px 15px;
   color: #fff;
   z-index: 10;
-  
-  /* Estilo que cria o fundo semitransparente e borrado, como na sua tela 'Meus Treinos' */
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* Estilo para a seta de voltar */
 .botao-voltar {
   --color: #fff;
   z-index: 10;
 }
 
-/* Estilo para o título centralizado */
 .titulo-meio {
   position: absolute;
   left: 50%;
@@ -29,20 +24,14 @@
   font-weight: 500;
   text-align: center;
   color: #fff;
-  z-index: 5; /* Z-index menor para que os botões fiquem em cima */
+  z-index: 5; 
 }
 
-/* Estilo para o avatar */
 .avatar {
   width: 35px;
   height: 35px;
   z-index: 10;
 }
-
-/* O restante do seu código SCSS original foi mantido abaixo. 
-  Certifique-se de que a sua `ion-content` não tenha a propriedade `padding-top`
-  para que o conteúdo não se sobreponha ao novo cabeçalho.
-*/  
 
 ion-content { 
   --background: none;
@@ -54,21 +43,20 @@ ion-content {
   background-blend-mode: darken;
 }
 
-/* Subtítulo */
 .subtitulo {
-  margin: 30px 0 30px 0; /* Ajustado para dar mais espaço */
+  margin: 30px 0 30px 0; 
   text-align: center;
   color: #fff;
   font-size: 18px;
-  font-weight: bold;
+  margin-top: 20%;
 }
 
-/* Container */
 .corpo {
   padding: 0 2.5%;
+  align-items: center;
+  margin-top: 15%;
 }
 
-/* Card de exercício */
 .exercicio-card {
   display: flex;
   align-items: center;
@@ -81,7 +69,6 @@ ion-content {
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* Info do exercício */
 .exercicio-info {
   flex: 1;
   margin: 0 12px;
@@ -89,7 +76,6 @@ ion-content {
 .exercicio-info h3 {
   margin: 0;
   font-size: 18px;
-  font-weight: bold;
 }
 .exercicio-info p {
   margin: 4px 0 0;
@@ -97,7 +83,6 @@ ion-content {
   opacity: 0.8;
 }
 
-/* Timer */
 .timer {
   display: flex;
   flex-direction: column;
@@ -109,11 +94,9 @@ ion-content {
   color: #fff;
 }
 
-/* Botão finalizar */
 .botao {
   --background: rgb(179, 179, 179);
   margin: 20px 5% 40px 5%;
   width: 90%;
-  font-weight: bold;
   border-radius: 25px;
 }
