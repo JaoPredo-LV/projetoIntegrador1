@@ -35,6 +35,10 @@ export const routes: Routes = [
     loadComponent: () => import('./treinos/treinos.page').then( m => m.TreinosPage)
   },
   {
+  path: 'dieta',
+  loadComponent: () => import('./dieta/dieta.page').then(m => m.DietaPage),
+  },
+  {
     path: 'info',
     loadComponent: () => import('./info/info.page').then( m => m.InfoPage)
   },
@@ -49,7 +53,16 @@ export const routes: Routes = [
   {
     path: 'hits',
     loadComponent: () => import('./hits/hits.page').then( m => m.HitsPage)
-  },  {
+  },
+  {
+    path: 'gymdesafios',
+    loadComponent: () => import('./gymdesafios/gymdesafios.page').then( m => m.GymdesafiosPage)
+  },
+  {
+    path: 'hitdez',
+    loadComponent: () => import('./hitdez/hitdez.page').then( m => m.HitdezPage)
+  },
+  {
     path: 'tempo',
     loadComponent: () => import('./tempo/tempo.page').then( m => m.TempoPage)
   },

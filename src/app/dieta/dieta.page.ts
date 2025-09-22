@@ -82,7 +82,6 @@ export class DietaPage implements OnInit {
 
   ngOnInit() {}
 
-  // ✅ alterna abrir/fechar dia
   toggleDia(index: number) {
     this.dias[index].open = !this.dias[index].open;
   }
