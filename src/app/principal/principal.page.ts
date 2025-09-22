@@ -17,7 +17,7 @@ export class PrincipalPage implements OnInit {
   usuario = {
     nome: sessionStorage.getItem('username')
   } 
-  constructor() { 
+  constructor() {
     addIcons({chevronForwardOutline})
   }
 
