@@ -3,30 +3,24 @@
 <ion-content [fullscreen]="true">
 
 <div class="topo">
-  <ion-back-button class="voltar" defaultHref="/home" text=""></ion-back-button>
+  <ion-button class="voltar" routerLink="/home" text=""></ion-button>
 
   <h1 class="intro">PRENCHA OS DADOS</h1>
 </div>
 
 
-  <div class="div-cadastro">
-    <div class="person">
-      <img *ngIf="selectedImage; else defaultAvatar"
-           [src]="selectedImage"
-           class="avatar-img" />
-
+<div>
+    <div>
       <ng-template #defaultAvatar>
         <ion-icon name="person-circle-outline" class="icon-person"></ion-icon>
       </ng-template>
-
-      <ion-icon name="camera" class="icon-camera" (click)="openCameraOrGallery()"></ion-icon>
     </div> 
 
     <div class="formulario">
-      <ion-input [(ngModel)]="nome" placeholder="Nome completo:" type="text"></ion-input>
+      <ion-input [(ngModel)]="nome" labelPlacement="floating" label="Nome completo:" type="text"></ion-input>
       <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date"></ion-input>
-      <ion-input [(ngModel)]="peso" placeholder="Peso:" type="number"></ion-input>
-      <ion-input [(ngModel)]="altura" placeholder="Altura (em centímetros)" type="number"></ion-input>
+      <ion-input [(ngModel)]="peso" labelPlacement="floating" label="Nome completo:" type="number"></ion-input>
+      <ion-input [(ngModel)]="altura" placeholder="Altura (em centímetros):" type="number"></ion-input>
       <ion-input [(ngModel)]="genero" placeholder="Gênero:" type="text"></ion-input>
       <ion-input [(ngModel)]="email" placeholder="E-mail:" type="email"></ion-input>
       <ion-input [(ngModel)]="senha" placeholder="Senha:" type="password">
@@ -34,12 +28,7 @@
       </ion-input>
 
       <div class="botao-container">
-        <ion-button 
-          class="botao" 
-          color="light" 
-          style="--border-radius: 100px;" 
-          (click)="salvar()" 
-          routerLink="/login">
+        <ion-button (click)="salvar()" routerLink="/login">
           CADASTRAR
         </ion-button>
       </div>

@@ -1,22 +1,3 @@
-.topo {
-  position: relative;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  padding: 12px 0;
-}
-
-.voltar {
-  position: absolute;
-  left: 12px; 
-  top: 50%;
-  transform: translateY(-50%);
-  --background: transparent;
-  --box-shadow: none;
-  color: #fff;
-  font-size: 22px;
-}
-
 .intro {
   margin: 0;
   text-align: center;
