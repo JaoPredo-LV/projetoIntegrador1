@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonButtons, IonBackButton, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonButtons, IonBackButton, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonIcon } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-dieta',
   templateUrl: './dieta.page.html',
   styleUrls: ['./dieta.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonBackButton, IonButtons, FormsModule, IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonButton, IonIcon]
+  imports: [CommonModule, IonBackButton, IonButtons, FormsModule, IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonIcon]
 })
 export class DietaPage implements OnInit {
 
