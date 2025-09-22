@@ -57,12 +57,15 @@ export const routes: Routes = [
   {
     path: 'gymdesafios',
     loadComponent: () => import('./gymdesafios/gymdesafios.page').then( m => m.GymdesafiosPage)
-  },  {
+  },
+  {
     path: 'hitdez',
     loadComponent: () => import('./hitdez/hitdez.page').then( m => m.HitdezPage)
   },
-
-
+  {
+    path: 'tempo',
+    loadComponent: () => import('./tempo/tempo.page').then( m => m.TempoPage)
+  },
 
 
 ];

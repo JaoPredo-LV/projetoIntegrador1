@@ -22,7 +22,7 @@ export class InfoPage implements OnInit {
     email: sessionStorage.getItem('email')
   }
 
-  dataN = {
+  date = {
     dataN: sessionStorage.getItem('dataN')
   }
 
