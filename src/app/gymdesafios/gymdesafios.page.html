@@ -13,32 +13,40 @@
   <div class="container">
     <h2 class="page-title">Seus desafios semanais!!</h2>
 
-
-<div class="day-list">
-  <div class="day-card" *ngFor="let dia of dias; let i = index">
-    <button class="day-header" (click)="toggleDia(i)" [class.open]="dia.open">
-      <div class="day-left">
-        <span>{{ dia.nome }}</span>
-        <span class="toggle-hint">{{ dia.open ? 'Fechar' : 'Abrir' }}</span>
-      </div>
-      <div class="day-right">
-        <ion-icon name="chevron-down-outline"></ion-icon>
-      </div>
-    </button>
-
-    <div class="day-content" [class.open]="dia.open">
-      <ion-item *ngFor="let desafio of dia.desafios">
-        <ion-label>
-          <div class="ref-title">
-            {{ desafio.titulo }}
+    <div class="day-list">
+      <div class="day-card" *ngFor="let dia of dias; let i = index">
+        <button class="day-header" (click)="toggleDia(i)" [class.open]="dia.open">
+          <div class="day-left">
+            <span>{{ dia.nome }}</span>
+            <span class="toggle-hint">{{ dia.open ? 'Fechar' : 'Abrir' }}</span>
           </div>
-          <div class="treino-list">
-             <p *ngFor="let treino of desafio.treino">{{ treino }}</p>
+          <div class="day-right">
+            <ion-icon name="chevron-down-outline"></ion-icon>
           </div>
-        </ion-label>
-      </ion-item>
+        </button>
+
+        <div class="day-content" [class.open]="dia.open">
+          <ion-item *ngFor="let desafio of dia.desafios">
+            <ion-label>
+              <div class="ref-title">
+                {{ desafio.titulo }}
+              </div>
+            </ion-label>
+
+            <div class="treino-list">
+              <ion-item *ngFor="let treino of desafio.treino" lines="none">
+                <ion-checkbox slot="start" [(ngModel)]="treino.checked"></ion-checkbox>
+                <ion-label>{{ treino.nome }}</ion-label>
+              </ion-item>
+            </div>
+          </ion-item>
+        </div>
+      </div>
     </div>
   </div>
+  <div style="display:flex; justify-content:center; margin-top:40px;">
+  <ion-button class="botao"  [routerLink]="['/principal']"shape="round">
+    FINALIZAR
+  </ion-button>
 </div>
-
-
+</ion-content>

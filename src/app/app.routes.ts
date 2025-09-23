@@ -65,7 +65,19 @@ export const routes: Routes = [
   {
     path: 'tempo',
     loadComponent: () => import('./tempo/tempo.page').then( m => m.TempoPage)
+  },  {
+    path: 'hitvinte',
+    loadComponent: () => import('./hitvinte/hitvinte.page').then( m => m.HitvintePage)
   },
+  {
+    path: 'hitquinze',
+    loadComponent: () => import('./hitquinze/hitquinze.page').then( m => m.HitquinzePage)
+  },
+  {
+    path: 'hitvinteecinco',
+    loadComponent: () => import('./hitvinteecinco/hitvinteecinco.page').then( m => m.HitvinteecincoPage)
+  },
+
 
 
 ];

@@ -14,6 +14,13 @@
     --color: #fff;
   }
 
+  ion-checkbox {
+  --size: 18px;
+  --checkmark-color: #fff;
+  --background-checked: #6c1f1e;
+}
+
+
   .header-title {
     position: absolute; 
     left: 0;
@@ -99,12 +106,20 @@
 .day-content.open {
   padding: 12px;
   max-height: 1000px; 
+  font-size: small;
 }
 
 ion-item {
   --background: transparent;
   border-radius: 8px;
   margin: 8px 0;
+}
+
+.botao{
+  --border-radius: 50px;
+  width: 50%;       
+  margin: 10px 0;   
+  color: white;
 }
 
 .ref-title {
