@@ -77,6 +77,10 @@ export const routes: Routes = [
     path: 'hitvinteecinco',
     loadComponent: () => import('./hitvinteecinco/hitvinteecinco.page').then( m => m.HitvinteecincoPage)
   },
+  {
+    path: 'hiteliptco',
+    loadComponent: () => import('./hiteliptco/hiteliptco.page').then( m => m.HiteliptcoPage)
+  },
 
 
 

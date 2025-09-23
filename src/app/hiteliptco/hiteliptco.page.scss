@@ -1,0 +1,70 @@
+.hits-header {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    height: 50px; 
+  }
+  
+  .hits-title {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .voltar {
+    position: absolute;
+    left: 10px;  
+    top: 50%;
+    transform: translateY(-50%); 
+    --background: transparent;
+    --box-shadow: none;
+    align-items: center;
+  }
+ion-content {
+    --background: none;
+    background: url('/assets/girl.jpg') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .table-container {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    padding: 16px;
+    width: 100%;
+    max-width: 360px;
+    color: #fff;
+    align-items: center;
+    margin-top: 50%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+
+  th, td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 4px;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  .start-btn {
+    --background: #000;
+    --background-hover: #222;
+    --color: #fff;
+    border-radius: 50px;
+    align-items: center;
+  }
+  
