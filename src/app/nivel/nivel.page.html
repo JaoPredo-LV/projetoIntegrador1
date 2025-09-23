@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+ <div class="header-container">
+    <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">HIT 10'- Nível 0</div>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Círculo central -->
+<div class="circle" [ngStyle]="{'background': 'conic-gradient(white ' + progressoPorcentagem + '%, transparent ' + progressoPorcentagem + '%)'}">
+  <span>{{ formatarTempo(tempoDoTreino) }}</span>
+</div>
+
+  <!-- Velocidade atual -->
+  <div class="info">
+    <p class="label">Velocidade atual</p>
+    <h2 class="speed">4–5 km/h</h2>
+    <p class="next">próxima 5–6 km/h</p>
+  </div>
+
+  <!-- Gráfico de barras -->
+<div class="chart">
+  <div *ngFor="let altura of alturasFinais; let i = index" class="bar-container">
+    <div class="bar-fundo" [ngStyle]="{'height': altura + '%'}"></div>
+    
+    <div class="bar-preenchimento" [ngStyle]="{'height': alturasAtuais[i] + '%'}"></div>
+  </div>
+</div>
+</ion-content>
