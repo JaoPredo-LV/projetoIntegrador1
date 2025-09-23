@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { home, personCircleOutline } from 'ionicons/icons';
 import { RequisicaoService } from '../service/requisicao';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -25,7 +25,8 @@ export class CadastroPage {
   public email:string="";
   public senha:string="";
   constructor(
-    public rs:RequisicaoService
+    public rs:RequisicaoService,
+    private router: Router
   ) { 
     addIcons({home, personCircleOutline})
    }
@@ -45,5 +46,7 @@ export class CadastroPage {
     fd.append('senha', this.senha);
 
     this.rs.post(fd).subscribe();
+
+    this.router.navigateByUrl('/questionario')
   }
 }

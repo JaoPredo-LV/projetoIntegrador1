@@ -24,4 +24,13 @@ export class RequisicaoService {
     }
     return this.http.post('/requisicao', formData, HttpOptions)
   }
+
+  uploaded(formData:any,params?:any){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin' : '*'
+      })      
+    };
+    return this.http.post('/upload',formData,httpOptions);
+  }  
 }
