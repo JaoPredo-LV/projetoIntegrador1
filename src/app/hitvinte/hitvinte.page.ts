@@ -6,14 +6,14 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-hitdez',
-  templateUrl: './hitdez.page.html',
-  styleUrls: ['./hitdez.page.scss'],
+  selector: 'app-hitvinte',
+  templateUrl: './hitvinte.page.html',
+  styleUrls: ['./hitvinte.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons,IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 
-export class HitdezPage {
+export class HitvintePage {
   niveis = [
     { numero: 0, titulo: 'Muito Fácil' },
     { numero: 1, titulo: 'Fácil' },

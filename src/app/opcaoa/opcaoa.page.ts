@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonLabel, IonButtons, IonIcon, IonBackButton,IonAvatar,IonList, IonButton,IonItem,IonThumbnail,IonCard,IonCardContent } from '@ionic/angular/standalone';
-import { NavController } from '@ionic/angular';
+import { IonContent, IonHeader,  IonIcon, IonBackButton,IonAvatar, IonButton,IonThumbnail } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-opcaoa',
   templateUrl: './opcaoa.page.html',
   styleUrls: ['./opcaoa.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonLabel, IonButtons, IonIcon, IonBackButton,IonAvatar,IonList, IonButton,IonItem,IonThumbnail,IonCard,IonCardContent ]
+  imports: [IonContent, IonHeader, CommonModule, FormsModule, IonIcon, IonBackButton,IonAvatar, IonButton,IonThumbnail, ]
 })
 export class OpcaoaPage implements OnInit {
   intervalos: any[] = []; // guarda os intervalos de cada exercício

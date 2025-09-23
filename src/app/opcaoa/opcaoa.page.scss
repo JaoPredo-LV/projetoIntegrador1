@@ -34,12 +34,13 @@
 }
 
 ion-content { 
+  
   --background: none;
   background-image: url("/assets/girl.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
 }
 
@@ -62,6 +63,7 @@ ion-content {
   align-items: center;
   justify-content: space-between;
   background: rgba(255, 255, 255, 0.1);
+  
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 15px;
