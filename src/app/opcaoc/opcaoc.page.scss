@@ -1,0 +1,104 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; 
+  padding: 10px 15px;
+  color: #fff;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.botao-voltar {
+  --color: #fff;
+  z-index: 10;
+}
+
+.titulo-meio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  z-index: 5; 
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+}
+
+ion-content { 
+  
+  --background: none;
+  background-image: url("/assets/girl.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: darken;
+}
+
+.subtitulo {
+  margin: 30px 0 30px 0; 
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20%;
+}
+
+.corpo {
+  padding: 0 2.5%;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.exercicio-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.exercicio-info {
+  flex: 1;
+  margin: 0 12px;
+}
+.exercicio-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.exercicio-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  gap: 6px;
+}
+.timer span {
+  color: #fff;
+}
+
+.botao {
+  --background: rgb(179, 179, 179);
+  margin: 20px 5% 40px 5%;
+  width: 90%;
+  border-radius: 25px;
+}

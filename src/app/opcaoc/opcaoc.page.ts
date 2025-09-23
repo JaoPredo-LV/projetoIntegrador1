@@ -5,20 +5,20 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonHeader,  IonIcon, IonBackButton,IonAvatar, IonButton,IonThumbnail } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-opcaoa',
-  templateUrl: './opcaoa.page.html',
-  styleUrls: ['./opcaoa.page.scss'],
+  selector: 'app-opcaoc',
+  templateUrl: './opcaoc.page.html',
+  styleUrls: ['./opcaoc.page.scss'],
   standalone: true,
   imports: [IonContent, RouterModule, IonHeader, CommonModule, FormsModule, IonIcon, IonBackButton,IonAvatar, IonButton,IonThumbnail, ]
 })
-export class OpcaoaPage implements OnInit {
-  intervalos: any[] = [];
+export class OpcaocPage implements OnInit {
+  intervalos: any[] = []; 
 
   exercicios = [
-    { nome: 'Abdominal Supra', img: 'assets/gifs/abdominalsupra.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Elevação lateral', img: 'assets/gifs/elevacaolateral.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Crucifixo', img: 'assets/gifs/crucifixo.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Encolhimento de Ombros', img: 'assets/gifs/encolhimentoombro.gif', tempo: 0, rodando: false, descanso: '01:00' }
+    { nome: 'Abdominal Bicicleta', img: 'assets/gifs/abdominalbicicleta.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Rosca martelo', img: 'assets/gifs/roscamartelo.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Cavalinho', img: 'assets/gifs/cavalinho.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Remada fechada', img: 'assets/gifs/remadafechada.gif', tempo: 0, rodando: false, descanso: '01:00' }
   ];
 
   constructor() {}
@@ -63,4 +63,5 @@ export class OpcaoaPage implements OnInit {
     return n < 10 ? '0' + n : '' + n;
   }
 }
+
 

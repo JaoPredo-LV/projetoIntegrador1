@@ -5,20 +5,20 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonHeader,  IonIcon, IonBackButton,IonAvatar, IonButton,IonThumbnail } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-opcaoa',
-  templateUrl: './opcaoa.page.html',
-  styleUrls: ['./opcaoa.page.scss'],
+  selector: 'app-opcaob',
+  templateUrl: './opcaob.page.html',
+  styleUrls: ['./opcaob.page.scss'],
   standalone: true,
   imports: [IonContent, RouterModule, IonHeader, CommonModule, FormsModule, IonIcon, IonBackButton,IonAvatar, IonButton,IonThumbnail, ]
 })
-export class OpcaoaPage implements OnInit {
-  intervalos: any[] = [];
+export class OpcaobPage implements OnInit {
+  intervalos: any[] = []; 
 
   exercicios = [
-    { nome: 'Abdominal Supra', img: 'assets/gifs/abdominalsupra.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Elevação lateral', img: 'assets/gifs/elevacaolateral.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Crucifixo', img: 'assets/gifs/crucifixo.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Encolhimento de Ombros', img: 'assets/gifs/encolhimentoombro.gif', tempo: 0, rodando: false, descanso: '01:00' }
+    { nome: 'Agachamento livre', img: 'assets/gifs/agachamento.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Cadeira extensora', img: 'assets/gifs/cadeiraestensora.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Leg press 45°', img: 'assets/gifs/legpress.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Agachamento smith', img: 'assets/gifs/smith.gif', tempo: 0, rodando: false, descanso: '01:00' }
   ];
 
   constructor() {}
@@ -37,7 +37,7 @@ export class OpcaoaPage implements OnInit {
     this.exercicios[index].rodando = true;
 
     this.intervalos[index] = setInterval(() => {
-      this.exercicios[index].tempo += 1000;
+      this.exercicios[index].tempo += 1000; 
     }, 1000);
   }
 
@@ -63,4 +63,5 @@ export class OpcaoaPage implements OnInit {
     return n < 10 ? '0' + n : '' + n;
   }
 }
+
 

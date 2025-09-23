@@ -86,6 +86,14 @@ export const routes: Routes = [
     path: 'hiteliptco',
     loadComponent: () => import('./hiteliptco/hiteliptco.page').then( m => m.HiteliptcoPage)
   },
+  {
+    path: 'opcaob',
+    loadComponent: () => import('./opcaob/opcaob.page').then( m => m.OpcaobPage)
+  },
+  {
+    path: 'opcaoc',
+    loadComponent: () => import('./opcaoc/opcaoc.page').then( m => m.OpcaocPage)
+  },
 
 
 
