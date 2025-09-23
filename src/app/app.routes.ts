@@ -82,6 +82,10 @@ export const routes: Routes = [
     path: 'nivel',
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
   },
+  {
+    path: 'hiteliptco',
+    loadComponent: () => import('./hiteliptco/hiteliptco.page').then( m => m.HiteliptcoPage)
+  },
 
 
 
