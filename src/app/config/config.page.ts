@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, IonList, IonItem, IonInput } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonLabel, IonButton,IonList, IonItem, IonInput } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { getDownloadURL, getStorage, ref, uploadString } from 'firebase/storage';
@@ -13,7 +13,7 @@ import { RequisicaoService } from '../service/requisicao';
   templateUrl: './config.page.html',
   styleUrls: ['./config.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton, IonIcon, IonList, IonItem, IonInput, RouterLink, CommonModule, FormsModule]
+  imports: [IonContent, IonHeader, IonLabel, IonButton, IonList, IonItem, IonInput, RouterLink, CommonModule, FormsModule]
 })
 export class ConfigPage implements OnInit {
   public nome:string="";

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonLabel, IonItem, IonList, IonText, IonButton } from '@ionic/angular/standalone';
+import { IonContent,IonLabel, IonButton } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonLabel, IonItem, IonList, IonText, IonButton, RouterLink, CommonModule, FormsModule]
+  imports: [IonContent,  IonLabel, IonButton, RouterLink, CommonModule, FormsModule]
 })
 export class HomePage implements OnInit {
 
