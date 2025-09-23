@@ -34,7 +34,7 @@ export class CadastroPage {
   }
 
   salvar(){
-    const fd =new FormData();
+    const fd = new FormData();
     fd.append('controller','cadastro-usuario');
     fd.append('nome', this.nome);
     fd.append('data', this.data);

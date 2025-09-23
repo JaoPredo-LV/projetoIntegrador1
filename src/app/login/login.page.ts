@@ -42,8 +42,7 @@ export class LoginPage implements OnInit {
         sessionStorage.setItem('dataN', _res.dataN);
         sessionStorage.setItem('genero', _res.genero);
 
-        // ✅ Redireciona para Questionário
-        this.router.navigate(['/questionario']);
+        
       } else {
         // ❌ Erro na autenticação
         console.log("Erro ao logar:", _res.message);
