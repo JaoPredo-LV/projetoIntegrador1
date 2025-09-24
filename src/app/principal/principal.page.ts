@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-<<<<<<< HEAD
-import { IonContent, IonHeader,IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
-import { chevronBackCircleOutline, chevronForwardOutline } from 'ionicons/icons';
-=======
 import { IonContent, IonHeader,IonLabel, IonButton, IonIcon, IonBackButton } from '@ionic/angular/standalone';
-import { chevronForwardOutline } from 'ionicons/icons';
->>>>>>> 60132cd (atualizando)
+import { chevronForwardOutline, chevronBackCircleOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons'
 
 @Component({
