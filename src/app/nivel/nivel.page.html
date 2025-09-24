@@ -29,4 +29,7 @@
     <div class="bar-preenchimento" [ngStyle]="{'height': alturasAtuais[i] + '%'}"></div>
   </div>
 </div>
+<div class="concluido" *ngIf="treinoConcluido">
+  <h2>TREINO CONCLUÍDO</h2>
+</div>
 </ion-content>
