@@ -36,14 +36,14 @@ export class LoginPage implements OnInit {
       if (_res.status === 'success') {
         // ✅ Salva token
         sessionStorage.setItem('token', _res.token);
-        sessionStorage.setItem('id',_res.id)
+        sessionStorage.setItem('id',_res.id);
+        sessionStorage.setItem('imagem', _res.imagem);
         sessionStorage.setItem('username', _res.username);
         sessionStorage.setItem('email', _res.email);
         sessionStorage.setItem('dataN', _res.dataN);
         sessionStorage.setItem('genero', _res.genero);
 
-        // ✅ Redireciona para Questionário
-        this.router.navigate(['/questionario']);
+        this.router.navigateByUrl('/principal')
       } else {
         // ❌ Erro na autenticação
         console.log("Erro ao logar:", _res.message);

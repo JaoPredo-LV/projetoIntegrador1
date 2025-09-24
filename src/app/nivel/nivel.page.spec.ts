@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ElipticohitPage } from './elipticohit.page';
+import { NivelPage } from './nivel.page';
 
-describe('ElipticohitPage', () => {
-  let component: ElipticohitPage;
-  let fixture: ComponentFixture<ElipticohitPage>;
+describe('NivelPage', () => {
+  let component: NivelPage;
+  let fixture: ComponentFixture<NivelPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ElipticohitPage);
+    fixture = TestBed.createComponent(NivelPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,7 +9,29 @@
   </div>
 
   <div class="corpo">
-    <img class="fotinha" src="./assets/fotoTeste.png">
+      <ion-list>
+    <ion-item>
+        <img
+        [id]="idImage" 
+        [src]="srcImage" 
+        [style.height]="heightImage" 
+        class="upload-image-componente upload-img"
+        alt="..." 
+      />
+    </ion-item>
+    <ion-item>
+      <ion-button 
+        (click)="inputFile.click()"
+      >Carregar</ion-button>
+      <input 
+          type="file" 
+          style="display:none" 
+          #inputFile 
+          (change)="onFileSelected($event);"
+      />
+      
+    </ion-item>
+  </ion-list>
     <ion-list>
       <ion-item>
       <ion-input label="Nome:" [(ngModel)]="nome"></ion-input>

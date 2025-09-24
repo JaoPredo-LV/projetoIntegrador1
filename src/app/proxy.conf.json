@@ -4,5 +4,12 @@
         "secure":false,
         "changeOrigin":true,
         "logLevel": "debug"
+    },
+    
+    "/upload":{
+      "target": "http://localhost/autenticacao/index.php",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
     }
 }

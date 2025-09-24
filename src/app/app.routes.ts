@@ -79,17 +79,17 @@ export const routes: Routes = [
     loadComponent: () => import('./hitvinteecinco/hitvinteecinco.page').then( m => m.HitvinteecincoPage)
   },
   {
+    path: 'nivel',
+    loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
+  },
+  {
     path: 'opcaob',
     loadComponent: () => import('./opcaob/opcaob.page').then( m => m.OpcaobPage)
   },
   {
     path: 'opcaoc',
     loadComponent: () => import('./opcaoc/opcaoc.page').then( m => m.OpcaocPage)
-  },  {
-    path: 'elipticohit',
-    loadComponent: () => import('./elipticohit/elipticohit.page').then( m => m.ElipticohitPage)
   },
-
 
 
 
