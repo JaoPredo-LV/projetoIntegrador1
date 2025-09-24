@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonContent, IonHeader,IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
-import { chevronForwardOutline } from 'ionicons/icons';
+import { chevronBackCircleOutline, chevronForwardOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons'
 
 @Component({
@@ -18,7 +18,7 @@ export class PrincipalPage implements OnInit {
     nome: sessionStorage.getItem('username')
   } 
   constructor() {
-    addIcons({chevronForwardOutline})
+    addIcons({chevronForwardOutline, chevronBackCircleOutline})
   }
 
   ngOnInit() {

@@ -42,11 +42,6 @@ ion-content{
   .propaganda {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    width: 60%;
+    margin: 10% auto;
   }
-  
-  .propaganda img {
-    width: 90%;
-    max-width: 350px;
-    border-radius: 10px;
-  }  

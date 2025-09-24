@@ -79,6 +79,10 @@ export const routes: Routes = [
     loadComponent: () => import('./hitvinteecinco/hitvinteecinco.page').then( m => m.HitvinteecincoPage)
   },
   {
+    path: 'nivel',
+    loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
+  },
+  {
     path: 'opcaob',
     loadComponent: () => import('./opcaob/opcaob.page').then( m => m.OpcaobPage)
   },
@@ -87,12 +91,20 @@ export const routes: Routes = [
     loadComponent: () => import('./opcaoc/opcaoc.page').then( m => m.OpcaocPage)
   },
   {
-    path: 'hiteliptico',
+    path: 'niveleliptco',
+    loadComponent: () => import('./niveleliptco/niveleliptco.page').then( m => m.NiveleliptcoPage)
+  },
+  {
+      path: 'hiteliptico',
     loadComponent: () => import('./hiteliptico/hiteliptico.page').then( m => m.HitelipticoPage)
   },
-    {
+  {
     path: 'nivel',
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
   },
+
+
+
+
 
 ];
