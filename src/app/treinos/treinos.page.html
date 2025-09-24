@@ -1,43 +1,27 @@
-<ion-header [translucent]="true">
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-
-  <div class="boas-vindas">
-TREINOS
+  <div class="header-container">
+    <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">MEUS TREINOS</div>
   </div>
 
-  <div class="hits-header">
-    <ion-back-button defaultHref="/principal" text="" class="voltar"></ion-back-button>
-    <h1 class="hits-title">TREINOS</h1>
-  </div>
-  
   <div class="corpo">
   <ion-label class="texto">OPÇÃO A</ion-label>
-<ion-button class="botao"  [routerLink]="['/treinos']"shape="round">
+<ion-button class="botao"  [routerLink]="['/opcaoa']"shape="round">
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
     ACESSAR
   </ion-button>
 
     <ion-label class="texto">OPÇÃO B</ion-label>
- <ion-button class="botao"  [routerLink]="['/hits']"shape="round">
+ <ion-button class="botao"  [routerLink]="['/opcaob']"shape="round">
     ACESSAR
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
 
     <ion-label class="texto">OPÇÃO C</ion-label>
- <ion-button class="botao"  [routerLink]="['/gymdesafios']"shape="round">
+ <ion-button class="botao"  [routerLink]="['/opcaoc']"shape="round">
     ACESSAR
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
-<!-- Banner de propaganda -->
-<div class="propaganda">
-  <a href="https://www.site-da-marca1.com"
-     target="_blank"
-     rel="noopener noreferrer">
-    <img src="assets/growth.jpeg" alt="Pré-treino">
-  </a>
-</div>
+
   </div>
-</ion-content>

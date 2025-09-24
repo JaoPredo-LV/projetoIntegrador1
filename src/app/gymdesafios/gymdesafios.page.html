@@ -1,17 +1,17 @@
-<ion-header class="custom-header">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/principal" text=""></ion-back-button>
-    </ion-buttons>
-    <ion-title class="header-title">GYM DESAFIOS</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
+<ion-content [fullscreen]="true">
+  <div class="header-container">
+    <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">
+GYMDESAFIOS
+    </div>
+  </div>
 
 <ion-content class="page-bg">
   <div class="page-background"></div>
 
   <div class="container">
-    <h2 class="page-title">Seus desafios semanais!!</h2>
+    <h2 class="page-title">Seus desafios semanais! :)</h2>
 
     <div class="day-list">
       <div class="day-card" *ngFor="let dia of dias; let i = index">
@@ -45,8 +45,8 @@
     </div>
   </div>
   <div style="display:flex; justify-content:center; margin-top:40px;">
-  <ion-button class="botao"  [routerLink]="['/principal']"shape="round">
-    FINALIZAR
-  </ion-button>
+    <ion-button class="botao"  color="medium" style="--border-radius: 100px;" [routerLink]="['/principal']"shape="round">
+      ENVIAR
+    </ion-button>
 </div>
 </ion-content>

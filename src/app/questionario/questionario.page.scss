@@ -49,14 +49,13 @@ form input[type="radio"]:checked {
   background-color: #fff;  
 }
 form label {
-  color: #fff;              /* branco como na imagem */
+  color: #fff;              
   font-size: 14px;
   cursor: pointer;
 }
 .botao {
-    --border-radius: 50px;
-    width: 50%;       
-    margin: 10px 0;   
-    opacity: 1;
-    color: white;
+    padding: 30% 0;
+    width: 50%;
+    margin-top: -90px;
+    margin-left: 100px;
   }
