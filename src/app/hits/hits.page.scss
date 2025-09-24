@@ -3,10 +3,11 @@
   display: flex;
   justify-content: center; 
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(212, 212, 212, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   height: 50px; 
+  padding: 35px;
 }
 
 .hits-title {
@@ -34,7 +35,7 @@
 }
 
 .corpo{
-    margin-top: 20%;
+    margin-top: 50%;
 }
 
 .botao{
@@ -52,7 +53,7 @@
 }
 ion-content{    
     --background: none;
-    background-image: url("/assets/gym.jpg");
+    background-image: url("/assets/cardio.jpg");
     background-size: cover;
     object-fit: cover;
     background-position: center;

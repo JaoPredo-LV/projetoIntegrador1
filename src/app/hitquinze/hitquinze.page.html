@@ -1,12 +1,11 @@
-<ion-header [translucent]="true">
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-<div class="hits-header">
-  <ion-back-button defaultHref="/tempo" text="" class="voltar"></ion-back-button>
-  <h1 class="hits-title">HIT 15'</h1>
-</div>
+  <div class="header-container">
+    <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">
+HIT 15'
+    </div>
+  </div>
 
 <ion-content class="page-bg">
   <div class="page-background"></div>
@@ -21,10 +20,13 @@
       <div class="number">{{nivel.numero}}</div>
     </div>
 
-<div class="content">
-  <div class="title">{{nivel.titulo}}</div>
-  <ion-button fill="clear" class="chev-btn" [routerLink]="['/hits', nivel.numero]">
-    <ion-icon name="chevron-forward-outline" class="chev"></ion-icon>
-  </ion-button>
+    <div class="content">
+      <div class="title">{{nivel.titulo}}</div>
+      <ion-icon 
+        name="chevron-forward-outline" 
+        class="chev" 
+        routerLink="/nivel/{{nivel.numero}}">
+      </ion-icon>
+    </div>
   </div>
 </div>

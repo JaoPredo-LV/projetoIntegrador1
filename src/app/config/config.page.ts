@@ -77,7 +77,7 @@ export class ConfigPage implements OnInit {
     // Upload de Arquivo
     this.us.upload(selectedFile).subscribe(
       (response:any) => {
-        this.srcImage = 'http://localhost/autenticacao/' + response.src;
+        this.srcImage = 'http://localhost/autenticacao/uploads' + response.src;
         sessionStorage.setItem('imagem',response.src);
         this.uploaded.emit(response.src);
       }
