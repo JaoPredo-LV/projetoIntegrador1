@@ -18,7 +18,9 @@ export class OpcaocPage implements OnInit {
     { nome: 'Abdominal Bicicleta', img: 'assets/gifs/abdominalbicicleta.gif', tempo: 0, rodando: false, descanso: '01:00' },
     { nome: 'Rosca martelo', img: 'assets/gifs/roscamartelo.gif', tempo: 0, rodando: false, descanso: '01:00' },
     { nome: 'Cavalinho', img: 'assets/gifs/cavalinho.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Remada fechada', img: 'assets/gifs/remadafechada.gif', tempo: 0, rodando: false, descanso: '01:00' }
+    { nome: 'Remada fechada', img: 'assets/gifs/remadafechada.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Puxada Aberta', img: 'assets/gifs/puxadaaberta.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Peck Deck', img: 'assets/gifs/peckdeck.gif', tempo: 0, rodando: false, descanso: '01:00' }
   ];
 
   constructor() {}

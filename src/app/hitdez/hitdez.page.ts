@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { addIcons } from 'ionicons';
 import { RouterModule } from '@angular/router';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
@@ -10,21 +9,20 @@ import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, I
   templateUrl: './hitdez.page.html',
   styleUrls: ['./hitdez.page.scss'],
   standalone: true,
-  imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons,IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-
-export class HitdezPage {
+export class HitdezPage implements OnInit {
   niveis = [
-    { numero: 0, titulo: 'Muito Fácil' },
-    { numero: 1, titulo: 'Fácil' },
-    { numero: 2, titulo: 'Moderado' },
-    { numero: 3, titulo: 'Moderado Alto' },
-    { numero: 4, titulo: 'Forte' },
-    { numero: 5, titulo: 'Máximo' }
+    { numero: 0, titulo: 'Muito Fácil', link: '/hiteliptico' },
+    { numero: 1, titulo: 'Fácil', link: '/nivel1' },
+    { numero: 2, titulo: 'Moderado', link: '/nivel2' },
+    { numero: 3, titulo: 'Moderado Alto', link: '/nivel3' },
+    { numero: 4, titulo: 'Forte', link: '/nivel4' },
+    { numero: 5, titulo: 'Máximo', link: '/nivel5' }
   ];
-  constructor() { }
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }
+

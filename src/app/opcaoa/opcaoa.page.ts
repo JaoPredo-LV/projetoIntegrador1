@@ -18,7 +18,9 @@ export class OpcaoaPage implements OnInit {
     { nome: 'Abdominal Supra', img: 'assets/gifs/abdominalsupra.gif', tempo: 0, rodando: false, descanso: '01:00' },
     { nome: 'Elevação lateral', img: 'assets/gifs/elevacaolateral.gif', tempo: 0, rodando: false, descanso: '01:00' },
     { nome: 'Crucifixo', img: 'assets/gifs/crucifixo.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Encolhimento de Ombros', img: 'assets/gifs/encolhimentoombro.gif', tempo: 0, rodando: false, descanso: '01:00' }
+    { nome: 'Encolhimento de Ombros', img: 'assets/gifs/encolhimentoombro.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Dead Bug', img: 'assets/gifs/deadbug.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Prancha', img: 'assets/gifs/prancha.gif', tempo: 0, rodando: false, descanso: '01:00' }
   ];
 
   constructor() {}

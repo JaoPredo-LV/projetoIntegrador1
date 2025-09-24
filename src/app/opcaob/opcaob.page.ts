@@ -18,7 +18,9 @@ export class OpcaobPage implements OnInit {
     { nome: 'Agachamento livre', img: 'assets/gifs/agachamento.gif', tempo: 0, rodando: false, descanso: '01:00' },
     { nome: 'Cadeira extensora', img: 'assets/gifs/cadeiraestensora.gif', tempo: 0, rodando: false, descanso: '01:00' },
     { nome: 'Leg press 45°', img: 'assets/gifs/legpress.gif', tempo: 0, rodando: false, descanso: '01:00' },
-    { nome: 'Agachamento smith', img: 'assets/gifs/smith.gif', tempo: 0, rodando: false, descanso: '01:00' }
+    { nome: 'Agachamento smith', img: 'assets/gifs/smith.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Cadeira Abdutora', img: 'assets/gifs/cadeiraabdutora.gif', tempo: 0, rodando: false, descanso: '01:00' },
+    { nome: 'Panturrilha', img: 'assets/gifs/panturrilha.gif', tempo: 0, rodando: false, descanso: '01:00' }
   ];
 
   constructor() {}

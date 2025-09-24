@@ -1,73 +1,63 @@
-.intro {
-  margin: 0;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  font-size: 18px;
-  margin-top: 2%;
+ion-content {
+  --background: #000; 
+}
+ion-card, ion-item {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.div-cadastro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
+
+ion-label {
+  display: none !important;
 }
 
-.person {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.avatar-img,
-.icon-person {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.icon-person {
-  font-size: 120px;
-  color: gray;
-}
-
-.icon-camera {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 28px;
-  color: #000;            
-  background: #fff;        
-  border-radius: 50%;
-  padding: 6px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
-  cursor: pointer;
-  z-index: 10;             
+ion-input, ion-datetime, ion-select, ion-input input {
+  --background: #fff;
+  --color: #000;
+  --placeholder-color: #777;
+  --placeholder-opacity: 1;
+  --border-radius: 25px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  font-size: 14px;
+  height: 44px;
+  border-radius: 25px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .formulario {
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.botao-container {
-  display: flex;
-  justify-content: center;
+  gap: 15px;
   margin-top: 20px;
 }
 
-.botao {
-    --border-radius: 50px;
-  width: 50%;       
-  margin: 10px 0;   
-  color: white;
+ion-button {
+  --background: #fff;
+  --color: #000;
+  --border-radius: 25px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
+.div-cadastro::before {
+  content: "\f4e1"; 
+  font-family: "Ionicons";
+  font-size: 60px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+
+
 
 

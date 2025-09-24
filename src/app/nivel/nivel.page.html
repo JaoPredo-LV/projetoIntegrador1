@@ -1,20 +1,19 @@
-<ion-header>
-  <ion-toolbar>
- <div class="header-container">
+<ion-header [translucent]="true"></ion-header>
+<ion-content [fullscreen]="true">
+  <div class="header-container">
     <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
-    <div class="titulo-meio">HIT 10'- Nível 0</div>
+    <div class="titulo-meio">
+HIT 10'- Nível 0
+    </div>
   </div>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content class="ion-padding">
 
-  <!-- Círculo central -->
 <div class="circle" [ngStyle]="{'background': 'conic-gradient(white ' + progressoPorcentagem + '%, transparent ' + progressoPorcentagem + '%)'}">
   <span>{{ formatarTempo(tempoDoTreino) }}</span>
 </div>
 
-  <!-- Velocidade atual -->
+
   <div class="info">
     <p class="label">Velocidade atual</p>
     <h2 class="speed">4–5 km/h</h2>
