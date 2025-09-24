@@ -1,17 +1,17 @@
-import { Component, OnInit, OnDestroy  } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-nivel',
-  templateUrl: './nivel.page.html',
-  styleUrls: ['./nivel.page.scss'],
+  selector: 'app-niveleliptco',
+  templateUrl: './niveleliptco.page.html',
+  styleUrls: ['./niveleliptco.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon,IonBackButton, IonButton, IonButtons,IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class NivelPage implements OnInit, OnDestroy {
-  
+export class NiveleliptcoPage implements OnInit, OnDestroy {
+
   tempoDoTreino: number = 0;
   progressoPorcentagem: number = 0;
   private intervalo: any;
@@ -21,9 +21,6 @@ export class NivelPage implements OnInit, OnDestroy {
   alturasAtuais: number[] = [0, 0, 0, 0, 0, 0, 0];
   velocidadePreenchimento: number = 1; // Você pode ajustar este valor
   treinoConcluido: boolean = false;
-  velocidades: string[] = ['4-5 km/h', '5-6 km/h', '6-7 km/h', '7-8 km/h', '8-9 km/h', '9-10 km/h', '10-11 km/h'];
-  velocidadeAtual: string = this.velocidades[0];
-  proximaVelocidade: string = this.velocidades[1];
 
   constructor() { }
 
@@ -54,23 +51,12 @@ export class NivelPage implements OnInit, OnDestroy {
                 this.alturasAtuais[this.barraAtualIndex] = this.alturasFinais[this.barraAtualIndex];
                 this.barraAtualIndex++;
             }
-
-             if (this.barraAtualIndex < this.velocidades.length) {
-              this.velocidadeAtual = this.velocidades[this.barraAtualIndex];
-              // Garante que a próxima velocidade não seja indefinida no final
-              if (this.barraAtualIndex + 1 < this.velocidades.length) {
-                this.proximaVelocidade = this.velocidades[this.barraAtualIndex + 1];
-              } else {
-                this.proximaVelocidade = ''; // Ou uma mensagem de "Última"
-              }
-            }
-
         } else {
           
           this.treinoConcluido = true;
             this.pararContador();
         }
-    }, 10);
+    }, 1000);
   }
     pararContador() {
     if (this.intervalo) {

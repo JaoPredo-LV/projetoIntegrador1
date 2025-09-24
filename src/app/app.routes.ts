@@ -89,7 +89,11 @@ export const routes: Routes = [
   {
     path: 'opcaoc',
     loadComponent: () => import('./opcaoc/opcaoc.page').then( m => m.OpcaocPage)
+  },  {
+    path: 'niveleliptco',
+    loadComponent: () => import('./niveleliptco/niveleliptco.page').then( m => m.NiveleliptcoPage)
   },
+
 
 
 
