@@ -70,7 +70,7 @@ export class NivelPage implements OnInit, OnDestroy {
           this.treinoConcluido = true;
             this.pararContador();
         }
-    }, 10);
+    }, 1000);
   }
     pararContador() {
     if (this.intervalo) {

@@ -16,12 +16,19 @@
 </div>
 
   <!-- Velocidade atual -->
-  <div class="info">
-    <p class="label">RPM</p>
-    <h2 class="speed">50-60</h2>
-    <p class="next">próxima 5–6 km/h</p>
-  </div>
+<div class="info">
+  <div class="info-row">
+    <div class="info-column">
+      <p class="label">RPM</p>
+      <h2 class="speed">{{ rpmAtual }}</h2>
+    </div>
 
+    <div class="info-column">
+      <p class="label">Carga</p>
+      <h2 class="speed">{{ cargaAtual }}</h2>
+    </div>
+  </div>
+</div>
   <!-- Gráfico de barras -->
 <div class="chart">
   <div *ngFor="let altura of alturasFinais; let i = index" class="bar-container">
@@ -30,6 +37,7 @@
     <div class="bar-preenchimento" [ngStyle]="{'height': alturasAtuais[i] + '%'}"></div>
   </div>
 </div>
+
 <div class="concluido" *ngIf="treinoConcluido">
   <h2>TREINO CONCLUÍDO</h2>
 </div>

@@ -41,6 +41,19 @@
 
 .info {
   text-align: center;
+  
+  .info-row {
+    display: flex;
+    justify-content: center; /* Centraliza as duas colunas */
+    gap: 40px; /* Adiciona um espaço entre as colunas */
+    margin-top: 20px;
+  }
+  
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .label {
     font-size: 16px;
@@ -55,9 +68,9 @@
     color: #fff;
   }
 
+  /* Remova o estilo 'next' se ele não for mais usado */
   .next {
-    font-size: 14px;
-    color: #999;
+    display: none;
   }
 }
 
