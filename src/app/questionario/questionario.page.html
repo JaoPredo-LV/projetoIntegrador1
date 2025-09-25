@@ -6,7 +6,8 @@
   </ion-header>
 
   <div class="titulo">QUESTIONÁRIO</div>
-  <div class="aviso">Seu treino criado com base nas suas respostas! :)</div>
+  <div class="aviso">Seu treino criado com 
+    <br>base nas suas respostas! :)</div>
 
   <form>
   <h6>Qual seu objetivo?</h6>
@@ -37,10 +38,7 @@
   <label><input type="radio" name="pular" value="sim"> Sim</label><br>
   <label><input type="radio" name="pular" value="nao"> Não</label>
 </form>
-
-<div style="display:flex; justify-content:center; margin-top:40px;">
-  <ion-button class="botao"  [routerLink]="['/principal']"shape="round">
+  <ion-button class="botao"  color="medium" style="--border-radius: 100px;" [routerLink]="['/principal']"shape="round">
     ENVIAR
   </ion-button>
-</div>
 </ion-content>

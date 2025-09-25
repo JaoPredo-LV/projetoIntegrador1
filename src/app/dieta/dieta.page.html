@@ -1,14 +1,11 @@
-<ion-header class="custom-header">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/principal" text=""></ion-back-button>
-    </ion-buttons>
-    <ion-title class="header-title">MINHA DIETA</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
+  <div class="header-container">
+    <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">
+DIETA
+    </div>
+  </div>
 
 <ion-content class="page-bg">
   <div class="page-background"></div>
@@ -27,7 +24,6 @@
             <ion-icon name="chevron-down-outline"></ion-icon>
           </div>
         </button>
-
         <div class="day-content" [class.open]="dia.open">
           <ion-item *ngFor="let refeicao of dia.refeicoes">
             <ion-label>

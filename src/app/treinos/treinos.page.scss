@@ -1,16 +1,32 @@
-.boas-vindas {
-  background: rgba(255, 255, 255, 0.15); 
-  padding: 40px;
-  text-align: center;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; 
+  padding: 10px 15px;
   color: #fff;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.botao-voltar {
+  --color: #fff;
+  z-index: 10;
+}
+
+.titulo-meio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 15px;
   font-weight: 500;
-  backdrop-filter: blur(8px); 
-  -webkit-backdrop-filter: blur(8px);
   text-align: center;
-  font-size: small;
-  padding: 5%;
+  color: #fff;
+  z-index: 5; 
 }
+
 
 .texto{
   float: left;
@@ -21,19 +37,20 @@
 }
 
 .corpo{
-  margin-top: 20%;
+  margin-top: 50%;
 }
 
 .botao{
   --background:rgb(179, 179, 179);
   margin-left: 5%;
   width: 90%;
-  float: left
+  float: left;
+  margin-top: 10%;
 }
 
 ion-content{    
   --background: none;
-  background-image: url("/assets/girl.jpg");
+  background-image: url("/assets/boy.jpg");
   background-size: cover;
   object-fit: cover;
   background-position: center;
