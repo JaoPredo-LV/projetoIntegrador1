@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 export const routes: Routes = [
   {
     path: 'home',
@@ -60,7 +59,7 @@ export const routes: Routes = [
   },
   {
     path: 'hitdez',
-    loadComponent: () => import('./hitdez/hitdez.page').then( m => m.HitdezPage)
+    loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
   },
   {
     path: 'tempo',
@@ -92,6 +91,10 @@ export const routes: Routes = [
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
   },
   {
+    path: 'hitrun',
+    loadComponent: () => import('./hitrun/hitrun.page').then( m => m.HitrunPage)
+  },
+  {
     path: 'hitbike',
     loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
   },
@@ -113,8 +116,37 @@ export const routes: Routes = [
   },
 
 
-
-
-
+  {
+    path: 'hitdezeliptico',
+    loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
+  },
+  {
+    path: 'hitquinzeeliptico',
+    loadComponent: () => import('./hitquinzeeliptico/hitquinzeeliptico.page').then( m => m.HitquinzeelipticoPage)
+  },
+  {
+    path: 'hitvinteeliptico',
+    loadComponent: () => import('./hitvinteeliptico/hitvinteeliptico.page').then( m => m.HitvinteelipticoPage)
+  },
+  {
+    path: 'hitvinteecincoeliptico',
+    loadComponent: () => import('./hitvinteecincoeliptico/hitvinteecincoeliptico.page').then( m => m.HitvinteecincoelipticoPage)
+  },
+  {
+    path: 'hitdezrun',
+    loadComponent: () => import('./hitdezrun/hitdezrun.page').then( m => m.HitdezrunPage)
+  },
+  {
+    path: 'hitquinzerun',
+    loadComponent: () => import('./hitquinzerun/hitquinzerun.page').then( m => m.HitquinzerunPage)
+  },
+  {
+    path: 'hitvinterun',
+    loadComponent: () => import('./hitvinterun/hitvinterun.page').then( m => m.HitvinterunPage)
+  },
+  {
+    path: 'hitvinteecincorun',
+    loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
+  },
 
 ];

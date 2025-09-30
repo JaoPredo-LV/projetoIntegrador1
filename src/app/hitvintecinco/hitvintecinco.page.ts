@@ -5,13 +5,13 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-hitquinzebike',
-  templateUrl: './hitquinzebike.page.html',
-  styleUrls: ['./hitquinzebike.page.scss'],
+  selector: 'app-hitvintecinco',
+  templateUrl: './hitvintecinco.page.html',
+  styleUrls: ['./hitvintecinco.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class HitquinzebikePage implements OnInit {
+export class HitvintecincoPage implements OnInit {
   niveis = [
     { numero: 0, titulo: 'Muito Fácil', link: '/hitbike' },
     { numero: 1, titulo: 'Fácil', link: '/nivel1' },

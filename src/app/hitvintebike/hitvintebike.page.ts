@@ -12,7 +12,7 @@ import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, I
   imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class HitvintebikePage implements OnInit {
-niveis = [
+  niveis = [
     { numero: 0, titulo: 'Muito Fácil', link: '/hitbike' },
     { numero: 1, titulo: 'Fácil', link: '/nivel1' },
     { numero: 2, titulo: 'Moderado', link: '/nivel2' },
@@ -20,9 +20,8 @@ niveis = [
     { numero: 4, titulo: 'Forte', link: '/nivel4' },
     { numero: 5, titulo: 'Máximo', link: '/nivel5' }
   ];
-  constructor() { }
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }

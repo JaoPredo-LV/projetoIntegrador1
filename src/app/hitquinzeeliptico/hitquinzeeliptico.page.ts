@@ -5,15 +5,15 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-hitdez',
-  templateUrl: './hitdez.page.html',
-  styleUrls: ['./hitdez.page.scss'],
+  selector: 'app-hitquinzeeliptico',
+  templateUrl: './hitquinzeeliptico.page.html',
+  styleUrls: ['./hitquinzeeliptico.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class HitdezPage implements OnInit {
+export class HitquinzeelipticoPage implements OnInit {
   niveis = [
-    { numero: 0, titulo: 'Muito Fácil', link: '/hitbike' },
+    { numero: 0, titulo: 'Muito Fácil', link: '/hiteliptico' },
     { numero: 1, titulo: 'Fácil', link: '/nivel1' },
     { numero: 2, titulo: 'Moderado', link: '/nivel2' },
     { numero: 3, titulo: 'Moderado Alto', link: '/nivel3' },
@@ -25,4 +25,3 @@ export class HitdezPage implements OnInit {
 
   ngOnInit() {}
 }
-
