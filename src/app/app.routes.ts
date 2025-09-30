@@ -102,9 +102,24 @@ export const routes: Routes = [
     path: 'nivel',
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
   },
-
-
-
-
-
+  {
+    path: 'hit',
+    loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
+  },
+  {
+    path: 'hitrun',
+    loadComponent: () => import('./hitrun/hitrun.page').then( m => m.HitrunPage)
+  },
+  {
+    path: 'hitbike',
+    loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
+  },
+  {
+    path: 'tempotwo',
+    loadComponent: () => import('./tempotwo/tempotwo.page').then( m => m.TempotwoPage)
+  },
+  {
+    path: 'tempothree',
+    loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },
 ];

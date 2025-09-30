@@ -13,7 +13,7 @@ import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, I
 })
 export class HitdezPage implements OnInit {
   niveis = [
-    { numero: 0, titulo: 'Muito Fácil', link: '/hiteliptico' },
+    { numero: 0, titulo: 'Muito Fácil', link: '/hitbike' },
     { numero: 1, titulo: 'Fácil', link: '/nivel1' },
     { numero: 2, titulo: 'Moderado', link: '/nivel2' },
     { numero: 3, titulo: 'Moderado Alto', link: '/nivel3' },
