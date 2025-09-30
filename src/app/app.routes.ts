@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 export const routes: Routes = [
   {
     path: 'home',
@@ -59,7 +58,7 @@ export const routes: Routes = [
     loadComponent: () => import('./gymdesafios/gymdesafios.page').then( m => m.GymdesafiosPage)
   },
   {
-    path: 'hitdezbike',
+    path: 'hitdez',
     loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
   },
   {
@@ -91,10 +90,6 @@ export const routes: Routes = [
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
   },
   {
-    path: 'hit',
-    loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
-  },
-  {
     path: 'hitrun',
     loadComponent: () => import('./hitrun/hitrun.page').then( m => m.HitrunPage)
   },
@@ -109,17 +104,38 @@ export const routes: Routes = [
   {
     path: 'tempothree',
     loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
-  },  {
-    path: 'hitquinzebike',
-    loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
   },
   {
-    path: 'hitvintebike',
-    loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+    path: 'hitdezeliptico',
+    loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
   },
   {
-    path: 'hitvintecinco',
-    loadComponent: () => import('./hitvintecinco/hitvintecinco.page').then( m => m.HitvintecincoPage)
+    path: 'hitquinzeeliptico',
+    loadComponent: () => import('./hitquinzeeliptico/hitquinzeeliptico.page').then( m => m.HitquinzeelipticoPage)
+  },
+  {
+    path: 'hitvinteeliptico',
+    loadComponent: () => import('./hitvinteeliptico/hitvinteeliptico.page').then( m => m.HitvinteelipticoPage)
+  },
+  {
+    path: 'hitvinteecincoeliptico',
+    loadComponent: () => import('./hitvinteecincoeliptico/hitvinteecincoeliptico.page').then( m => m.HitvinteecincoelipticoPage)
+  },
+  {
+    path: 'hitdezrun',
+    loadComponent: () => import('./hitdezrun/hitdezrun.page').then( m => m.HitdezrunPage)
+  },
+  {
+    path: 'hitquinzerun',
+    loadComponent: () => import('./hitquinzerun/hitquinzerun.page').then( m => m.HitquinzerunPage)
+  },
+  {
+    path: 'hitvinterun',
+    loadComponent: () => import('./hitvinterun/hitvinterun.page').then( m => m.HitvinterunPage)
+  },
+  {
+    path: 'hitvinteecincorun',
+    loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
   },
 
 ];
