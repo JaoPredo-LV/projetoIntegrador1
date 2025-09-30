@@ -5,13 +5,13 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonBackButton, IonButtons, IonButton, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-hitbike',
-  templateUrl: './hitbike.page.html',
-  styleUrls: ['./hitbike.page.scss'],
+  selector: 'app-hitrun',
+  templateUrl: './hitrun.page.html',
+  styleUrls: ['./hitrun.page.scss'],
   standalone: true,
   imports: [IonContent, RouterModule, IonBackButton, IonButtons, IonButton, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class HitBikePage implements OnInit {
+export class HitrunPage implements OnInit {
 
   constructor() { }
 
