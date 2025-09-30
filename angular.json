@@ -35,7 +35,11 @@
                 "output": "assets"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "node_modules/swiper/swiper-bundle.css"
+            ],
             "scripts": [],
             "browser": "src/main.ts"
           },
@@ -112,7 +116,11 @@
                 "output": "assets"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "node_modules/swiper/swiper-bundle.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -152,3 +160,4 @@
     }
   }
 }
+
