@@ -102,6 +102,55 @@ export const routes: Routes = [
     path: 'nivel',
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
   },
+  {
+    path: 'hitbike',
+    loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitbikePage)
+  },
+  {
+    path: 'tempobike',
+    loadComponent: () => import('./tempobike/tempobike.page').then( m => m.TempobikePage)
+  },
+  {
+    path: 'hitdezbike',
+    loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
+  },
+  {
+    path: 'hitesteira',
+    loadComponent: () => import('./hitesteira/hitesteira.page').then( m => m.HitesteiraPage)
+  },
+  {
+    path: 'tempoesteira',
+    loadComponent: () => import('./tempoesteira/tempoesteira.page').then( m => m.TempoesteiraPage)
+  },  {
+    path: 'hitdezesteira',
+    loadComponent: () => import('./hitdezesteira/hitdezesteira.page').then( m => m.HitdezesteiraPage)
+  },
+  {
+    path: 'hitquinzebike',
+    loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
+  },
+  {
+    path: 'hitvintebike',
+    loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+  },
+  {
+    path: 'hitvinteecincobike',
+    loadComponent: () => import('./hitvinteecincobike/hitvinteecincobike.page').then( m => m.HitvinteecincobikePage)
+  },
+  {
+    path: 'hitquinzeesteira',
+    loadComponent: () => import('./hitquinzeesteira/hitquinzeesteira.page').then( m => m.HitquinzeesteiraPage)
+  },
+  {
+    path: 'hitvinteesteira',
+    loadComponent: () => import('./hitvinteesteira/hitvinteesteira.page').then( m => m.HitvinteesteiraPage)
+  },
+  {
+    path: 'hitvinteecincoesteira',
+    loadComponent: () => import('./hitvinteecincoesteira/hitvinteecincoesteira.page').then( m => m.HitvinteecincoesteiraPage)
+  },
+
+
 
 
 
