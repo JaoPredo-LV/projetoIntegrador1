@@ -59,8 +59,8 @@ export const routes: Routes = [
     loadComponent: () => import('./gymdesafios/gymdesafios.page').then( m => m.GymdesafiosPage)
   },
   {
-    path: 'hitdez',
-    loadComponent: () => import('./hitdez/hitdez.page').then( m => m.HitdezPage)
+    path: 'hitdezbike',
+    loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
   },
   {
     path: 'tempo',
@@ -109,5 +109,17 @@ export const routes: Routes = [
   {
     path: 'tempothree',
     loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },  {
+    path: 'hitquinzebike',
+    loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
   },
+  {
+    path: 'hitvintebike',
+    loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+  },
+  {
+    path: 'hitvintecinco',
+    loadComponent: () => import('./hitvintecinco/hitvintecinco.page').then( m => m.HitvintecincoPage)
+  },
+
 ];
