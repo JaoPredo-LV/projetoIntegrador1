@@ -107,6 +107,18 @@ export const routes: Routes = [
     loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
   },
   {
+  path: 'hitquinzebike',
+  loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
+},
+{
+  path: 'hitvintebike',
+  loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+},
+{
+  path: 'hitvintecinco',
+  loadComponent: () => import('./hitvintecinco/hitvintecinco.page').then( m => m.HitvintecincoPage)
+},
+  {
     path: 'hitesteira',
     loadComponent: () => import('./hitesteira/hitesteira.page').then( m => m.HitesteiraPage)
   },
@@ -145,6 +157,37 @@ export const routes: Routes = [
   {
     path: 'hitvinteecincorun',
     loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
+  },
+  {
+    path: 'tempotwo',
+    loadComponent: () => import('./tempotwo/tempotwo.page').then( m => m.TempotwoPage)
+  },
+  {
+    path: 'tempothree',
+    loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },  {
+    path: 'trcquinzeeli',
+    loadComponent: () => import('./trcquinzeeli/trcquinzeeli.page').then( m => m.TrcquinzeeliPage)
+  },
+  {
+    path: 'trcvinteeli',
+    loadComponent: () => import('./trcvinteeli/trcvinteeli.page').then( m => m.TrcvinteeliPage)
+  },
+  {
+    path: 'trcvientecincoeli',
+    loadComponent: () => import('./trcvientecincoeli/trcvientecincoeli.page').then( m => m.TrcvientecincoeliPage)
+  },
+  {
+    path: 'trcquinzeest',
+    loadComponent: () => import('./trcquinzeest/trcquinzeest.page').then( m => m.TrcquinzeestPage)
+  },
+  {
+    path: 'trcvinteest',
+    loadComponent: () => import('./trcvinteest/trcvinteest.page').then( m => m.TrcvinteestPage)
+  },
+  {
+    path: 'trcvintecincoest',
+    loadComponent: () => import('./trcvintecincoest/trcvintecincoest.page').then( m => m.TrcvintecincoestPage)
   },
 
 ];

@@ -1,0 +1,66 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; 
+    padding: 10px 15px;
+    color: #fff;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .botao-voltar {
+    --color: #fff;
+    z-index: 10;
+  }
+  
+  .titulo-meio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    z-index: 5; 
+  }
+  ion-content {
+    --background: none;
+    background: url('/assets/run.jpg') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
+  .table-container {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    padding: 16px;
+    width: 90%;
+    margin: 40% auto 0 auto;
+    max-width: 360px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+  }
+  
+  th, td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+  
+  .botao{
+    --border-radius: 50px;
+    width: 50%;       
+    margin: 10px 0;   
+    color: white;
+  }
