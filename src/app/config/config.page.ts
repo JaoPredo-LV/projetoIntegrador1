@@ -42,7 +42,7 @@ export class ConfigPage implements OnInit {
   constructor(public rs: RequisicaoService, public us:UploadService) {
     this.nome = sessionStorage.getItem('username') || '';
     this.genero = sessionStorage.getItem('genero') || '';
-    //this.srcImage = sessionStorage.getItem('imagem') || '';
+    this.srcImage = sessionStorage.getItem('imagem') || '';
   }
 
    salvar() {
