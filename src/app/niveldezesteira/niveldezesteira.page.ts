@@ -1,21 +1,21 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-nivelquinzeecincoeliptico',
-  templateUrl: './nivelquinzeecincoeliptico.page.html',
-  styleUrls: ['./nivelquinzeecincoeliptico.page.scss'],
+  selector: 'app-niveldezesteira',
+  templateUrl: './niveldezesteira.page.html',
+  styleUrls: ['./niveldezesteira.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon,IonBackButton, IonButton, IonButtons,IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class NivelquinzeecincoelipticoPage implements OnInit, OnDestroy {
+export class NiveldezesteiraPage implements OnInit, OnDestroy {
 
   tempoDoTreino: number = 0;
   progressoPorcentagem: number = 0;
   private intervalo: any;
-  alturasFinais: number[] = [50, 80, 40, 70, 90, 60, 45, 65, 85];
+  alturasFinais: number[] = [60, 80, 40, 70, 90, 60, 45, 80, 60];
   barrasAtivas: boolean[] = [false, false, false, false, false, false, false, false, false];
   barraAtualIndex: number = 0;
   alturasAtuais: number[] = [0, 0, 0, 0, 0, 0, 0];
@@ -40,7 +40,7 @@ export class NivelquinzeecincoelipticoPage implements OnInit, OnDestroy {
         this.tempoDoTreino++;
         
         // Define a duração da barra atual
-        const duracaoTotal = 100
+        const duracaoTotal = this.barraAtualIndex === 0 ? 60 : 120;
         
         // Lógica do Círculo
         this.progressoPorcentagem = (this.tempoDoTreino / duracaoTotal) * 100;

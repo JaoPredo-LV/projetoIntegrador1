@@ -4,15 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-nivelquinzeecincoeliptico',
-  templateUrl: './nivelquinzeecincoeliptico.page.html',
-  styleUrls: ['./nivelquinzeecincoeliptico.page.scss'],
+  selector: 'app-nivelquinzeesteira',
+  templateUrl: './nivelquinzeesteira.page.html',
+  styleUrls: ['./nivelquinzeesteira.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon,IonBackButton, IonButton, IonButtons,IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class NivelquinzeecincoelipticoPage implements OnInit, OnDestroy {
-
-  tempoDoTreino: number = 0;
+export class NivelquinzeesteiraPage implements OnInit, OnDestroy {
+tempoDoTreino: number = 0;
   progressoPorcentagem: number = 0;
   private intervalo: any;
   alturasFinais: number[] = [50, 80, 40, 70, 90, 60, 45, 65, 85];
