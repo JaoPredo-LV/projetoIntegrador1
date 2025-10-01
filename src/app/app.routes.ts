@@ -165,7 +165,8 @@ export const routes: Routes = [
   {
     path: 'tempothree',
     loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
-  },  {
+  },
+  {
     path: 'trcquinzeeli',
     loadComponent: () => import('./trcquinzeeli/trcquinzeeli.page').then( m => m.TrcquinzeeliPage)
   },

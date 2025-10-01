@@ -1,0 +1,105 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; 
+  padding: 10px 15px;
+  color: #fff;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.botao-voltar {
+  --color: #fff;
+  z-index: 10;
+}
+
+.titulo-meio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  z-index: 5; 
+}
+.circle {
+  width: 180px;
+  height: 180px;
+  border: 6px solid #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 40px auto 20px;
+}
+
+.info {
+  text-align: center;
+
+  .label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .speed {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 8px 0;
+    color: #fff;
+  }
+
+  .next {
+    font-size: 14px;
+    color: #999;
+  }
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.bar-container {
+  // Define o contêiner como um ponto de referência para a posição dos filhos
+  position: relative;
+  height: 100%;
+  width: 20px;
+}
+
+.bar-fundo {
+  // Posição no fundo do container, com a altura final
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #555; /* Cor da barra "vazia" */
+  border-radius: 4px;
+}
+
+.bar-preenchimento {
+  // Posição no fundo do container, com a altura controlada pelo TS
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff; /* Cor da barra "cheia" */
+  border-radius: 4px;
+  transition: height 0.1s ease-in-out; /* Transição suave */
+}
+.concluido {
+  text-align: center;
+  margin-top: 50px;
+  color: green; /* Cor para a mensagem de sucesso */
+  font-size: 24px;
+  font-weight: bold;
+}

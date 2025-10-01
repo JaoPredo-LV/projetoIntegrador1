@@ -1,0 +1,34 @@
+<ion-header [translucent]="true"></ion-header>
+<ion-content [fullscreen]="true">
+  <div class="header-container">
+    <ion-back-button defaultHref="/principal" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">
+HIT 25'- Nível 0
+    </div>
+  </div>
+
+<ion-content class="ion-padding">
+
+<div class="circle" [ngStyle]="{'background': 'conic-gradient(white ' + progressoPorcentagem + '%, transparent ' + progressoPorcentagem + '%)'}">
+  <span>{{ formatarTempo(tempoDoTreino) }}</span>
+</div>
+
+
+  <div class="info">
+    <p class="label">Velocidade atual</p>
+    <h2 class="speed">{{ velocidadeAtual }}</h2>
+    <p class="next">próxima {{ proximaVelocidade }}</p>
+  </div>
+
+  <!-- Gráfico de barras -->
+<div class="chart">
+  <div *ngFor="let altura of alturasFinais; let i = index" class="bar-container">
+    <div class="bar-fundo" [ngStyle]="{'height': altura + '%'}"></div>
+    
+    <div class="bar-preenchimento" [ngStyle]="{'height': alturasAtuais[i] + '%'}"></div>
+  </div>
+</div>
+<div class="concluido" *ngIf="treinoConcluido">
+  <h2>TREINO CONCLUÍDO</h2>
+</div>
+</ion-content>
