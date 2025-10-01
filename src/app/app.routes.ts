@@ -165,5 +165,17 @@ export const routes: Routes = [
   {
     path: 'tempothree',
     loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },  {
+    path: 'tvcqbike',
+    loadComponent: () => import('./tvcqbike/tvcqbike.page').then( m => m.TvcqbikePage)
   },
+  {
+    path: 'tvcvbike',
+    loadComponent: () => import('./tvcvbike/tvcvbike.page').then( m => m.TvcvbikePage)
+  },
+  {
+    path: 'tvcvcbike',
+    loadComponent: () => import('./tvcvcbike/tvcvcbike.page').then( m => m.TvcvcbikePage)
+  },
+
 ];
