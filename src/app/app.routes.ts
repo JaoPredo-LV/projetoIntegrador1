@@ -169,7 +169,7 @@ export const routes: Routes = [
     loadComponent: () => import('./nivelvinteeliptico/nivelvinteeliptico.page').then( m => m.NivelvinteelipticoPage)
   },
   {
-    path: 'nivelquinzeecincoeliptico',
+    path: 'nivelecincoeliptico',
     loadComponent: () => import('./nivelquinzeecincoeliptico/nivelquinzeecincoeliptico.page').then( m => m.NivelquinzeecincoelipticoPage)
   },
 
@@ -454,5 +454,16 @@ export const routes: Routes = [
     path: 'niveleliptco',
     loadComponent: () => import('./niveleliptco/niveleliptco.page').then( m => m.NiveleliptcoPage)
   },
-
+  {
+    path: 'nivelquinzeesteira',
+    loadComponent: () => import('./nivelquinzeesteira/nivelquinzeesteira.page').then( m => m.NivelquinzeesteiraPage)
+  },
+  {
+    path: 'nivelvinteecincoesteira',
+    loadComponent: () => import('./nivelvinteecincoesteira/nivelvinteecincoesteira.page').then( m => m.NivelvinteecincoesteiraPage)
+  },
+  {
+    path: 'nivelvinteesteira',
+    loadComponent: () => import('./nivelvinteesteira/nivelvinteesteira.page').then( m => m.NivelvinteesteiraPage)
+  },
 ];

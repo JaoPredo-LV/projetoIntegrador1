@@ -7,6 +7,7 @@ import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, I
 @Component({
   selector: 'app-hitdezrun',
   templateUrl: './hitdezrun.page.html',
+  styleUrls: ['./hitdezrun.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
