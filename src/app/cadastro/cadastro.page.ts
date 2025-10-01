@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { home, personCircleOutline } from 'ionicons/icons';
+import { chevronBackOutline, home, personCircleOutline } from 'ionicons/icons';
 import { RequisicaoService } from '../service/requisicao';
 import { Router, RouterLink } from '@angular/router';
 
@@ -28,7 +28,7 @@ export class CadastroPage {
     public rs:RequisicaoService,
     private router: Router
   ) { 
-    addIcons({home, personCircleOutline})
+    addIcons({home, personCircleOutline, chevronBackOutline})
    }
 
   ngOnInit() {
