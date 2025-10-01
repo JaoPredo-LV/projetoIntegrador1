@@ -17,22 +17,46 @@
     </div> 
 
     <div class="formulario">
-      <ion-input [(ngModel)]="nome" labelPlacement="floating" label="Nome completo:" type="text"></ion-input>
-      <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date"></ion-input>
-      <ion-input [(ngModel)]="peso" labelPlacement="floating" label="Peso (em Kg):" type="number"></ion-input>
-      <ion-input [(ngModel)]="altura" labelPlacement="floating" label="Altura (em centímetros):" type="number"></ion-input>
-      <ion-input [(ngModel)]="genero" labelPlacement="floating" label="Gênero:" type="text"></ion-input>
-      <ion-input [(ngModel)]="email" labelPlacement="floating" label="E-mail:" type="email"></ion-input>
-      <ion-input [(ngModel)]="senha" labelPlacement="floating" label="Senha:" type="password">
+    
+    <ion-item class="custom-input">
+      <ion-input [(ngModel)]="nome" labelPlacement="floating" label="Nome completo:" type="text" fill="outline"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input [(ngModel)]="data" labelPlacement="floating" label="Data de nascimento (dd/mm/aaaa):" type="date" fill="outline"></ion-input>
+    </ion-item>
+    
+    <ion-item class="custom-input">
+      <ion-input [(ngModel)]="peso" labelPlacement="floating" label="Peso (em Kg):" type="number" fill="outline"></ion-input>
+    </ion-item>
+    
+    <ion-item class="custom-input">
+      <ion-input [(ngModel)]="altura" labelPlacement="floating" label="Altura (em centímetros):" type="number" fill="outline"></ion-input>
+    </ion-item>
+    
+    <ion-item class="custom-input">
+      <ion-select [(ngModel)]="genero" label="Gênero:" labelPlacement="floating" fill="outline" placeholder="Selecione">
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="feminino">Feminino</ion-select-option>
+        </ion-select>
+    </ion-item>
+    
+    <ion-item class="custom-input">
+      <ion-input [(ngModel)]="email" labelPlacement="floating" label="E-mail:" type="email" fill="outline"></ion-input>
+    </ion-item>
+    
+    <ion-item class="custom-input">
+      <ion-input [(ngModel)]="senha" labelPlacement="floating" label="Senha:" type="password" fill="outline">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
+    </ion-item>
 
-      <div class="botao-container">
-        <ion-button (click)="salvar()">
-          CADASTRAR
-        </ion-button>
-      </div>
+    <div class="botao-container">
+      <ion-button (click)="salvar()" expand="block" class="register-button">
+        CADASTRAR
+      </ion-button>
     </div>
+  </div>
   </div>
 </ion-content>
 
