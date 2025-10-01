@@ -147,6 +147,30 @@ export const routes: Routes = [
   {
     path: 'hitvinteecincorun',
     loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
+  },  {
+    path: 'nivelquinzebike',
+    loadComponent: () => import('./nivelquinzebike/nivelquinzebike.page').then( m => m.NivelquinzebikePage)
   },
+  {
+    path: 'nivelvintebike',
+    loadComponent: () => import('./nivelvintebike/nivelvintebike.page').then( m => m.NivelvintebikePage)
+  },
+  {
+    path: 'nivelvinteecincobike',
+    loadComponent: () => import('./nivelvinteecincobike/nivelvinteecincobike.page').then( m => m.NivelvinteecincobikePage)
+  },
+  {
+    path: 'nivelquinzeeliptico',
+    loadComponent: () => import('./nivelquinzeeliptico/nivelquinzeeliptico.page').then( m => m.NivelquinzeelipticoPage)
+  },
+  {
+    path: 'nivelvinteeliptico',
+    loadComponent: () => import('./nivelvinteeliptico/nivelvinteeliptico.page').then( m => m.NivelvinteelipticoPage)
+  },
+  {
+    path: 'nivelquinzeecincoeliptico',
+    loadComponent: () => import('./nivelquinzeecincoeliptico/nivelquinzeecincoeliptico.page').then( m => m.NivelquinzeecincoelipticoPage)
+  },
+
 
 ];
