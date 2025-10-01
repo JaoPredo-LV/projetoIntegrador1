@@ -107,6 +107,18 @@ export const routes: Routes = [
     loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
   },
   {
+  path: 'hitquinzebike',
+  loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
+},
+{
+  path: 'hitvintebike',
+  loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+},
+{
+  path: 'hitvintecinco',
+  loadComponent: () => import('./hitvintecinco/hitvintecinco.page').then( m => m.HitvintecincoPage)
+},
+  {
     path: 'hitesteira',
     loadComponent: () => import('./hitesteira/hitesteira.page').then( m => m.HitesteiraPage)
   },
@@ -114,8 +126,6 @@ export const routes: Routes = [
     path: 'tempoesteira',
     loadComponent: () => import('./tempoesteira/tempoesteira.page').then( m => m.TempoesteiraPage)
   },
-
-
   {
     path: 'hitdezeliptico',
     loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
@@ -148,5 +158,12 @@ export const routes: Routes = [
     path: 'hitvinteecincorun',
     loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
   },
-
+  {
+    path: 'tempotwo',
+    loadComponent: () => import('./tempotwo/tempotwo.page').then( m => m.TempotwoPage)
+  },
+  {
+    path: 'tempothree',
+    loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },
 ];
