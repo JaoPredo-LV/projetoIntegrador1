@@ -15,13 +15,13 @@ export class NivelPage implements OnInit, OnDestroy {
   tempoDoTreino: number = 0;
   progressoPorcentagem: number = 0;
   private intervalo: any;
-  alturasFinais: number[] = [60, 80, 40, 70, 90, 60, 45];
-  barrasAtivas: boolean[] = [false, false, false, false, false, false, false];
+  alturasFinais: number[] = [60, 80, 40, 70, 90, 60, 45, 90, 50];
+  barrasAtivas: boolean[] = [false, false, false, false, false, false, false, false, false];
   barraAtualIndex: number = 0;
-  alturasAtuais: number[] = [0, 0, 0, 0, 0, 0, 0];
+  alturasAtuais: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   velocidadePreenchimento: number = 1; // Você pode ajustar este valor
   treinoConcluido: boolean = false;
-  velocidades: string[] = ['4-5 km/h', '5-6 km/h', '6-7 km/h', '7-8 km/h', '8-9 km/h', '9-10 km/h', '10-11 km/h'];
+  velocidades: string[] = ['4-5 km/h', '5-6 km/h', '6-7 km/h','4-5 km/h', '5-6 km/h','4-5 km/h','6-7 km/h', '5-6 km/h', '4-5 km/h'];
   velocidadeAtual: string = this.velocidades[0];
   proximaVelocidade: string = this.velocidades[1];
 

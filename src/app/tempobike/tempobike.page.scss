@@ -1,0 +1,53 @@
+.hits-header {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    height: 50px;
+    padding: 35px;
+  }
+  
+  .hits-title {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .voltar {
+    position: absolute;
+    left: 10px;  
+    top: 50%;
+    transform: translateY(-50%); 
+    --background: transparent;
+    --box-shadow: none;
+  }
+
+  
+  .corpo{
+    margin-top: 50%;
+    display: flex;
+    flex-wrap: wrap;          /* quebra linha quando precisar */
+    justify-content: center;  /* centraliza horizontalmente */
+    gap: 20px;                /* espaçamento entre botões */
+  }
+  
+  .botao{
+    --background: rgb(179, 179, 179);
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    --border-radius: 0 !important;
+  }
+
+  ion-content{    
+      --background: none;
+      background-image: url("/assets/bike.jpg");
+      background-size: cover;
+      object-fit: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }

@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonIcon, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone'; 
+
 @Component({
-  selector: 'app-hitdezbike',
-  templateUrl: './hitdezbike.page.html',
-  styleUrls: ['./hitdezbike.page.scss'],
+  selector: 'app-hitvinteecincobike',
+  templateUrl: './hitvinteecincobike.page.html',
+  styleUrls: ['./hitvinteecincobike.page.scss'],
   standalone: true,
   imports: [IonContent, IonIcon, RouterModule, IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class HitdezbikePage implements OnInit {
-  niveis = [
+export class HitvinteecincobikePage implements OnInit {
+niveis = [
     { numero: 0, titulo: 'Muito Fácil', link: '/hitbike' },
     { numero: 1, titulo: 'Fácil', link: '/nivel1' },
     { numero: 2, titulo: 'Moderado', link: '/nivel2' },

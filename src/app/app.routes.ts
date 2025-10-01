@@ -65,6 +65,7 @@ export const routes: Routes = [
     path: 'tempo',
     loadComponent: () => import('./tempo/tempo.page').then( m => m.TempoPage)
   },
+
   {
     path: 'nivel',
     loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
@@ -98,13 +99,23 @@ export const routes: Routes = [
     loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
   },
   {
-    path: 'tempotwo',
-    loadComponent: () => import('./tempotwo/tempotwo.page').then( m => m.TempotwoPage)
+    path: 'tempobike',
+    loadComponent: () => import('./tempobike/tempobike.page').then( m => m.TempobikePage)
   },
   {
-    path: 'tempothree',
-    loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+    path: 'hitdezbike',
+    loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
   },
+  {
+    path: 'hitesteira',
+    loadComponent: () => import('./hitesteira/hitesteira.page').then( m => m.HitesteiraPage)
+  },
+  {
+    path: 'tempoesteira',
+    loadComponent: () => import('./tempoesteira/tempoesteira.page').then( m => m.TempoesteiraPage)
+  },
+
+
   {
     path: 'hitdezeliptico',
     loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
