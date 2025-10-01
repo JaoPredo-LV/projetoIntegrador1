@@ -272,5 +272,21 @@ export const routes: Routes = [
   {
     path: 'tempothree',
     loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },  {
+    path: 'niveldezesteira',
+    loadComponent: () => import('./niveldezesteira/niveldezesteira.page').then( m => m.NiveldezesteiraPage)
   },
+  {
+    path: 'nivelquinzeesteira',
+    loadComponent: () => import('./nivelquinzeesteira/nivelquinzeesteira.page').then( m => m.NivelquinzeesteiraPage)
+  },
+  {
+    path: 'nivelvinteesteira',
+    loadComponent: () => import('./nivelvinteesteira/nivelvinteesteira.page').then( m => m.NivelvinteesteiraPage)
+  },
+  {
+    path: 'nivelvinteecincoesteira',
+    loadComponent: () => import('./nivelvinteecincoesteira/nivelvinteecincoesteira.page').then( m => m.NivelvinteecincoesteiraPage)
+  },
+
 ];
