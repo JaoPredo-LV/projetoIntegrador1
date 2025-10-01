@@ -36,15 +36,15 @@ export class PrincipalPage implements OnInit, AfterViewInit {
   propagandas = [
     {
       img: 'assets/propagandawhey.jpg',
-      link: 'https://www.gsuplementos.com.br/whey-protein-concentrado-1kg-growth-supplements-p985936'
+      link: 'https://darklabsuplementos.com.br/products/whey-protein-concentrado-1kg-dark-lab'
     },
     {
       img: 'assets/growthwheyy.jpg',
       link: 'https://www.gsuplementos.com.br/whey-protein-concentrado-1kg-growth-supplements-p985936'
     },
     {
-      img: 'assets/max.jpg',
-      link: 'https://https://www.maxtitanium.com.br/creatine-pote-300g/p?skuid=31'
+      img: 'assets/darkmamba.jpg',
+      link: 'https://darklabsuplementos.com.br/products/dark-mamba-60-capsulas-dark-lab'
     }
   ];
 

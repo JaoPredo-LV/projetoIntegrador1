@@ -114,8 +114,6 @@ export const routes: Routes = [
     path: 'tempoesteira',
     loadComponent: () => import('./tempoesteira/tempoesteira.page').then( m => m.TempoesteiraPage)
   },
-
-
   {
     path: 'hitdezeliptico',
     loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
