@@ -272,7 +272,8 @@ export const routes: Routes = [
   {
     path: 'tempothree',
     loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
-  },  {
+  },
+  {
     path: 'niveldezesteira',
     loadComponent: () => import('./niveldezesteira/niveldezesteira.page').then( m => m.NiveldezesteiraPage)
   },
@@ -287,6 +288,244 @@ export const routes: Routes = [
   {
     path: 'nivelvinteecincoesteira',
     loadComponent: () => import('./nivelvinteecincoesteira/nivelvinteecincoesteira.page').then( m => m.NivelvinteecincoesteiraPage)
+  },
+
+  {
+    path: 'nivel',
+    loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
+  },
+  {
+    path: 'opcaob',
+    loadComponent: () => import('./opcaob/opcaob.page').then( m => m.OpcaobPage)
+  },
+  {
+    path: 'opcaoc',
+    loadComponent: () => import('./opcaoc/opcaoc.page').then( m => m.OpcaocPage)
+  },
+  {
+    path: 'niveleliptco',
+    loadComponent: () => import('./niveleliptco/niveleliptco.page').then( m => m.NiveleliptcoPage)
+  },
+  {
+      path: 'hiteliptico',
+    loadComponent: () => import('./hiteliptico/hiteliptico.page').then( m => m.HitelipticoPage)
+  },
+  {
+    path: 'nivel',
+    loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
+  },
+  {
+    path: 'hitrun',
+    loadComponent: () => import('./hitrun/hitrun.page').then( m => m.HitrunPage)
+  },
+  {
+    path: 'hitbike',
+    loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
+  },
+  {
+    path: 'tempobike',
+    loadComponent: () => import('./tempobike/tempobike.page').then( m => m.TempobikePage)
+  },
+  {
+    path: 'hitdezbike',
+    loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
+  },
+  {
+  path: 'hitquinzebike',
+  loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
+},
+{
+  path: 'hitvintebike',
+  loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+},
+{
+  path: 'hitvintecinco',
+  loadComponent: () => import('./hitvintecinco/hitvintecinco.page').then( m => m.HitvintecincoPage)
+},
+  {
+    path: 'hitesteira',
+    loadComponent: () => import('./hitesteira/hitesteira.page').then( m => m.HitesteiraPage)
+  },
+  {
+    path: 'tempoesteira',
+    loadComponent: () => import('./tempoesteira/tempoesteira.page').then( m => m.TempoesteiraPage)
+  },
+  {
+    path: 'hitdezeliptico',
+    loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
+  },
+  {
+    path: 'hitquinzeeliptico',
+    loadComponent: () => import('./hitquinzeeliptico/hitquinzeeliptico.page').then( m => m.HitquinzeelipticoPage)
+  },
+  {
+    path: 'hitvinteeliptico',
+    loadComponent: () => import('./hitvinteeliptico/hitvinteeliptico.page').then( m => m.HitvinteelipticoPage)
+  },
+  {
+    path: 'hitvinteecincoeliptico',
+    loadComponent: () => import('./hitvinteecincoeliptico/hitvinteecincoeliptico.page').then( m => m.HitvinteecincoelipticoPage)
+  },
+  {
+    path: 'hitdezrun',
+    loadComponent: () => import('./hitdezrun/hitdezrun.page').then( m => m.HitdezrunPage)
+  },
+  {
+    path: 'hitquinzerun',
+    loadComponent: () => import('./hitquinzerun/hitquinzerun.page').then( m => m.HitquinzerunPage)
+  },
+  {
+    path: 'hitvinterun',
+    loadComponent: () => import('./hitvinterun/hitvinterun.page').then( m => m.HitvinterunPage)
+  },
+  {
+    path: 'hitvinteecincorun',
+    loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
+  },
+  {
+    path: 'tempotwo',
+    loadComponent: () => import('./tempotwo/tempotwo.page').then( m => m.TempotwoPage)
+  },
+  {
+    path: 'tempothree',
+    loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },
+  {
+    path: 'tvcqbike',
+    loadComponent: () => import('./tvcqbike/tvcqbike.page').then( m => m.TvcqbikePage)
+  },
+  {
+    path: 'tvcvbike',
+    loadComponent: () => import('./tvcvbike/tvcvbike.page').then( m => m.TvcvbikePage)
+  },
+  {
+    path: 'tvcvcbike',
+    loadComponent: () => import('./tvcvcbike/tvcvcbike.page').then( m => m.TvcvcbikePage)
+  },
+
+  {
+    path: 'nivel',
+    loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
+  },
+  {
+    path: 'opcaob',
+    loadComponent: () => import('./opcaob/opcaob.page').then( m => m.OpcaobPage)
+  },
+  {
+    path: 'opcaoc',
+    loadComponent: () => import('./opcaoc/opcaoc.page').then( m => m.OpcaocPage)
+  },
+  {
+    path: 'niveleliptco',
+    loadComponent: () => import('./niveleliptco/niveleliptco.page').then( m => m.NiveleliptcoPage)
+  },
+  {
+      path: 'hiteliptico',
+    loadComponent: () => import('./hiteliptico/hiteliptico.page').then( m => m.HitelipticoPage)
+  },
+  {
+    path: 'nivel',
+    loadComponent: () => import('./nivel/nivel.page').then( m => m.NivelPage)
+  },
+  {
+    path: 'hitrun',
+    loadComponent: () => import('./hitrun/hitrun.page').then( m => m.HitrunPage)
+  },
+  {
+    path: 'hitbike',
+    loadComponent: () => import('./hitbike/hitbike.page').then( m => m.HitBikePage)
+  },
+  {
+    path: 'tempobike',
+    loadComponent: () => import('./tempobike/tempobike.page').then( m => m.TempobikePage)
+  },
+  {
+    path: 'hitdezbike',
+    loadComponent: () => import('./hitdezbike/hitdezbike.page').then( m => m.HitdezbikePage)
+  },
+  {
+  path: 'hitquinzebike',
+  loadComponent: () => import('./hitquinzebike/hitquinzebike.page').then( m => m.HitquinzebikePage)
+},
+{
+  path: 'hitvintebike',
+  loadComponent: () => import('./hitvintebike/hitvintebike.page').then( m => m.HitvintebikePage)
+},
+{
+  path: 'hitvintecinco',
+  loadComponent: () => import('./hitvintecinco/hitvintecinco.page').then( m => m.HitvintecincoPage)
+},
+  {
+    path: 'hitesteira',
+    loadComponent: () => import('./hitesteira/hitesteira.page').then( m => m.HitesteiraPage)
+  },
+  {
+    path: 'tempoesteira',
+    loadComponent: () => import('./tempoesteira/tempoesteira.page').then( m => m.TempoesteiraPage)
+  },
+  {
+    path: 'hitdezeliptico',
+    loadComponent: () => import('./hitdezeliptico/hitdezeliptico.page').then( m => m.HitdezelipticoPage)
+  },
+  {
+    path: 'hitquinzeeliptico',
+    loadComponent: () => import('./hitquinzeeliptico/hitquinzeeliptico.page').then( m => m.HitquinzeelipticoPage)
+  },
+  {
+    path: 'hitvinteeliptico',
+    loadComponent: () => import('./hitvinteeliptico/hitvinteeliptico.page').then( m => m.HitvinteelipticoPage)
+  },
+  {
+    path: 'hitvinteecincoeliptico',
+    loadComponent: () => import('./hitvinteecincoeliptico/hitvinteecincoeliptico.page').then( m => m.HitvinteecincoelipticoPage)
+  },
+  {
+    path: 'hitdezrun',
+    loadComponent: () => import('./hitdezrun/hitdezrun.page').then( m => m.HitdezrunPage)
+  },
+  {
+    path: 'hitquinzerun',
+    loadComponent: () => import('./hitquinzerun/hitquinzerun.page').then( m => m.HitquinzerunPage)
+  },
+  {
+    path: 'hitvinterun',
+    loadComponent: () => import('./hitvinterun/hitvinterun.page').then( m => m.HitvinterunPage)
+  },
+  {
+    path: 'hitvinteecincorun',
+    loadComponent: () => import('./hitvinteecincorun/hitvinteecincorun.page').then( m => m.HitvinteecincorunPage)
+  },
+  {
+    path: 'tempotwo',
+    loadComponent: () => import('./tempotwo/tempotwo.page').then( m => m.TempotwoPage)
+  },
+  {
+    path: 'tempothree',
+    loadComponent: () => import('./tempothree/tempothree.page').then( m => m.TempothreePage)
+  },
+  {
+    path: 'trcquinzeeli',
+    loadComponent: () => import('./trcquinzeeli/trcquinzeeli.page').then( m => m.TrcquinzeeliPage)
+  },
+  {
+    path: 'trcvinteeli',
+    loadComponent: () => import('./trcvinteeli/trcvinteeli.page').then( m => m.TrcvinteeliPage)
+  },
+  {
+    path: 'trcvientecincoeli',
+    loadComponent: () => import('./trcvientecincoeli/trcvientecincoeli.page').then( m => m.TrcvientecincoeliPage)
+  },
+  {
+    path: 'trcquinzeest',
+    loadComponent: () => import('./trcquinzeest/trcquinzeest.page').then( m => m.TrcquinzeestPage)
+  },
+  {
+    path: 'trcvinteest',
+    loadComponent: () => import('./trcvinteest/trcvinteest.page').then( m => m.TrcvinteestPage)
+  },
+  {
+    path: 'trcvintecincoest',
+    loadComponent: () => import('./trcvintecincoest/trcvintecincoest.page').then( m => m.TrcvintecincoestPage)
   },
 
 ];
