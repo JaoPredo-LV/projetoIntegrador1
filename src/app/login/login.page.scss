@@ -1,3 +1,7 @@
+ion-header{
+right:115px;
+margin-top: -18%;
+}
 .div-login {
     display: flex;
     flex-direction: column;   
@@ -40,4 +44,9 @@ ion-input {
 .botao{
     padding: 30% 0;
     width: 50%;
+}
+
+.button-inner{
+    width: 20%;
+    margin:0 ;
 }

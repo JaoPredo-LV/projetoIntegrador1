@@ -1,14 +1,18 @@
 <ion-header [translucent]="true"></ion-header>
-
+<ion-header>
+  <ion-back-button defaultHref="/home"  class="botao-voltar"></ion-back-button>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header></ion-header>
+  <ion-header>
+    <ion-back-button defaultHref="/treinos"  class="botao-voltar"></ion-back-button>
+  </ion-header>
   <div class="div-login">
     <h1 class="intro">LOGIN</h1>
 
-    <ion-input placeholder="E-mail:" type="email" [(ngModel)]="email"></ion-input>
+    <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
     <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
 
-    <ion-input placeholder="Senha:" type="password" [(ngModel)]="senha">
+    <ion-input label="Senha: (8 caracteres)" labelPlacement="floating" maxlength="8" type="password" [(ngModel)]="senha">
       <ion-input-password-toggle slot="end"></ion-input-password-toggle>
     </ion-input>
     <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>

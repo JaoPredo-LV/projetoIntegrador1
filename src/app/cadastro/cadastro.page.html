@@ -15,10 +15,9 @@
       <ion-input [(ngModel)]="altura" labelPlacement="floating" label="Altura (em centímetros):" type="number" shape="round"></ion-input>
       <ion-input [(ngModel)]="genero" labelPlacement="floating" label="Gênero:" type="text" shape="round"></ion-input>
       <ion-input [(ngModel)]="email" labelPlacement="floating" label="E-mail:" type="email" shape="round"></ion-input>
-      <ion-input [(ngModel)]="senha" labelPlacement="floating" label="Senha:" type="password" shape="round">
+      <ion-input [(ngModel)]="senha" labelPlacement="floating" label="Senha:" maxlength="8" type="password" shape="round">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
-    </ion-item>
 
         <ion-button class="botao" (click)="salvar()">
           CADASTRAR

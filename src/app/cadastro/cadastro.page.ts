@@ -7,36 +7,34 @@ import { chevronBackOutline, home, personCircleOutline } from 'ionicons/icons';
 import { RequisicaoService } from '../service/requisicao';
 import { Router, RouterLink } from '@angular/router';
 
-
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.page.html',
   styleUrls: ['./cadastro.page.scss'],
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule, IonicModule],
+  imports: [CommonModule, RouterLink, FormsModule, IonicModule, ]
 })
-
 export class CadastroPage {
-  public nome:string="";
-  public data:string="";
-  public peso:string="";
-  public altura:string="";
-  public genero:string="";
-  public email:string="";
-  public senha:string="";
-  constructor(
-    public rs:RequisicaoService,
-    private router: Router
-  ) { 
-    addIcons({home, personCircleOutline, chevronBackOutline})
-   }
+  public nome: string = "";
+  public data: string = "";
+  public peso: string = "";
+  public altura: string = "";
+  public genero: string = "";
+  public email: string = "";
+  public senha: string = "";
 
-  ngOnInit() {
+  constructor(
+    private rs: RequisicaoService,
+    private router: Router
+  ) {
+    addIcons({ home, personCircleOutline, chevronBackOutline });
   }
 
-  salvar(){
+  ngOnInit() {}
+
+  salvar() {
     const fd = new FormData();
-    fd.append('controller','cadastro-usuario');
+    fd.append('controller', 'cadastro-usuario');
     fd.append('nome', this.nome);
     fd.append('data', this.data);
     fd.append('peso', this.peso);
@@ -46,7 +44,5 @@ export class CadastroPage {
     fd.append('senha', this.senha);
 
     this.rs.post(fd).subscribe();
-
-    this.router.navigateByUrl('/questionario')
   }
 }
