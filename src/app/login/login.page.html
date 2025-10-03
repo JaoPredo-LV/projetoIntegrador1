@@ -1,14 +1,11 @@
 <ion-header [translucent]="true"></ion-header>
-<ion-header>
-  <ion-back-button defaultHref="/home"  class="botao-voltar"></ion-back-button>
-</ion-header>
-<ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-back-button defaultHref="/treinos"  class="botao-voltar"></ion-back-button>
-  </ion-header>
-  <div class="div-login">
-    <h1 class="intro">LOGIN</h1>
 
+<ion-content [fullscreen]="true">
+  <div class="header-container">
+    <ion-back-button defaultHref="/home" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">LOGIN</div>
+  </div>
+  <div class="div-login">
     <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
     <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
 
@@ -19,6 +16,6 @@
 
        <p><a href="/esenha">Esqueci minha senha</a></p>
 
-       <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="logar()">ENTRAR</ion-button>
-    </div>
+       <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="logar()" a href="/principal">ENTRAR</ion-button>
+      </div>
 </ion-content>

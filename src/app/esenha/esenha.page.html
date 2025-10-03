@@ -1,14 +1,13 @@
-<ion-header [translucent]="true">
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="header-container">
+    <ion-back-button defaultHref="/login" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">ESQUECEU SUA SENHA?</div>
+  </div>
+
   <div class="div-esenha">
-    <h1 class="intro">ESQUECEU SUA SENHA?</h1>
-
-  <div class="div-login">
     <ion-input label="E-mail:" labelPlacement="floating" type="email"></ion-input>
-
-
        <ion-button id="envio" class="botao" color="medium" style="--border-radius: 100px;">ENVIAR CÓDIGO</ion-button>
        <ion-popover trigger="envio" triggerAction="click" side="top" alignment="center">
         <ng-template>
