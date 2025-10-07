@@ -16,9 +16,9 @@
       <ion-input label="Senha: (8 caracteres)" labelPlacement="floating" maxlength="8" type="password" [(ngModel)]="senha">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
-
-
-      <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="salvar()" a href="/questionario">CADASTRAR</ion-button>
+        <ion-button class="botao" (click)="salvar()">
+          CADASTRAR
+        </ion-button>
   </div>
 
 

@@ -52,6 +52,7 @@ export class ConfigPage implements OnInit {
     fd.append('nome', this.nome);
     fd.append('genero', this.genero);
     fd.append('imagem', this.srcImage);
+  
 
     sessionStorage.setItem('username', this.nome);
     sessionStorage.setItem('genero', this.genero);
@@ -63,7 +64,9 @@ export class ConfigPage implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    if (sessionStorage.getItem('imagem') == '' || sessionStorage.getItem('imagem')){
+    if (sessionStorage.getItem('user_src_img')){
+      this.srcImage = String(sessionStorage.getItem('user_src_img'));
+    }else{
       this.noImagem();
     }    
   }
@@ -77,9 +80,12 @@ export class ConfigPage implements OnInit {
     // Upload de Arquivo
     this.us.upload(selectedFile).subscribe(
       (response:any) => {
-        this.srcImage = 'http://localhost/autenticacao/uploads' + response.src;
-        sessionStorage.setItem('imagem',response.src);
-        this.uploaded.emit(response.src);
+        if (response.status=='success'){
+          this.srcImage = 'http://localhost/autenticacao/' + response.src;
+
+          sessionStorage.setItem('user_src_img', this.srcImage);
+        }
+        this.uploaded.emit(response);
       }
     );
   }

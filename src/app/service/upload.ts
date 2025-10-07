@@ -13,6 +13,7 @@ export class UploadService {
     const fd = new FormData();
     fd.append('imagem',selectedFile);
     fd.append('controller','upload');
+    fd.append('userid', String(sessionStorage.getItem('userid')));
     return this.rs.uploaded(fd);
   }
 }
