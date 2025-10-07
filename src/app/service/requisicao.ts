@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,31 +6,22 @@ import { Injectable } from '@angular/core';
 })
 export class RequisicaoService {
 
-  constructor(
-    public http:HttpClient
-  ) { }
+  private baseUrl = 'http://localhost/autenticacao'; // 🟢 caminho da pasta onde estão os PHPs
 
-  get(dados:any){
-    return this.http.get('/requisicao',{
-      params:dados
-    });
+  constructor(private http: HttpClient) { }
+
+  // Método GET genérico (caso precise)
+  get(url: string, params?: any) {
+    return this.http.get(`${this.baseUrl}/${url}`, { params });
   }
 
-  post(formData:any){
-    const HttpOptions = {
-      headers: new HttpHeaders ({
-        'Access-Control-Allow-Origin' : '*'
-      })
-    }
-    return this.http.post('/requisicao', formData, HttpOptions)
+  // Método POST genérico
+  post(formData: any, endpoint: string) {
+    return this.http.post(`${this.baseUrl}/${endpoint}`, formData);
   }
 
-  uploaded(formData:any,params?:any){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin' : '*'
-      })      
-    };
-    return this.http.post('/upload',formData,httpOptions);
-  }  
+  // Upload de arquivos (caso precise enviar imagem ou arquivo)
+  upload(formData: FormData, endpoint: string) {
+    return this.http.post(`${this.baseUrl}/${endpoint}`, formData);
+  }
 }
