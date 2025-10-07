@@ -7,7 +7,7 @@
     },
     
     "/upload":{
-      "target": "http://localhost/autenticacao/index.php",
+      "target": "http://localhost/autenticacao/upload.php",
       "secure": false,
       "changeOrigin": true,
       "logLevel": "debug"

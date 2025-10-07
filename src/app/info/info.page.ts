@@ -29,7 +29,9 @@ export class InfoPage implements OnInit {
   genero = {
     genero: sessionStorage.getItem('genero')
   }
-
+  srcImage = {
+    srcImage: sessionStorage.getItem('imagem')
+  }
   constructor() { 
     addIcons({chevronBackOutline, personCircleOutline})
   }
