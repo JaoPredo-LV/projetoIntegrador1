@@ -12,29 +12,50 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './cadastro.page.html',
   styleUrls: ['./cadastro.page.scss'],
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule, IonicModule, ]
+  imports: [CommonModule, RouterLink, FormsModule, IonicModule]
 })
 export class CadastroPage {
-  public nome: string = "";
-  public data: string = "";
-  public peso: string = "";
-  public altura: string = "";
-  public genero: string = "";
-  public email: string = "";
-  public senha: string = "";
+  public nome = '';
+  public data = '';
+  public peso = '';
+  public altura = '';
+  public genero = '';
+  public email = '';
+  public senha = '';
+  public imagemArquivo: any = null;
+  public imagemPreview: string = 'assets/default.png';
+  public erroMsg = '';
+  public sucessoMsg = '';
 
-  constructor(
-    private rs: RequisicaoService,
-    private router: Router
-  ) {
+  constructor(private rs: RequisicaoService, private router: Router) {
     addIcons({ home, personCircleOutline, chevronBackOutline });
   }
 
-  ngOnInit() {}
+  selecionarFoto() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = () => {
+      if (input.files && input.files[0]) {
+        this.imagemArquivo = input.files[0];
+        const reader = new FileReader();
+        reader.onload = e => this.imagemPreview = reader.result as string;
+        reader.readAsDataURL(this.imagemArquivo);
+      }
+    };
+    input.click();
+  }
 
   salvar() {
+    this.erroMsg = '';
+    this.sucessoMsg = '';
+
+    if (!this.nome || !this.data || !this.peso || !this.altura || !this.genero || !this.email || !this.senha) {
+      this.erroMsg = 'Preencha todos os campos';
+      return;
+    }
+
     const fd = new FormData();
-    fd.append('controller', 'cadastro-usuario');
     fd.append('nome', this.nome);
     fd.append('data', this.data);
     fd.append('peso', this.peso);
@@ -43,6 +64,27 @@ export class CadastroPage {
     fd.append('email', this.email);
     fd.append('senha', this.senha);
 
-    this.rs.post(fd).subscribe();
+    // Se o usuário escolheu uma imagem, envia o arquivo real
+    if (this.imagemArquivo) {
+      fd.append('imagem', this.imagemArquivo, this.imagemArquivo.name);
+    } else {
+      // Caso contrário, envia apenas o nome da imagem padrão
+      fd.append('imagem', 'guest.png');
+    }
+
+    this.rs.post(fd, 'cadastro-usuario.php').subscribe({
+      next: (res: any) => {
+        if (res.status === 'success') {
+          this.sucessoMsg = res.msg;
+          setTimeout(() => this.router.navigate(['/questionario']), 1000);
+        } else {
+          this.erroMsg = res.msg;
+        }
+      },
+      error: (err) => {
+        this.erroMsg = 'Erro de conexão com o servidor.';
+        console.error(err);
+      }
+    });
   }
 }

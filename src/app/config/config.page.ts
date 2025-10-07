@@ -57,7 +57,7 @@ export class ConfigPage implements OnInit {
     sessionStorage.setItem('username', this.nome);
     sessionStorage.setItem('genero', this.genero);
     sessionStorage.setItem('imagem', this.srcImage);
-    this.rs.post(fd).subscribe();
+    this.rs.post(fd, 'cadastro-usuario.php').subscribe();
   }
 
   ngOnInit() {

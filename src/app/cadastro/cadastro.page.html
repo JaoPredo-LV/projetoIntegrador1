@@ -1,5 +1,3 @@
-
-
 <ion-content [fullscreen]="true">
   <div class="header-container">
     <ion-back-button defaultHref="/home" class="botao-voltar"></ion-back-button>
@@ -7,6 +5,12 @@
   </div>
 
     <div class="formulario">
+
+      <div class="foto-container" (click)="selecionarFoto()">
+      <img [src]="imagemPreview" class="foto-perfil"/>
+      <div class="icone-camera">📷</div>
+    </div>
+
       <ion-input [(ngModel)]="nome" labelPlacement="floating" label="Nome completo:" type="text" shape="round"></ion-input>
       <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date" shape="round"></ion-input>
       <ion-input [(ngModel)]="peso" labelPlacement="floating" label="Peso (em Kg):" type="number" shape="round"></ion-input>
@@ -19,7 +23,9 @@
         <ion-button class="botao" (click)="salvar()">
           CADASTRAR
         </ion-button>
+
+    <ion-text color="danger" *ngIf="erroMsg">{{ erroMsg }}</ion-text>
+
+    <ion-text color="success" *ngIf="sucessoMsg">{{ sucessoMsg }}</ion-text>
   </div>
-
-
 </ion-content>
