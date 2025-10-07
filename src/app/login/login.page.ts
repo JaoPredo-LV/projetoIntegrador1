@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader,  IonInput, IonLabel,  IonButton, IonInputPasswordToggle } from '@ionic/angular/standalone';
+import { IonContent, IonHeader,  IonInput, IonLabel,  IonButton, IonInputPasswordToggle, IonBackButton, IonButtons, IonToolbar } from '@ionic/angular/standalone';
 import { Router } from '@angular/router'; // ✅ Import Router
 import { AutenticacaoService } from '../service/autenticacao';
 
@@ -14,7 +14,8 @@ import { AutenticacaoService } from '../service/autenticacao';
     IonContent, IonHeader, 
     IonInput, IonLabel,
     IonButton, CommonModule, FormsModule, 
-    IonInputPasswordToggle
+    IonInputPasswordToggle, IonBackButton,
+    IonButtons,IonToolbar
   ]
 })
 export class LoginPage implements OnInit {

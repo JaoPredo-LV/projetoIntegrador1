@@ -1,34 +1,82 @@
-.topo{
+ion-content {
+  --background: #000;
+  color: #fff; 
+}
+
+ion-header ion-toolbar {
+  --background: #000;
+  --color: #fff; 
+
+  // Centraliza o título no toolbar (Padrão do Ionic, mas bom garantir)
+  ion-title {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+// Estilo para o ícone de pessoa (Avatar)
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .icon-person {
+    font-size: 60px;
+    color: #fff;
+  }
+}
+
+// Estilo para os inputs (mantém o visual arredondado e branco)
+.custom-input {
+  // Define uma largura MÁXIMA para o campo
+  max-width: 350px; /* Ajuste esta largura (em px ou %) para o tamanho que você deseja */
+  width: 90%; /* Garante que ele use 90% da largura do contêiner 'formulario' */
+  margin-bottom: 20px;
+  
+  // Remove o fundo cinza e a borda do ion-item
+  --background: transparent;
+  --border-color: transparent;
+  --inner-border-width: 0; // Remove a linha divisória do Ionic 
+  --border-width: 0;
+  
+  // SOLUÇÃO PARA O ALINHAMENTO DO TEXTO ("LABEL FEIO"):
+  --padding-start: 0; // Zera o padding padrão que empurra o conteúdo para a direita
+  --padding-end: 0;
+  --padding-top: 0; 
+  --padding-bottom: 0; 
+
+  ion-input, ion-select {
+    --background: #fff; 
+    --color: #000;      
+    --border-radius: 100px; 
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+    // O atributo fill="outline" no HTML é o que está criando o preenchimento branco!
+    --border-color: #fff; 
+    --placeholder-color: #666;
+    --label-color: #666;
+    
+  }
+}
+.formulario {
+  // Centraliza o formulário inteiro
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
   width: 100%;
 }
-
-.intro{
-  align-content: center;
-  float: left;
-  margin-left: 12%;
-  font-size: xx-large;
-}
-
-.voltar{
-  float: left;
-  padding: 3%;
-  --background: white;
-}
-
-.formulario{
-  height: auto;
-  clear: both;
-  padding: 10%;
-}
-
-ion-input{
-  margin-top: 10%;
-  --background: white;
-  --color: black;
-}
-
-.botao{
-  --background: white;
-  padding: 10%;
-  width: 100%;
+// Estilo para o botão "CADASTRAR"
+.register-button {
+  // O botão também precisa ter a largura menor e estar centralizado
+  max-width: 350px; /* Usa a mesma largura do input */
+  width: 90%;
+  margin-top: 50px;
+  --background: #fff;
+  --color: #000; 
+  --border-radius: 100px; 
+  height: 50px; 
+  font-weight: bold;
+  font-size: 16px;
 }
