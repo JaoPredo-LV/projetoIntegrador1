@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { IonContent, IonHeader, IonLabel, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonLabel, IonButton, IonIcon, IonAvatar } from '@ionic/angular/standalone';
 import { chevronBackCircleOutline, chevronForwardOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
@@ -25,7 +25,8 @@ SwiperCore.use([Autoplay, Pagination]);
     CommonModule,
     RouterModule,
     FormsModule,
-    SwiperModule
+    SwiperModule,
+    IonAvatar
   ]
 })
 export class PrincipalPage implements OnInit, AfterViewInit {
