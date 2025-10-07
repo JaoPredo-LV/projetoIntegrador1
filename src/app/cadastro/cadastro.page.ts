@@ -74,6 +74,7 @@ export class CadastroPage {
 
     this.rs.post(fd, 'cadastro-usuario.php').subscribe({
       next: (res: any) => {
+        // res já é JSON
         if (res.status === 'success') {
           this.sucessoMsg = res.msg;
           setTimeout(() => this.router.navigate(['/questionario']), 1000);

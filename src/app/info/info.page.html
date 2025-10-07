@@ -10,7 +10,7 @@
   </div>
 
   <div class="corpo">
-    <img class="fotinha" src="{{srcImage.srcImage}}">
+    <img [src]="'http://localhost/autenticacao/uploads/' + imagemUsuario" class="foto-perfil"/>
     <ion-list>
       <ion-item>Nome: {{usuario.nome}}</ion-item>
       <ion-item>E-mail: {{email.email}}</ion-item>

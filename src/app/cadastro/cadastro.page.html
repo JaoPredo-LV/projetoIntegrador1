@@ -4,28 +4,26 @@
     <div class="titulo-meio">PREENCHA OS DADOS</div>
   </div>
 
-    <div class="formulario">
+  <div class="formulario">
 
-      <div class="foto-container" (click)="selecionarFoto()">
+    <div class="foto-container" (click)="selecionarFoto()">
       <img [src]="imagemPreview" class="foto-perfil"/>
       <div class="icone-camera">📷</div>
     </div>
 
-      <ion-input [(ngModel)]="nome" labelPlacement="floating" label="Nome completo:" type="text" shape="round"></ion-input>
-      <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date" shape="round"></ion-input>
-      <ion-input [(ngModel)]="peso" labelPlacement="floating" label="Peso (em Kg):" type="number" shape="round"></ion-input>
-      <ion-input [(ngModel)]="altura" labelPlacement="floating" label="Altura (em centímetros):" type="number" shape="round"></ion-input>
-      <ion-input [(ngModel)]="genero" labelPlacement="floating" label="Gênero:" type="text" shape="round"></ion-input>
-      <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
-      <ion-input label="Senha: (8 caracteres)" labelPlacement="floating" maxlength="8" type="password" [(ngModel)]="senha">
-        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-      </ion-input>
-        <ion-button class="botao" (click)="salvar()">
-          CADASTRAR
-        </ion-button>
+    <ion-input [(ngModel)]="nome" labelPlacement="floating" label="Nome completo:" type="text" shape="round"></ion-input>
+    <ion-input [(ngModel)]="data" placeholder="Data de nascimento:" type="date" shape="round"></ion-input>
+    <ion-input [(ngModel)]="peso" labelPlacement="floating" label="Peso (em Kg):" type="number" shape="round"></ion-input>
+    <ion-input [(ngModel)]="altura" labelPlacement="floating" label="Altura (em centímetros):" type="number" shape="round"></ion-input>
+    <ion-input [(ngModel)]="genero" labelPlacement="floating" label="Gênero:" type="text" shape="round"></ion-input>
+    <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
+    <ion-input label="Senha: (8 caracteres)" labelPlacement="floating" maxlength="8" type="password" [(ngModel)]="senha">
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+    </ion-input>
+
+    <ion-button class="botao" (click)="salvar()">CADASTRAR</ion-button>
 
     <ion-text color="danger" *ngIf="erroMsg">{{ erroMsg }}</ion-text>
-
     <ion-text color="success" *ngIf="sucessoMsg">{{ sucessoMsg }}</ion-text>
   </div>
 </ion-content>

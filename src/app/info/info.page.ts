@@ -5,6 +5,7 @@ import { IonContent, IonHeader,IonLabel, IonButton, IonIcon, IonList, IonItem } 
 import { addIcons } from 'ionicons';
 import { chevronBackOutline, personCircleOutline } from 'ionicons/icons';
 import { RouterLink } from '@angular/router';
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-info',
@@ -14,10 +15,12 @@ import { RouterLink } from '@angular/router';
   imports: [IonContent, IonHeader,  IonLabel, IonButton, IonIcon, IonList, IonItem, RouterLink, CommonModule, FormsModule]
 })
 export class InfoPage implements OnInit {
+  
+  imagemUsuario: string = 'guest.png';
+
   usuario = {
     nome: sessionStorage.getItem('username')
   }
-
   email = {
     email: sessionStorage.getItem('email')
   }
@@ -32,11 +35,12 @@ export class InfoPage implements OnInit {
   srcImage = {
     srcImage: sessionStorage.getItem('imagem')
   }
-  constructor() { 
+  constructor(private usuarioService: UsuarioService) { 
     addIcons({chevronBackOutline, personCircleOutline})
   }
 
   ngOnInit() {
+    this.imagemUsuario = this.usuarioService.getImagemUsuario();
   }
 
 }
