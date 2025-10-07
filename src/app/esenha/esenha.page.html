@@ -1,23 +1,18 @@
-<ion-header [translucent]="true">
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header></ion-header>
-
-  <div class="boas-vindas">
-  <ion-button color="medium" routerLink="/login"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
-  <ion-label class="texto">ESQUECEU SUA SENHA?</ion-label>
+  <div class="header-container">
+    <ion-back-button defaultHref="/login" class="botao-voltar"></ion-back-button>
+    <div class="titulo-meio">ESQUECEU SUA SENHA?</div>
   </div>
 
-  <div class="div-login">
-    <h1 class="intro">Digite seu E-mail</h1>
-    <ion-input placeholder="E-mail:" type="email"></ion-input>
+  <div class="div-esenha">
+    <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
+    
+    <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="enviarCodigo()">ENVIAR CÓDIGO</ion-button>
 
-       <ion-button id="pinto" class="botao" color="medium" style="--border-radius: 100px;">ENVIAR CÓDIGO</ion-button>
-       <ion-popover trigger="pinto" triggerAction="click" side="top" alignment="center">
-        <ng-template>
-          <ion-content>Código enviado</ion-content>
-        </ng-template>
-       </ion-popover>
-    </div>
+    <!-- Mensagem de erro -->
+    <ion-text color="danger" *ngIf="erroMsg">{{ erroMsg }}</ion-text>
+
+    <!-- Mensagem de sucesso -->
+    <ion-text color="success" *ngIf="sucessoMsg">{{ sucessoMsg }}</ion-text>
+  </div>
 </ion-content>

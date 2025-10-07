@@ -1,31 +1,19 @@
 import { Injectable } from '@angular/core';
-import { RequisicaoService } from './requisicao';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutenticacaoService {
+  private apiUrl = 'http://localhost/autenticacao/logar.php';
 
-  constructor(
-    public rs: RequisicaoService
-  ) { }
+  constructor(private http: HttpClient) {}
 
-  logar(email:string, senha:string){
-
-    const fd = new FormData();
-    fd.append('controller','logar');
-    fd.append('email', email);
-    fd.append('senha', senha);
-
-    return this.rs.post(fd);
+  logar(email: string, senha: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl, { email, senha });
   }
-
-  validarToken(_token:string){
-
-    const fd = new FormData();
-    fd.append('controller', 'validar-token');
-    fd.append('token',_token);
-
-    return this.rs.post(fd)
-  }
+  enviarEmail(email: string): Observable<any> {
+  return this.http.post<any>('http://localhost/seu_projeto/verifica_email.php', { email });
+}
 }

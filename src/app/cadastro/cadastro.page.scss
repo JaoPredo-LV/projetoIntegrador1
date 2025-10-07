@@ -1,82 +1,82 @@
-ion-content {
-  --background: #000;
-  color: #fff; 
-}
-
-ion-header ion-toolbar {
-  --background: #000;
-  --color: #fff; 
-
-  // Centraliza o título no toolbar (Padrão do Ionic, mas bom garantir)
-  ion-title {
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-  }
-}
-
-// Estilo para o ícone de pessoa (Avatar)
-.avatar-container {
+.header-container {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-
-  .icon-person {
-    font-size: 60px;
-    color: #fff;
-  }
+  align-items: center;
+  justify-content: space-between;
+  position: relative; 
+  padding: 10px 15px;
+  color: #fff;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-// Estilo para os inputs (mantém o visual arredondado e branco)
-.custom-input {
-  // Define uma largura MÁXIMA para o campo
-  max-width: 350px; /* Ajuste esta largura (em px ou %) para o tamanho que você deseja */
-  width: 90%; /* Garante que ele use 90% da largura do contêiner 'formulario' */
-  margin-bottom: 20px;
-  
-  // Remove o fundo cinza e a borda do ion-item
-  --background: transparent;
-  --border-color: transparent;
-  --inner-border-width: 0; // Remove a linha divisória do Ionic 
-  --border-width: 0;
-  
-  // SOLUÇÃO PARA O ALINHAMENTO DO TEXTO ("LABEL FEIO"):
-  --padding-start: 0; // Zera o padding padrão que empurra o conteúdo para a direita
-  --padding-end: 0;
-  --padding-top: 0; 
-  --padding-bottom: 0; 
-
-  ion-input, ion-select {
-    --background: #fff; 
-    --color: #000;      
-    --border-radius: 100px; 
-    --padding-top: 5px;
-    --padding-bottom: 5px;
-    // O atributo fill="outline" no HTML é o que está criando o preenchimento branco!
-    --border-color: #fff; 
-    --placeholder-color: #666;
-    --label-color: #666;
-    
-  }
+.botao-voltar {
+  --color: #fff;
+  z-index: 10;
 }
-.formulario {
-  // Centraliza o formulário inteiro
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
+ion-input {
+  text-align: left;
+  --background: white;
+  --color: black;
+  --placeholder-color: gray;
+  --padding-start: 15px;
+  --border-radius: 20px;
+  margin: 5px ;
+  height: 45px;
+  width: 90%;   
+  max-width: 400px;
+}
+.titulo-meio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  z-index: 5; 
+}
+
+  .formulario {
+      display: flex;
+      flex-direction: column;   
+      align-items: center;      
+      justify-content: center;  
+      min-height: 90vh;         
+      text-align: center;       
+      position: relative;           
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;              
+  }
+  .intro {
+      text-align: center;
+      font-size: large;
+  }
+
+
+.voltar{
+  float: left;
+  padding: 3%;
+  --background: white;
+}
+
+.formulario{
+  height: auto;
+  clear: both;
+  padding: 10%;
+}
+
+ion-input{
+  margin-top: 10%;
+  --background: white;
+  --color: black;
+}
+
+.botao{
+  --background: white;
+  padding: 10%;
   width: 100%;
-}
-// Estilo para o botão "CADASTRAR"
-.register-button {
-  // O botão também precisa ter a largura menor e estar centralizado
-  max-width: 350px; /* Usa a mesma largura do input */
-  width: 90%;
-  margin-top: 50px;
-  --background: #fff;
-  --color: #000; 
-  --border-radius: 100px; 
-  height: 50px; 
-  font-weight: bold;
-  font-size: 16px;
 }

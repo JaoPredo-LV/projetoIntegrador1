@@ -1,3 +1,31 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; 
+    padding: 10px 15px;
+    color: #fff;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .botao-voltar {
+    --color: #fff;
+    z-index: 10;
+  }
+  
+  .titulo-meio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    z-index: 5; 
+  }
 .div-login {
     display: flex;
     flex-direction: column;   
@@ -5,7 +33,7 @@
     justify-content: center;  
     min-height: 100vh;         
     text-align: center;       
-    position: fixed;           
+    position: relative;           
     top: 0;
     left: 0;
     width: 100%;
@@ -41,7 +69,14 @@ ion-input {
     padding: 30% 0;
     width: 50%;
 }
-.botao-voltar {
-  color: #fff;
-  z-index: 10;
+
+.button-inner{
+    width: 20%;
+    margin:0 ;
+}
+.erro-msg {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
 }
