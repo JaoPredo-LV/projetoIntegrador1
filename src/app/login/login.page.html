@@ -5,17 +5,43 @@
     <ion-back-button defaultHref="/home" class="botao-voltar"></ion-back-button>
     <div class="titulo-meio">LOGIN</div>
   </div>
-  <div class="div-login">
-    <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
-    <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
 
-    <ion-input label="Senha: (8 caracteres)" labelPlacement="floating" maxlength="8" type="password" [(ngModel)]="senha">
+  <div class="div-login">
+    <!-- Input de E-mail -->
+    <ion-input
+      label="E-mail:"
+      labelPlacement="floating"
+      type="email"
+      [(ngModel)]="email">
+    </ion-input>
+
+    <!-- Input de Senha -->
+    <ion-input
+      label="Senha: (8 caracteres)"
+      labelPlacement="floating"
+      maxlength="8"
+      type="password"
+      [(ngModel)]="senha">
       <ion-input-password-toggle slot="end"></ion-input-password-toggle>
     </ion-input>
-    <ion-label class="label" color="danger">*CAMPO OBRIGATÓRIO</ion-label>
 
-       <p><a href="/esenha">Esqueci minha senha</a></p>
+    <p><a href="/esenha">Esqueci minha senha</a></p>
 
-       <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="logar()" a href="/principal">ENTRAR</ion-button>
-      </div>
+    <ion-button
+      class="botao"
+      color="medium"
+      style="--border-radius: 100px;"
+      (click)="logar()">
+      ENTRAR
+    </ion-button>
+
+    <!-- Mensagem de erro abaixo do botão -->
+    <ion-label *ngIf="erroMsg" color="danger" class="erro-msg">{{ erroMsg }}</ion-label>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <div class="footer">
+    <p>Não possui cadastro? <a href="/cadastro">Cadastre-se</a></p>
+  </div>
+</ion-footer>

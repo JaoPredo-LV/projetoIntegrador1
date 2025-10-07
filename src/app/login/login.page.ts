@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader,  IonInput, IonLabel,  IonButton, IonInputPasswordToggle, IonBackButton } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router'; 
 import { AutenticacaoService } from '../service/autenticacao';
 
@@ -11,45 +11,55 @@ import { AutenticacaoService } from '../service/autenticacao';
   styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [
-    IonContent, IonHeader, 
-    IonInput, IonLabel,
-    IonButton, CommonModule, FormsModule, 
-    IonInputPasswordToggle, IonBackButton
+    CommonModule,
+    FormsModule,
+    IonicModule
   ]
 })
 export class LoginPage implements OnInit {
   public email: string = "";
   public senha: string = "";
+  public erroMsg: string = "";
 
   constructor(
     public autenticacao: AutenticacaoService,
-    private router: Router // ✅ Injeta Router
+    private router: Router
   ) {}
 
   ngOnInit() {}
 
   logar() {
-    const email = this.email;
-    const senha = this.senha;
+  // Limpa mensagem de erro anterior
+  this.erroMsg = "";
 
-    this.autenticacao.logar(email, senha).subscribe((_res: any) => {
+  if (!this.email || !this.senha) {
+    this.erroMsg = "Preencha e-mail e senha!";
+    return;
+  }
+
+  this.autenticacao.logar(this.email, this.senha).subscribe({
+    next: (_res: any) => {
       if (_res.status === 'success') {
-        // ✅ Salva token
         sessionStorage.setItem('token', _res.token);
-        sessionStorage.setItem('id',_res.id);
-        sessionStorage.setItem('imagem', _res.imagem);
+        sessionStorage.setItem('id', _res.id);
+        sessionStorage.setItem('imagem', _res.imagem ?? '');
         sessionStorage.setItem('username', _res.username);
         sessionStorage.setItem('email', _res.email);
         sessionStorage.setItem('dataN', _res.dataN);
-        sessionStorage.setItem('genero', _res.genero);
+        sessionStorage.setItem('genero', _res.genero ?? '');
 
-        this.router.navigateByUrl('/principal')
+        this.router.navigateByUrl('/principal');
       } else {
-        // ❌ Erro na autenticação
-        console.log("Erro ao logar:", _res.message);
+        // Aqui definimos a mensagem de erro que vai aparecer no app
+        this.erroMsg = "Dados incorretos"; // mensagem genérica
+        console.log("Erro ao logar:", _res.msg); // mantém no console para debug
       }
-    });
-  }
+    },
+    error: (err) => {
+      this.erroMsg = "Erro de conexão com o servidor";
+      console.error("Erro de conexão:", err);
+    }
+  });
 }
 
-
+}

@@ -1,5 +1,3 @@
-<ion-header [translucent]="true"></ion-header>
-
 <ion-content [fullscreen]="true">
   <div class="header-container">
     <ion-back-button defaultHref="/login" class="botao-voltar"></ion-back-button>
@@ -7,11 +5,14 @@
   </div>
 
   <div class="div-esenha">
-    <ion-input label="E-mail:" labelPlacement="floating" type="email"></ion-input>
-       <ion-button id="envio" class="botao" color="medium" style="--border-radius: 100px;">ENVIAR CÓDIGO</ion-button>
-       <ion-popover trigger="envio" triggerAction="click" side="top" alignment="center">
-        <ng-template>
-          <ion-content>Código enviado</ion-content>
-        </ng-template>
-       </ion-popover>
-    </div>
+    <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
+    
+    <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="enviarCodigo()">ENVIAR CÓDIGO</ion-button>
+
+    <!-- Mensagem de erro -->
+    <ion-text color="danger" *ngIf="erroMsg">{{ erroMsg }}</ion-text>
+
+    <!-- Mensagem de sucesso -->
+    <ion-text color="success" *ngIf="sucessoMsg">{{ sucessoMsg }}</ion-text>
+  </div>
+</ion-content>
