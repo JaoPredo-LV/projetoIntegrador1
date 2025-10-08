@@ -1,10 +1,9 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonLabel, IonButton,IonList, IonItem, IonInput } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { RequisicaoService } from '../service/requisicao';
-
 import { UploadService } from '../service/upload';
 import { HttpParams } from '@angular/common/http';
 
@@ -13,7 +12,7 @@ import { HttpParams } from '@angular/common/http';
   templateUrl: './config.page.html',
   styleUrls: ['./config.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonLabel, IonButton, IonList, IonItem, IonInput, RouterLink, CommonModule, FormsModule]
+  imports: [IonicModule, RouterLink, CommonModule, FormsModule]
 })
 export class ConfigPage implements OnInit {
   public nome:string="";

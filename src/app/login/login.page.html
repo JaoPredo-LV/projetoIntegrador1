@@ -8,34 +8,21 @@
 
   <div class="div-login">
     <!-- Input de E-mail -->
-    <ion-input
-      label="E-mail:"
-      labelPlacement="floating"
-      type="email"
-      [(ngModel)]="email">
-    </ion-input>
+    <ion-input label="E-mail:" labelPlacement="floating" type="email" [(ngModel)]="email"></ion-input>
 
     <!-- Input de Senha -->
-    <ion-input
-      label="Senha: (8 caracteres)"
-      labelPlacement="floating"
-      maxlength="8"
-      type="password"
-      [(ngModel)]="senha">
+    <ion-input label="Senha (8 caracteres):" labelPlacement="floating" maxlength="8" type="password" [(ngModel)]="senha">
       <ion-input-password-toggle slot="end"></ion-input-password-toggle>
     </ion-input>
 
     <p><a href="/esenha">Esqueci minha senha</a></p>
 
-    <ion-button
-      class="botao"
-      color="medium"
-      style="--border-radius: 100px;"
-      (click)="logar()">
+    <!-- Botão de Login -->
+    <ion-button class="botao" color="medium" style="--border-radius: 100px;" (click)="logar()">
       ENTRAR
     </ion-button>
 
-    <!-- Mensagem de erro abaixo do botão -->
-    <ion-label *ngIf="erroMsg" color="danger" class="erro-msg">{{ erroMsg }}</ion-label>
+    <!-- Mensagem de erro -->
+    <ion-text color="danger" *ngIf="erroMsg">{{ erroMsg }}</ion-text>
   </div>
 </ion-content>

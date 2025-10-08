@@ -1,40 +1,77 @@
-.boas-vindas {
-    background: rgba(255, 255, 255, 0.15); 
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px);
-    padding: 10%;
-    text-align: center;
+/* 1. FUNDO GERAL DA PÁGINA (Conteúdo Principal) */
+
+/* 2. CABEÇALHO (Toolbar) */
+ion-toolbar {
+    /* Define a cor de fundo da toolbar para um preto escuro */
+    --background: #121212 !important; 
+    --color: #ffffff;
+    
+    /* 🛑 CRÍTICO: Remove a sombra (box-shadow) que faz o cabeçalho parecer cinza/branco */
+    --box-shadow: none !important; 
+    --border-style: none !important; /* Remove a linha de separação */
 }
 
-.text{
-    text-align: center;
-    font-size: large;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    align-content: center;
+/* 3. TÍTULO E BOTÃO DE VOLTAR */
+ion-title {
+ font-size: 16px;
+ font-weight: 500;
+  /* 🛑 Mude isso para BRANCO */
+ color: #ffffff !important; 
 }
 
-.botaoA{
-    width: 80%;
-    margin-top: 20%;
-    margin-left: 10%;
+ion-back-button {
+    --color: #ffffff !important; /* Faz a seta ser branca */
+}
+
+/* 4. LISTA DE INFORMAÇÕES (Itens e Campos) */
+ion-list {
+    margin: 0 20px;
+    background: transparent;
+}
+
+ion-item {
+    /* Garante que o fundo dos itens da lista seja transparente */
+    --background: transparent !important;
+    --color: #ffffff; /* Texto branco */
+    --ion-item-background: transparent !important;
+
+    /* Estilo da linha divisória sutil */
+    --border-style: solid; 
+    --border-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* 5. FOTO E BOTÕES */
+
+/* CONTAINER CENTRALIZADOR DA FOTO E BOTÃO */
+.foto-bloco {
+    text-align: center; 
+    padding: 20px 0 10px 0; 
+    margin: 0 20px; 
+}
+
+/* FOTO DE PERFIL (Tamanho fixo e redondo) */
+.fotinha {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px auto; 
+    border-radius: 50%;
+    object-fit: cover; 
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.1); 
+}
+
+/* BOTÃO CARREGAR */
+.botaoC {
+    width: 60%; 
+    margin: 0 auto; 
+    display: block; 
     font-weight: bold;
 }
 
-.textoD{
-    width: 100%;
-}
-
-.fotinha{
-    display: block;
-    margin: 10% auto;
-    border-radius: 50%;
-    height: auto;
-}
-
-.botaoC{
+/* BOTÃO PRINCIPAL (SALVAR) */
+.botaoA {
     width: 80%;
+    margin-top: 20%;
     margin-left: 10%;
     font-weight: bold;
 }

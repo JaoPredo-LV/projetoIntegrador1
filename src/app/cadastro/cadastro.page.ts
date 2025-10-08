@@ -22,8 +22,8 @@ export class CadastroPage {
   public genero = '';
   public email = '';
   public senha = '';
-  public imagemArquivo: any = null;
-  public imagemPreview: string = 'assets/default.png';
+  public imagemArquivo: File | null = null;
+  public imagemPreview: string = 'assets/default.png'; // padrão
   public erroMsg = '';
   public sucessoMsg = '';
 
@@ -47,45 +47,65 @@ export class CadastroPage {
   }
 
   salvar() {
-    this.erroMsg = '';
-    this.sucessoMsg = '';
+  this.erroMsg = '';
+  this.sucessoMsg = '';
 
-    if (!this.nome || !this.data || !this.peso || !this.altura || !this.genero || !this.email || !this.senha) {
-      this.erroMsg = 'Preencha todos os campos';
-      return;
-    }
-
-    const fd = new FormData();
-    fd.append('nome', this.nome);
-    fd.append('data', this.data);
-    fd.append('peso', this.peso);
-    fd.append('altura', this.altura);
-    fd.append('genero', this.genero);
-    fd.append('email', this.email);
-    fd.append('senha', this.senha);
-
-    // Se o usuário escolheu uma imagem, envia o arquivo real
-    if (this.imagemArquivo) {
-      fd.append('imagem', this.imagemArquivo, this.imagemArquivo.name);
-    } else {
-      // Caso contrário, envia apenas o nome da imagem padrão
-      fd.append('imagem', 'guest.png');
-    }
-
-    this.rs.post(fd, 'cadastro-usuario.php').subscribe({
-      next: (res: any) => {
-        // res já é JSON
-        if (res.status === 'success') {
-          this.sucessoMsg = res.msg;
-          setTimeout(() => this.router.navigate(['/questionario']), 1000);
-        } else {
-          this.erroMsg = res.msg;
-        }
-      },
-      error: (err) => {
-        this.erroMsg = 'Erro de conexão com o servidor.';
-        console.error(err);
-      }
-    });
+  // Verifica se todos os campos estão preenchidos
+  if (!this.nome || !this.data || !this.peso || !this.altura || !this.genero || !this.email || !this.senha) {
+    this.erroMsg = 'Preencha todos os campos';
+    return;
   }
+
+  // Valida e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(this.email)) {
+    this.erroMsg = 'E-mail inválido';
+    return;
+  }
+
+  // Valida peso e altura (números positivos)
+  if (isNaN(+this.peso) || +this.peso <= 0) {
+    this.erroMsg = 'Peso inválido';
+    return;
+  }
+  if (isNaN(+this.altura) || +this.altura <= 0) {
+    this.erroMsg = 'Altura inválida';
+    return;
+  }
+
+  // Valida senha (mínimo 8 caracteres)
+  if (this.senha.length < 8) {
+    this.erroMsg = 'Senha deve ter pelo menos 8 caracteres';
+    return;
+  }
+
+  // Preparar FormData
+  const fd = new FormData();
+  fd.append('nome', this.nome);
+  fd.append('data', this.data);
+  fd.append('peso', this.peso);
+  fd.append('altura', this.altura);
+  fd.append('genero', this.genero);
+  fd.append('email', this.email);
+  fd.append('senha', this.senha);
+
+  if (this.imagemArquivo) {
+    fd.append('imagem', this.imagemArquivo, this.imagemArquivo.name);
+  }
+
+  this.rs.post(fd, 'cadastro-usuario.php').subscribe({
+    next: (res: any) => {
+      if (res.status === 'success') {
+        this.sucessoMsg = res.msg;
+        setTimeout(() => this.router.navigate(['/questionario']), 1000);
+      } else {
+        this.erroMsg = res.msg;
+      }
+    },
+    error: (err) => {
+      this.erroMsg = 'Erro de conexão com o servidor.';
+      console.error(err);
+    }
+  });
+}
 }

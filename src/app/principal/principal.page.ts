@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { IonContent, IonHeader, IonLabel, IonButton, IonIcon, IonAvatar } from '@ionic/angular/standalone';
 import { chevronBackCircleOutline, chevronForwardOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
-
+import { UsuarioService } from '../service/usuario.service';
 import { SwiperModule, SwiperComponent } from 'swiper/angular';
 import SwiperCore, { Autoplay, Pagination } from 'swiper';
 
@@ -30,8 +30,9 @@ SwiperCore.use([Autoplay, Pagination]);
   ]
 })
 export class PrincipalPage implements OnInit, AfterViewInit {
-  usuario = {
-    nome: sessionStorage.getItem('username')
+   usuario: any = {
+    nome: 'Visitante',
+    imagem: 'assets/default.png'
   };
 
   propagandas = [
@@ -51,11 +52,19 @@ export class PrincipalPage implements OnInit, AfterViewInit {
 
   @ViewChild('swiper') swiper?: SwiperComponent;
 
-  constructor() {
+  constructor(private usuarioService: UsuarioService) {
     addIcons({ chevronForwardOutline, chevronBackCircleOutline });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const dadosUsuario = this.usuarioService.getUsuario();
+    if (dadosUsuario) {
+      this.usuario = {
+        nome: dadosUsuario.username || 'Visitante',
+        imagem: dadosUsuario.imagem ? `http://localhost/uploads/${dadosUsuario.imagem}` : 'assets/guest.png'
+      };
+  }
+  }
 
   ngAfterViewInit() {
     setTimeout(() => {
