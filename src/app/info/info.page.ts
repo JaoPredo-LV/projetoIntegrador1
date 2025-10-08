@@ -6,7 +6,7 @@ import { addIcons } from 'ionicons';
 import { chevronBackOutline, personCircleOutline } from 'ionicons/icons';
 import { RouterLink } from '@angular/router';
 import { UsuarioService } from '../service/usuario.service';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-info',
@@ -36,7 +36,7 @@ export class InfoPage implements OnInit {
   srcImage = {
     srcImage: sessionStorage.getItem('imagem')
   }
-  constructor(private usuarioService: UsuarioService,private location: Location) { 
+  constructor(private usuarioService: UsuarioService,private router: Router) { 
     addIcons({chevronBackOutline, personCircleOutline})
   }
 
@@ -44,6 +44,6 @@ export class InfoPage implements OnInit {
     this.imagemUsuario = this.usuarioService.getImagemUsuario();
   }
   voltar() {
-    this.location.back();
-  }
+  this.router.navigate(['/principal']);
+}
 }
