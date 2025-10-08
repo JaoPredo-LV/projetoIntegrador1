@@ -70,7 +70,7 @@ export class NivelquinzebikePage implements OnInit, OnDestroy {
           this.treinoConcluido = true;
             this.pararContador();
         }
-    }, 1000);
+    }, 10);
   }
     pararContador() {
     if (this.intervalo) {

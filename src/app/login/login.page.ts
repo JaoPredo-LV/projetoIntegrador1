@@ -28,25 +28,26 @@ export class LoginPage {
     }
 
     this.autenticacao.logar(this.email, this.senha).subscribe({
-      next: (res: any) => {
-        if (res.status === 'success') {
-          this.usuarioService.setUsuario({
-            id: res.id,
-            username: res.username,
-            email: res.email,
-            imagem: res.imagem ?? 'guest.png',
-            dataN: res.dataN,
-            genero: res.genero ?? ''
-          });
-          this.router.navigateByUrl('/principal');
-        } else {
-          this.erroMsg = res.msg || 'Dados incorretos';
-        }
-      },
-      error: (err) => {
-        this.erroMsg = 'Erro de conexão com o servidor';
-        console.error(err);
-      }
-    });
+  next: (_res: any) => {
+    if (_res.status === 'success') {
+      // salva os dados no sessionStorage
+      sessionStorage.setItem('token', _res.token);
+      sessionStorage.setItem('id', _res.id);
+      sessionStorage.setItem('username', _res.username);
+      sessionStorage.setItem('email', _res.email);
+      sessionStorage.setItem('dataN', _res.dataN);
+      sessionStorage.setItem('genero', _res.genero ?? '');
+      sessionStorage.setItem('imagem', _res.imagem ?? 'guest.png');
+
+      this.router.navigateByUrl('/principal');
+    } else {
+      this.erroMsg = 'Dados incorretos';
+    }
+  },
+  error: (err) => {
+    this.erroMsg = 'Erro de conexão com o servidor.';
+    console.error(err);
   }
+});
+}
 }

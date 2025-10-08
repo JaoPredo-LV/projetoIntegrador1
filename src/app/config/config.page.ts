@@ -1,108 +1,72 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { RequisicaoService } from '../service/requisicao';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import { RouterLink } from '@angular/router';
-import { RequisicaoService } from '../service/requisicao';
-import { UploadService } from '../service/upload';
-import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-config',
   templateUrl: './config.page.html',
   styleUrls: ['./config.page.scss'],
   standalone: true,
-  imports: [IonicModule, RouterLink, CommonModule, FormsModule]
+  imports: [IonicModule, FormsModule, CommonModule]
 })
 export class ConfigPage implements OnInit {
-  public nome:string="";
-  public genero:string="";
+  @ViewChild('inputFile') input!: ElementRef;
 
-  email = {
-    email: sessionStorage.getItem('email')
-  }
+  nome: string = '';
+  genero: string = '';
+  email: string = '';
+  dataN: string = '';
 
-  date = {
-    dataN: sessionStorage.getItem('dataN')
-  }
+  srcImage: string = 'assets/default.png'; // imagem padrão
+  selectedFile!: File;
 
-  @ViewChild('inputFile') input!:ElementRef;
-  @Input() srcImage:string = '';
-  @Input() params!:HttpParams;
-  @Input('id') idImage:string = '';
-  @Input() styleClass:string = '';
-  @Input('height') heightImage:string = '30%';
-  @Output() uploaded = new EventEmitter();
-  @Output() no_image = new EventEmitter<any>();
-  @Output() set_image = new EventEmitter<any>();
-  @Output() show_dialog  = new EventEmitter();
-  public sem_imagem_src = '/assets/fotoTeste.png';
+  constructor(private rs: RequisicaoService, private router: Router) {}
 
-  constructor(public rs: RequisicaoService, public us:UploadService) {
+  ngOnInit() {
+    // Pega valores do sessionStorage
     this.nome = sessionStorage.getItem('username') || '';
     this.genero = sessionStorage.getItem('genero') || '';
-    this.srcImage = sessionStorage.getItem('imagem') || '';
+    this.email = sessionStorage.getItem('email') || '';
+    this.dataN = sessionStorage.getItem('dataN') || '';
+
+    const img = sessionStorage.getItem('imagem');
+    if (img) {
+      this.srcImage = 'http://localhost/autenticacao/uploads/' + img;
+    }
   }
 
-   salvar() {
-    const fd =new FormData();
-    fd.append('controller','atualizar-usuario');
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = e => this.srcImage = reader.result as string;
+    reader.readAsDataURL(this.selectedFile);
+  }
+
+  salvar() {
+    const fd = new FormData();
+    fd.append('controller', 'atualizar-usuario');
     fd.append('id', String(sessionStorage.getItem('id')));
     fd.append('nome', this.nome);
     fd.append('genero', this.genero);
-    fd.append('imagem', this.srcImage);
-  
 
-    sessionStorage.setItem('username', this.nome);
-    sessionStorage.setItem('genero', this.genero);
-    sessionStorage.setItem('imagem', this.srcImage);
-    this.rs.post(fd, 'cadastro-usuario.php').subscribe();
-  }
+    if (this.selectedFile) {
+      fd.append('imagem', this.selectedFile);
+    }
 
-  ngOnInit() {
-  }
+    this.rs.post(fd, 'atualizar-usuario.php').subscribe((res: any) => {
+      if (res.status === 'success') {
+        // Atualiza sessionStorage
+        sessionStorage.setItem('username', this.nome);
+        sessionStorage.setItem('genero', this.genero);
+        if (res.imagem) sessionStorage.setItem('imagem', res.imagem);
 
-  ngAfterViewInit(): void {
-    if (sessionStorage.getItem('user_src_img')){
-      this.srcImage = String(sessionStorage.getItem('user_src_img'));
-    }else{
-      this.noImagem();
-    }    
-  }
-
-  onFileSelected(event:any)
-  {
-
-    // Arquivo Uploaded
-    let selectedFile = <File>event.target.files[0];
-
-    // Upload de Arquivo
-    this.us.upload(selectedFile).subscribe(
-      (response:any) => {
-        if (response.status=='success'){
-          this.srcImage = 'http://localhost/autenticacao/' + response.src;
-
-          sessionStorage.setItem('user_src_img', this.srcImage);
-        }
-        this.uploaded.emit(response);
+        this.router.navigate(['/info']); // volta para info page
+      } else {
+        console.error(res.msg);
       }
-    );
-  }
-
-  noImagem(){
-    this.no_image.emit();
-    this.srcImage = this.sem_imagem_src;
-  }
-
-  setImagem(src:string){    
-    this.srcImage = src == null ? this.sem_imagem_src : src;
-    this.set_image.emit();
-  }
-
-  showDialog()
-  {
-    this.show_dialog.emit();
-    this.input.nativeElement.click();
+    });
   }
 }
-

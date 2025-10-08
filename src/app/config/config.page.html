@@ -1,67 +1,55 @@
 <ion-header [translucent]="true">
-    <ion-toolbar >
-        <ion-buttons slot="start">
-            <ion-back-button 
-                defaultHref="/info" 
-                
-                text=""
-            ></ion-back-button>
-        </ion-buttons>
-
-        <ion-title class="ion-text-center">INFORMAÇÕES PESSOAIS</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/info" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">INFORMAÇÕES PESSOAIS</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-    </ion-header>
+  <div class="corpo">
 
-    <div class="corpo">
-        
-        <div class="foto-bloco">
-            <img
-                [id]="idImage" 
-                [src]="srcImage" 
-                [style.height]="heightImage" 
-                class="fotinha"
-                alt="..." 
-            />
-            
-            <ion-button 
-                (click)="inputFile.click()"
-                class="botaoC"
-                color="medium" 
-                shape="round"
-            >
-                CARREGAR
-            </ion-button>
-            
-            <input 
-                type="file" 
-                style="display:none" 
-                #inputFile 
-                (change)="onFileSelected($event);"
-            />
-        </div>
-        
-        <ion-list>
-            <ion-item>
-            <ion-input label="Nome:" [(ngModel)]="nome"></ion-input>
-            </ion-item>
+    <!-- FOTO -->
+    <div class="foto-bloco">
+      <img
+        [src]="srcImage"
+        class="fotinha"
+        (error)="srcImage='assets/default.png'"
+        alt="Foto do usuário"
+      />
+      <ion-button (click)="input.nativeElement.click()" class="botaoC" color="medium" shape="round">
+  CARREGAR
+</ion-button>
 
-            <ion-item>
-            <ion-input label="E-mail:" [disabled]="true" value="{{email.email}}"></ion-input>
-            </ion-item>
-
-            <ion-item>
-            <ion-input label="Data de nascimento:" [disabled]="true" value="{{date.dataN}}"></ion-input>
-            </ion-item>
-
-            <ion-item>
-            <ion-input label="Gênero:" [(ngModel)]="genero"></ion-input>
-            </ion-item>
-        </ion-list>
-
-        <ion-button class="botaoA" color="medium" shape="round" (click)="salvar()">SALVAR ALTERAÇÕES</ion-button>
+      <input type="file" style="display:none" #inputFile (change)="onFileSelected($event)" />
     </div>
+
+    <!-- INFORMAÇÕES -->
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nome:</ion-label>
+        <ion-input [(ngModel)]="nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">E-mail:</ion-label>
+        <ion-input [value]="email" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Data de nascimento:</ion-label>
+        <ion-input [value]="dataN" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Gênero:</ion-label>
+        <ion-input [(ngModel)]="genero"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="botaoA" color="medium" shape="round" (click)="salvar()">
+      SALVAR ALTERAÇÕES
+    </ion-button>
+  </div>
 </ion-content>

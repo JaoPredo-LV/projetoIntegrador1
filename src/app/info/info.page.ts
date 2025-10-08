@@ -4,9 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { chevronBackOutline, personCircleOutline } from 'ionicons/icons';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UsuarioService } from '../service/usuario.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-info',
@@ -16,34 +15,34 @@ import { Router } from '@angular/router';
   imports: [IonicModule, RouterLink, CommonModule, FormsModule]
 })
 export class InfoPage implements OnInit {
-  
-  imagemUsuario: string = 'guest.png';
+  usuario: any = {}; // objeto com todos os dados
+  imagemUsuario: string = 'default.png'; // imagem padrão
 
-  usuario = {
-    nome: sessionStorage.getItem('username')
-  }
-  email = {
-    email: sessionStorage.getItem('email')
-  }
-
-  date = {
-    dataN: sessionStorage.getItem('dataN')
-  }
-
-  genero = {
-    genero: sessionStorage.getItem('genero')
-  }
-  srcImage = {
-    srcImage: sessionStorage.getItem('imagem')
-  }
-  constructor(private usuarioService: UsuarioService,private router: Router) { 
-    addIcons({chevronBackOutline, personCircleOutline})
+  constructor(
+    private usuarioService: UsuarioService,
+    private router: Router
+  ) {
+    addIcons({ chevronBackOutline, personCircleOutline });
   }
 
   ngOnInit() {
-    this.imagemUsuario = this.usuarioService.getImagemUsuario();
+    // Puxa os dados da sessão do login
+    this.usuario = {
+      nome: sessionStorage.getItem('username') || 'Usuário',
+      email: sessionStorage.getItem('email') || '',
+      dataN: sessionStorage.getItem('dataN') || '',
+      genero: sessionStorage.getItem('genero') || '',
+      imagem: sessionStorage.getItem('imagem') || 'default.png'
+    };
+
+    this.imagemUsuario = this.usuario.imagem;
   }
+
   voltar() {
-  this.router.navigate(['/principal']);
+    this.router.navigate(['/principal']);
+  }
+  onImageError(event: Event) {
+  const img = event.target as HTMLImageElement;
+  img.src = 'assets/default.png';
 }
 }

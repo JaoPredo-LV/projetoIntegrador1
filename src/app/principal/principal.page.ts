@@ -31,8 +31,8 @@ SwiperCore.use([Autoplay, Pagination]);
 })
 export class PrincipalPage implements OnInit, AfterViewInit {
    usuario: any = {
-    nome: 'Visitante',
-    imagem: 'assets/default.png'
+    nome: '',
+    imagem: 'default.png'
   };
 
   propagandas = [
@@ -57,13 +57,15 @@ export class PrincipalPage implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    const dadosUsuario = this.usuarioService.getUsuario();
-    if (dadosUsuario) {
-      this.usuario = {
-        nome: dadosUsuario.username || 'Visitante',
-        imagem: dadosUsuario.imagem ? `http://localhost/uploads/${dadosUsuario.imagem}` : 'assets/guest.png'
-      };
+    // pega os dados do usuário do sessionStorage
+    this.usuario = {
+      nome: sessionStorage.getItem('username') || 'Usuário',
+      imagem: sessionStorage.getItem('imagem') || 'guest.png'
+    };
   }
+  getImagemCompleta() {
+    // retorna o caminho completo da imagem
+    return `http://localhost/autenticacao/uploads/${this.usuario.imagem}`;
   }
 
   ngAfterViewInit() {

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { IonContent, IonButtons, IonBackButton, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonButton, IonIcon, IonCheckbox } from '@ionic/angular/standalone';
+import { IonicModule  } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-gymdesafios',
@@ -13,17 +15,7 @@ import { IonContent, IonButtons, IonBackButton, IonHeader, IonTitle, IonToolbar,
     CommonModule,
     FormsModule,
     RouterModule,
-    IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
-    IonItem,
-    IonLabel,
-    IonButton,
-    IonIcon,
-    IonBackButton,
-    IonButtons,
-    IonCheckbox
+    IonicModule,
   ]
 })
 export class GymdesafiosPage implements OnInit {
@@ -101,11 +93,25 @@ export class GymdesafiosPage implements OnInit {
     }
   ];
 
-  constructor() {}
+  constructor(private router: Router, private toastController: ToastController) {}
 
   ngOnInit() {}
 
   toggleDia(index: number) {
     this.dias[index].open = !this.dias[index].open;
+  }
+
+  async enviarDesafios() {
+    const toast = await this.toastController.create({
+      message: 'Parabéns! Você completou seus desafios!',
+      duration: 2000, // 2 segundos
+      color: 'success',
+      position: 'top'
+    });
+    await toast.present();
+
+    setTimeout(() => {
+      this.router.navigate(['/principal']);
+    }, 2000); // espera 2s para o toast desaparecer antes de voltar
   }
 }
